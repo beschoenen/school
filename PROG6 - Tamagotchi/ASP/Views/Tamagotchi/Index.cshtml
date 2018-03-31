@@ -1,0 +1,66 @@
+﻿@using TamagotchiService
+
+@model IEnumerable<Tamagotchi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Tamagotchi currentTamagotchi = ViewBag.CurrentTamagotchi;
+}
+@if (currentTamagotchi != null)
+{
+    <br/>
+    <div class="alert alert-success">
+        @Html.ActionLink($"Tamagotchi {currentTamagotchi.Name} is currently in use", "Play", new {id = currentTamagotchi.Id})
+        <span style="float: right">
+            @Html.ActionLink($"Dismiss {currentTamagotchi.Name}", "Dismiss")
+        </span>
+    </div>
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Health)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Health)
+            </td>
+            <td style="max-width: 40px;">
+                @if (item.Health != 0)
+                {
+                    @Html.ActionLink("Play", "SetTamagotchi", new { id = item.Id })
+                    <span>&nbsp;</span>
+                }
+                @if (currentTamagotchi?.Id != item.Id)
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+            </td>
+        </tr>
+    }
+
+</table>

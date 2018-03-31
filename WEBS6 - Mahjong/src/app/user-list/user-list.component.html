@@ -1,0 +1,7 @@
+<h3>Players</h3>
+<ul *ngFor="let player of players">
+  <li [class.checkable]="canCheck">
+    <input id="{{ player._id }}" type="checkbox" (change)="userChecked(player)" [class.hidden]="!canCheck">
+    <label for="{{ player._id }}">{{ player.name }}</label>
+  </li>
+</ul>

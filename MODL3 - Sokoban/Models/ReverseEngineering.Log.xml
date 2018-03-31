@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-10-10T12:23:02" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '183095b7-87e8-4378-8a01-4e9f960ab9f0' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '74434caf-22b6-4e76-83b7-a68b99fa9b32' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'db8f3817-0ff5-4dd4-bad4-be6a5e0d745b' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'e5b2b7db-fb12-42f1-b06b-3e18e71a9b34' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController::AskInput' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController::Game' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController::GameController' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController::PlayGame' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController::PlayGame::i' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Controllers::GameController::WantsToPlay' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::DirectionType' -  (Enumeration)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::DirectionType::Down' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::DirectionType::Left' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::DirectionType::Right' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::DirectionType::Up' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::FieldType' -  (Enumeration)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::FieldType::Box' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::FieldType::Floor' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::FieldType::Space' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Enums::FieldType::Wall' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Banana' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Banana::Banana' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Banana::Banana::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Banana::Coordinate' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Banana::Move' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Banana::Move::direction' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Box' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Box::Box' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Box::Box::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Box::GetIdentifier' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate::Coordinate' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate::Coordinate::x' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate::Coordinate::y' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate::ToString' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate::X' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Coordinate::Y' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field::CanWalkOn' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field::Coordinate' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field::Field' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field::Field::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field::GetIdentifier' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Field::Type' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Floor' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Floor::Floor' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Floor::Floor::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Floor::GetIdentifier' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Floor::HasBanana' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Floor::HasMonkey' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::Bananas' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::CalculateNewCoordinate' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::CalculateNewCoordinate::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::CalculateNewCoordinate::direction' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::CheckEndGame' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::ConvertInputToDirection' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::ConvertInputToDirection::input' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::Game' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::GetMap' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::IsPlaying' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::LoadMaze' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::LoadMaze::maze' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::Maze' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::Monkey' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::MoveBanana' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::MoveBanana::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::MoveBanana::direction' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::MoveMonkey' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::MoveMonkey::input' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::ParseMaze' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Game::ParseMaze::lines' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze::AllBoxesHaveBananas' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze::GetNextField' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze::GetNextField::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze::GetNextField::direction' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze::Map' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Maze::Maze' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Monkey' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Monkey::Coordinate' -  (Property)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Monkey::Monkey' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Monkey::Monkey::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Monkey::Walk' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Monkey::Walk::direction' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Space' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Space::GetIdentifier' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Space::Space' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Space::Space::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Wall' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Wall::GetIdentifier' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Wall::Wall' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Models::Wall::Wall::coordinate' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::IViewInterface' -  (Interface)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::IViewInterface::PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::MapView' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::MapView::MapView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::MapView::PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::MapView::PrintView::map' -  (Parameter)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::MapView::Sokoban‎.Views‎.IViewInterface‎.PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::ResultView' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::ResultView::PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::ResultView::ResultView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::ResultView::Sokoban‎.Views‎.IViewInterface‎.PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::WelcomeView' -  (Class)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::WelcomeView::PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::WelcomeView::Sokoban‎.Views‎.IViewInterface‎.PrintView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Sokoban::Views::WelcomeView::WelcomeView' -  (Operation)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Char' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::Dictionary' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::Dictionary&lt;String‎, Field‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::IReadOnlyCollection' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::IReadOnlyCollection&lt;String‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::List&lt;Banana‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::ConsoleKey' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Banana to Models::Sokoban::Models::Coordinate (Association)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Box to Models::Sokoban::Models::Floor (Generalization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Field to Models::Sokoban::Models::Coordinate (Association)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Field to Models::Sokoban::Enums::FieldType (Association)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Floor to Models::Sokoban::Models::Field (Generalization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Views::MapView to Models::Sokoban::Views::IViewInterface (InterfaceRealization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Monkey to Models::Sokoban::Models::Coordinate (Association)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Views::ResultView to Models::Sokoban::Views::IViewInterface (InterfaceRealization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Space to Models::Sokoban::Models::Field (Generalization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Models::Wall to Models::Sokoban::Models::Field (Generalization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Sokoban::Views::WelcomeView to Models::Sokoban::Views::IViewInterface (InterfaceRealization)" />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="High" Text="(17) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="High" Text="(8) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-10-10T12:23:11" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

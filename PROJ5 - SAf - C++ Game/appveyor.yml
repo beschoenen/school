@@ -1,0 +1,33 @@
+version: '{build}'
+
+clone_folder: C:\projects\game
+
+image: Visual Studio 2017
+
+before_build:
+# Clone submodules
+  - git submodule update --init --recursive
+
+# Download libraries
+  - ps: Invoke-WebRequest "https://www.libsdl.org/release/SDL2-devel-2.0.7-VC.zip" -OutFile "C:\projects\sdl.zip"
+  - ps: Invoke-WebRequest "https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.0.14-VC.zip" -OutFile "C:\projects\sdl_ttf.zip"
+  - ps: Invoke-WebRequest "https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.1-VC.zip" -OutFile "C:\projects\sdl_image.zip"
+  - ps: Invoke-WebRequest "https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-devel-2.0.2-VC.zip" -OutFile "C:\projects\sdl_mixer.zip"
+
+# Extract libraries
+  - mkdir libraries && cd libraries
+  - 7z x "C:\projects\sdl.zip"
+  - 7z x "C:\projects\sdl_ttf.zip"
+  - 7z x "C:\projects\sdl_image.zip"
+  - 7z x "C:\projects\sdl_mixer.zip"
+  - cd ..
+
+# Make build folder
+  - mkdir build && cd build
+
+build_script:
+  - cmake ..
+  - cmake --build .
+
+artifacts:
+  - path: build\bin\Debug

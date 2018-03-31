@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        link(rel="icon" href="/assets/img/icon.png")
+        link(rel="stylesheet" type="text/css" href="/assets/style/main.css")
+        title Diary Manager
+    body
+    div(class="div-top")
+        div(class="div-header")
+            img(src="/assets/img/icon.png" width="12%" height="auto")
+        div(class="div-main")
+            h1 Diary Manager
+            div(class="div-blue-bar-login")
+                form(action='/' method='POST')
+                    label(for='post[webcode]') Webcode: 
+                    input(type='text', class='input-login', name='webcode') 
+                    input(type='submit', value='Login', class='button-login')
+            h3(class="message")
+                =message

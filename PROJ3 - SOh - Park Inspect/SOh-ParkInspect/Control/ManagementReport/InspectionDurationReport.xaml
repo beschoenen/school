@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="SOh_ParkInspect.Control.ManagementReport.InspectionDurationReport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:SOh_ParkInspect.Control.ManagementReport"
+             xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+             mc:Ignorable="d"
+             Background="White"
+             d:DesignHeight="430"
+             d:DesignWidth="700"
+             DataContext="{Binding InspectionDuration, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                        Margin="5,0,5,0">
+                <TextBlock Text="Grafiektype" />
+                <ComboBox ItemsSource="{Binding ChartTypes}"
+                          SelectedItem="{Binding SelectedChart}" />
+
+                <TextBlock Text="Regio" />
+                <ComboBox ItemsSource="{Binding Regions}"
+                          SelectedItem="{Binding SelectedRegion}" />
+                <TextBlock Text="Alle regio's" />
+                <CheckBox IsChecked="{Binding SelectAllRegions}" />
+                <TextBlock Text="Regio" />
+                <ComboBox ItemsSource="{Binding Inspectors}"
+                          SelectedItem="{Binding SelectedEmployee}" />
+                <TextBlock Text="Alle werknemers" />
+                <CheckBox IsChecked="{Binding SelectAllEmployees}" />
+                <TextBlock Text="Klant" />
+                <ComboBox DisplayMemberPath="Name"
+                          ItemsSource="{Binding Customers}"
+                          SelectedItem="{Binding SelectedCustomer}" />
+                <TextBlock Text="Alle klanten" />
+                <CheckBox IsChecked="{Binding SelectAllCustomers}" />
+            </StackPanel>
+            <StackPanel Grid.Column="1"
+                        Margin="5,0,5,0">
+                <TextBlock Text="Begindatum" />
+                <DatePicker SelectedDate="{Binding BeginDateTime}" />
+                <TextBlock Text="Einddatum" />
+                <DatePicker SelectedDate="{Binding EndDateTime}" />
+            </StackPanel>
+        </Grid>
+        <WebBrowser Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="Browser"
+                    local:WebBrowserUtility.BindableSource="{Binding WebBrowserUri, 
+            UpdateSourceTrigger=PropertyChanged}"
+                    Height="Auto"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Width="Auto"
+                    Margin="0,0,0,0.2" />
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+            <Button Content="Generate"
+                    Margin="5"
+                    Command="{Binding GenerateCommand}"
+                    CommandParameter="{Binding ElementName=Browser}" />
+            <Button Content="Export"
+                    Margin="5"
+                    Click="exportButton_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

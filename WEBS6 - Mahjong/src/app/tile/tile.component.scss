@@ -1,0 +1,189 @@
+.tile {
+  position: absolute;
+  user-select: none;
+
+  div {
+    background: url("http://mahjongmayhem.herokuapp.com/Tiles_sprite3.png");
+    background-size: 100%;
+    height: 55px;
+    width: 40px;
+    border-bottom-right-radius: 6px;
+  }
+
+  div.selected {
+    -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* Bamboo */
+.bamboo-2 {
+  background-position-y: -55px !important;
+}
+
+.bamboo-3 {
+  background-position-y: -110px !important;
+}
+
+.bamboo-4 {
+  background-position-y: -165px !important;
+}
+
+.bamboo-5 {
+  background-position-y: -220px !important;
+}
+
+.bamboo-6 {
+  background-position-y: -275px !important;
+}
+
+.bamboo-7 {
+  background-position-y: -330px !important;
+}
+
+.bamboo-8 {
+  background-position-y: -385px !important;
+}
+
+.bamboo-9 {
+  background-position-y: -440px !important;
+}
+
+/* Character */
+.character-1 {
+  background-position-y: -495px !important;
+}
+
+.character-2 {
+  background-position-y: -550px !important;
+}
+
+.character-3 {
+  background-position-y: -605px !important;
+}
+
+.character-4 {
+  background-position-y: -660px !important;
+}
+
+.character-5 {
+  background-position-y: -715px !important;
+}
+
+.character-6 {
+  background-position-y: -770px !important;
+}
+
+.character-7 {
+  background-position-y: -825px !important;
+}
+
+.character-8 {
+  background-position-y: -880px !important;
+}
+
+.character-9 {
+  background-position-y: -935px !important;
+}
+
+/* Circle */
+.circle-1 {
+  background-position-y: -990px !important;
+}
+
+.circle-2 {
+  background-position-y: -1045px !important;
+}
+
+.circle-3 {
+  background-position-y: -1100px !important;
+}
+
+.circle-4 {
+  background-position-y: -1155px !important;
+}
+
+.circle-5 {
+  background-position-y: -1210px !important;
+}
+
+.circle-6 {
+  background-position-y: -1265px !important;
+}
+
+.circle-7 {
+  background-position-y: -1320px !important;
+}
+
+.circle-8 {
+  background-position-y: -1375px !important;
+}
+
+.circle-9 {
+  background-position-y: -1430px !important;
+}
+
+/* Colors */
+.dragon-green {
+  background-position-y: 825px !important;
+}
+
+.dragon-red {
+  background-position-y: 770px !important;
+}
+
+.dragon-white {
+  background-position-y: 715px !important;
+}
+
+/* Flowers */
+.flower-bamboo {
+  background-position-y: 660px !important;
+}
+
+.flower-chrysantememum {
+  background-position-y: 605px !important;
+}
+
+.flower-plum {
+  background-position-y: 550px !important;
+}
+
+.flower-orchid {
+  background-position-y: 495px !important;
+}
+
+/* Seasons */
+.season-autumn {
+  background-position-y: 440px !important;
+}
+
+.season-spring {
+  background-position-y: 385px !important;
+}
+
+.season-summer {
+  background-position-y: 330px !important;
+}
+
+.season-winter {
+  background-position-y: 275px !important;
+}
+
+/* Wind directions */
+.wind-east {
+  background-position-y: 220px !important;
+}
+
+.wind-north {
+  background-position-y: 165px !important;
+}
+
+.wind-south {
+  background-position-y: 110px !important;
+}
+
+.wind-west {
+  background-position-y: 55px !important;
+}

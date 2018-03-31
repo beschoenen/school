@@ -1,0 +1,26 @@
+language: php
+
+php:
+  - 7.1
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction --prefer-source
+
+before_script:
+  - cp .env.dusk.local .env
+  - touch database/testing.sqlite
+  - phantomjs --webdriver=127.0.0.1:9515 & # Start PhantomJS driver
+  - DB_CONNECTION=selenium php artisan serve --port 8001 & # Start server
+  - sleep 2 # Give PhantomJS and Artisan time to start
+
+script:
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+  - php artisan dusk --coverage-clover=coverage.xml
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

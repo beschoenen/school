@@ -1,0 +1,17 @@
+<div class="ship-list">
+	{{#each ships}}
+		<div class="ship" data-name="{{name}}" data-length="{{length}}">
+			<span>{{name}}</span>
+			<br/>
+			{{#for length}}
+				<div class="field"></div>
+			{{/for}}
+			<br/>
+		</div>
+	{{/each}}
+	<div class="clear-fix"></div>
+	<button id="vertical" class="pull-left">Vertical</button>
+	<button id="done" class="pull-right" disabled>Done</button>
+	<button id="cancel" class="pull-right">Cancel</button>
+	<div class="clear-fix"></div>
+</div>

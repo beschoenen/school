@@ -1,0 +1,117 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.TaskDetailsControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           mc:Ignorable="d"
+                           d:DesignWidth="600"
+                           Background="White"
+                           MinHeight="450"
+                           MinWidth="300"
+                           DataContext="{Binding TaskDetails, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="GroupBox"
+                   BasedOn="{StaticResource {x:Type GroupBox}}">
+                <Setter Property="Padding"
+                        Value="10" />
+                <Setter Property="Margin"
+                        Value="5" />
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground"
+                        Value="DimGray" />
+                <Setter Property="FontSize"
+                        Value="10" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Opdrachtdetails"
+               FontSize="20"
+               Grid.Row="0" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0"
+                      Grid.Row="0"
+                      Header="Basisinformatie">
+                <StackPanel>
+                    <TextBlock Text="Opdrachtgever" />
+                    <TextBox Text="{Binding Task.Customer.Name}"
+                             IsReadOnly="True" />
+                    <TextBlock Text="Locatie" />
+                    <TextBox Text="{Binding Task.ParkingLot.Address.City}"
+                             IsReadOnly="True" />
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Grid.Column="0"
+                      Grid.Row="1"
+                      Header="Extra informatie">
+                <StackPanel>
+                    <TextBlock Text="Opmerkingen" />
+                    <TextBox TextWrapping="Wrap"
+                             AcceptsReturn="True"
+                             IsReadOnly="True"
+                             Height="50"
+                             Text="{Binding Remarks}" />
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Grid.Column="1"
+                      Grid.Row="0"
+                      Header="Inspecteurs">
+                <ListBox DisplayMemberPath="FirstName"
+                         ItemsSource="{Binding Inspectors}" />
+            </GroupBox>
+
+            <GroupBox Grid.Column="1"
+                      Grid.Row="1"
+                      Header="Geplande inspecties">
+                <ListView SelectedItem="{Binding SelectedInspection}"
+                          ItemsSource="{Binding Inspections}"
+                          SelectionMode="Single">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0:dd-MM-yyyy HH:mm}, {1} inspecteurs">
+                                        <Binding Path="DateTimePlanned" />
+                                        <Binding Path="InspectionInspectors.Count" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListView>
+            </GroupBox>
+        </Grid>
+        <StackPanel Grid.Row="2"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal"
+                    Margin="5">
+            <Button Content="Terug"
+                    Command="{Binding GoBackCommand}"
+                    Margin="0,0,10,0" />
+            <Button Content="Link inspecteur"
+                    Margin="0,0,10,0" 
+                    Command="{Binding LinkInspectorCommand}" />
+            <Button Content="Print resultaat"
+                    Command="{Binding ConvertToPdfCommand}" />
+
+        </StackPanel>
+    </Grid>
+</helper:ParkInspectControl>

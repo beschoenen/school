@@ -1,0 +1,50 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.ManagementControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:local="clr-namespace:SOh_ParkInspect.Control"
+                           mc:Ignorable="d"
+                           xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                           Background="White"
+                           d:DesignHeight="300"
+                           d:DesignWidth="500"
+                           DataContext="{Binding Management, Source={StaticResource Locator}}">
+    <dragablz:TabablzControl x:Name="TabControl">
+        <TabItem Header="Kaart"
+                 Selector.Selected="Selector_OnSelected"
+                 Selector.Unselected="Selector_OnUnSelected">
+            <UserControl Margin="5"
+                         Content="{Binding Heatmap}" />
+        </TabItem>
+        <TabItem Header="Rapportages"
+                 Content="{Binding ReportOverview}" />
+        
+        <TabItem Header="Medewerkers"
+                 Selector.Selected="Selector_OnSelected"
+                 Selector.Unselected="Selector_OnUnSelected">
+            <UserControl Margin="5"
+                         Content="{Binding UserManagement}" />
+        </TabItem>
+        <TabItem Header="Templates"
+                 Selector.Selected="Selector_OnSelected"
+                 Selector.Unselected="Selector_OnUnSelected">
+            <UserControl Margin="5"
+                         Content="{Binding TemplateOverview}" />
+        </TabItem>
+        <TabItem Header="Opdrachten"
+                 Selector.Selected="Selector_OnSelected"
+                 Selector.Unselected="Selector_OnUnSelected">
+            <UserControl Margin="5"
+                         Content="{Binding TaskOverview}" />
+        </TabItem>
+        <TabItem Header="Klanten"
+                 Selector.Selected="Selector_OnSelected"
+                 Selector.Unselected="Selector_OnUnSelected">
+            <UserControl Margin="5"
+                         Content="{Binding ClientOverview}" />
+        </TabItem>
+    </dragablz:TabablzControl>
+</helper:ParkInspectControl>

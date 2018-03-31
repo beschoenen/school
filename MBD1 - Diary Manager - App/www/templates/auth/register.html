@@ -1,0 +1,18 @@
+<ion-view view-title="Register">
+  <ion-content class="register" scroll="false">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <div class="content has-header">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="user.firstName" placeholder="First Name">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="user.lastName" placeholder="Last Name">
+        </label>
+      </div>
+      <button ng-click="register()" class="button button-block button-positive button-space">Register</button>
+    </div>
+  </ion-content>
+</ion-view>

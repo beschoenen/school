@@ -1,0 +1,49 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.ExecuteInspectionControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           mc:Ignorable="d"
+                           Background="White"
+                           d:DesignHeight="430"
+                           d:DesignWidth="600"
+                           DataContext="{Binding ExecuteInspection, Source={StaticResource Locator}}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               Content="{Binding ChecklistName}"
+               FontSize="24"/>
+
+        <ScrollViewer Grid.Row="1" Margin="5">
+            <ItemsControl ItemsSource="{Binding ControlList}" MaxWidth="600">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="0 0 1 0">
+                            <!-- Hier Komt een userControl afhankelijk van de type-->
+                            <ContentControl Content="{Binding Control}" />
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.Row="2">
+            <Button Content="Annuleer"
+                    Command="{Binding BackCommand}"
+                    Margin="5" />
+            <Button Command="{Binding SaveQuestionListCommand}"
+                    Margin="5"
+                    Content="Opslaan" />
+        </StackPanel>
+    </Grid>
+
+</helper:ParkInspectControl>

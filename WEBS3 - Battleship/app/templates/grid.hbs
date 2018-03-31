@@ -1,0 +1,11 @@
+<div id="{{id}}">
+	{{#each rows}}
+		{{#each ../cols}}
+			<div class="field field-{{.}}{{../.}}" data-field="{{.}}{{../.}}" data-x="{{.}}" data-y="{{../.}}">
+				<span style="align-self: center">{{.}}{{../.}}</span>
+			</div>
+		{{/each}}
+		<br/>
+	{{/each}}
+</div>
+<div class="clear-fix"></div>

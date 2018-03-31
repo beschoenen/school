@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="11583337-aee2-4551-8bc8-bc315db6f1e4"
+  name="Controllers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="db3396e8-1cff-485b-9958-48e75784eb88"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSokoban.Controllers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c07cdfae-4fdb-4e97-9f17-55e9cef87277"
+        name="GameController"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="26f72c54-d086-447a-94e7-ee2432502e18"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8ddcadef-1802-4809-b16a-009dd9e86915"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c994c9fd-2f36-4eea-af5c-369dac14cf21">
+                <propertyInstance
+                  Id="6906aeda-bcc1-47f5-a56b-8ea94a25619e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="43c03d81-b631-41d2-8491-df73e099be29">
+                <propertyInstance
+                  Id="fde97972-c5d9-4b72-8a8f-b57c8b829165"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2f3a622-eb3e-4c7a-9087-0623804009dc">
+                <propertyInstance
+                  Id="4887b1e9-96a0-4fe9-b1f8-6fe4a08621c6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a934727a-c183-4192-8802-789d7ce32c60">
+                <propertyInstance
+                  Id="622c6855-0933-4d43-bc6f-0b0dbfe5977b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4ff93ae2-b5ec-4963-8b74-ec95df897d1d">
+                <propertyInstance
+                  Id="d19bd3e7-b49f-42b2-a744-d612d6677892"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="94c87120-a542-4329-96e1-b8df5e8489ed"
+            name="Game"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ce83af3d-fd55-40f4-b667-a2bf03c60bf0"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController Member%3DGame"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2c34606b-bb5c-4fa5-9246-46814a964df4"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d78b7b84-481e-43c6-af2b-da6c0da179f4">
+                    <propertyInstance
+                      Id="c8a547fd-eb85-4ca5-8946-3df01f22304e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96322c97-71e0-4e31-a833-a56090176df0">
+                    <propertyInstance
+                      Id="e4666d5c-4bb8-4d47-b23a-e0a74674ab6c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbac5f6e-df96-436b-be1a-39e21d935021">
+                    <propertyInstance
+                      Id="28c67f3b-85ce-4ae0-80f2-060bde138165"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="675d1dd6-f41a-4e4d-be61-1b752871130d">
+                    <propertyInstance
+                      Id="a8317efb-9174-4480-a18d-e1723aca67bb"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6e8caf3-a058-4861-b0e7-8e573ebdc382">
+                    <propertyInstance
+                      Id="2d250377-dbaf-442f-b4ab-303d9cb5f72f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="5bc15681-31f9-4221-87e0-36eaf6f4c1b9"
+                LastKnownName="Game"
+                LastKnownLocation="Package_2321.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d30cd53a-0ad5-43ee-9cc7-05e2fd7eb235"
+            name="WantsToPlay"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="76892d2f-3fc5-468f-bac3-f63a3680baae"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController Member%3DWantsToPlay"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="efea6f84-da6f-4871-8344-25275d94ea16"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ada2c6d3-0963-4766-80bb-0cf9b325fa58">
+                    <propertyInstance
+                      Id="6ca4d7b1-b1b3-47ec-ad4b-c36f2a1142c6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86a4760c-b51d-4369-a32b-9b75b8e70465">
+                    <propertyInstance
+                      Id="a6429f0a-3069-4e77-9735-559f21fae1f9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cdaee5b-b62d-4e37-a745-f85f8e0c93ee">
+                    <propertyInstance
+                      Id="2e63ec87-3247-4c96-8889-4b6e2c2ce351"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a660fc44-dffd-4007-9ba6-1dc6666c512c">
+                    <propertyInstance
+                      Id="e3061de8-3ec7-478c-b4cc-159f0815ef81"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="738f5f82-43a0-4e0d-9536-307d566c8fc1">
+                    <propertyInstance
+                      Id="2b58b9f3-9e77-43fd-a396-df5a2de6c74a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6908c03b-558c-4bd9-80d1-d580c700fcb9"
+            name="PlayGame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="90128de9-8b06-49c6-97ee-f4fba23bc6b0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController Member%3D(Name%3DPlayGame OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="43bde69c-6509-47a1-bcfd-2a58697aec19"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d0977de-8304-45ed-8755-df951f953470">
+                    <propertyInstance
+                      Id="d8fe6bcc-b6b1-457e-9c7f-cc3f1fc4d385"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd10362f-8606-44ad-b3e3-204d4bcd7685">
+                    <propertyInstance
+                      Id="0f84cfdb-1afc-4294-93a1-e460b318a123"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10409d00-be9f-484a-b0c6-83aa44405013">
+                    <propertyInstance
+                      Id="83f20ede-0cd2-4b05-8971-b099d76d2c23"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="114722b4-36ef-45c2-930d-69bb7b592b7c">
+                    <propertyInstance
+                      Id="88fef2ad-6688-40a2-8e3a-f5973238066b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="165f28af-687a-48b6-9a99-44a009596fe2">
+                    <propertyInstance
+                      Id="a614cbef-a551-40b6-a1ba-d00211b99b18"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0efe0fde-1a60-4e52-825a-b092eaf58f5e">
+                    <propertyInstance
+                      Id="2fd1a121-8604-4097-bc83-e4f522d61823"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6dac1f63-04ed-415c-9195-f7c1298ad0fb"
+                  name="i"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5d32289d-aab6-4ab6-b853-a27de374a377"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController Member%3D(Name%3DPlayGame OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Di"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5b6ade68-21ee-4111-b221-961289b192f6"
+            name="AskInput"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="273526ba-8145-4794-add9-b561368c9a14"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController Member%3DAskInput"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f858876e-003f-4766-a6b4-293769bfaf67"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2917551-821f-48a6-9076-65dab5f61800">
+                    <propertyInstance
+                      Id="0bea3e0b-a19e-42e7-8029-247bfcd4088d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c0c75c3-bfc3-4dc0-b9dd-2a62195d184c">
+                    <propertyInstance
+                      Id="0dbfcdaa-5169-4788-b82b-d6e5bb526e99"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f39073ed-76a1-4e53-8080-bb7522c9cf65">
+                    <propertyInstance
+                      Id="439c146f-47fa-4a86-be9d-8438c6a68632"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9132aeb-50ad-45b6-b544-2f77ddc57ff7">
+                    <propertyInstance
+                      Id="87765d98-25cc-4d87-9cc7-ad51492efe55"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="895fbb2a-f187-4f20-8b2c-8b66161aef9d">
+                    <propertyInstance
+                      Id="1da7644d-5bb8-49c1-9603-b40306542d18"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73b3bb42-d084-4804-8c99-df4d7aaeaa84">
+                    <propertyInstance
+                      Id="03370336-8d5e-4dc3-a207-70bbcb7d251d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c082ac5-324d-4ac3-aa0a-640a249af799"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="91746359-7c15-407d-a2bf-8e80a8ade26b"
+                      LastKnownName="ConsoleKey"
+                      LastKnownLocation="Package2_2321.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="11537906-8918-4609-a515-398529926dc0"
+            name="GameController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="af5de0bc-9633-42d1-b688-50fd38110b6d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Controllers Type%3DGameController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e89291b-3e8c-4ac3-b7b2-032b1aa0df8b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="beaa0237-87c6-475c-a098-e226ed4c4a27">
+                    <propertyInstance
+                      Id="0ba25675-933e-4f4f-98fd-2c3377687522"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2e1fcd8-88e0-45ba-885b-29360b8df14a">
+                    <propertyInstance
+                      Id="05ce8c6f-a3de-47b2-9ec8-dbc762b16d3e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57c38ac4-bd42-4baf-b774-89ca56b5a87b">
+                    <propertyInstance
+                      Id="9d70df93-6cef-4800-b7c0-07953a332b44"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="330b1532-5134-4564-ab52-4b7fab853793">
+                    <propertyInstance
+                      Id="d8196a1e-434f-4df4-bb94-65c409132fff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1315465f-c539-410a-ae29-09a841708542">
+                    <propertyInstance
+                      Id="f2f4324a-bd4c-4a6e-be97-20eff7c6f823"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7a817288-7cfa-4b71-9baf-7f793b5683a8">
+                    <propertyInstance
+                      Id="c654f1b4-73d7-4fa3-b9d7-559e9ac3da93"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

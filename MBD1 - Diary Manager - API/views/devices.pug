@@ -1,0 +1,21 @@
+extends ./layout
+
+block title
+    |Devices
+
+block content
+    each device in devices
+        div(class="device-box")
+            br
+            #device
+                if device.code == loggeddevice
+                    div(class="div-overview-list-item loggedinbrowser")
+                        =device.name
+                        br
+                        =device.code
+                else
+                    div(class="div-overview-list-item")
+                        =device.name
+                        br
+                        =device.code
+                        i(class="fa fa-trash-o icon-delete", aria-hidden="false", onclick="deleteDevice('"+device._id+"', this)")

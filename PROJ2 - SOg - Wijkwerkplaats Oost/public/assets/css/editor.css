@@ -1,0 +1,21 @@
+.edit-container [data-editable][data-text]:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.edit-box {
+    display: none;
+}
+
+.image-carousel .no-img:hover {
+    cursor: pointer;
+}
+
+.editmode {
+    text-align: center;
+}
+
+.editmode-user-label {
+    color: red;
+    font-size: 16px;
+}

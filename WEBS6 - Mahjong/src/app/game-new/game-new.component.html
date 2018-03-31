@@ -1,0 +1,41 @@
+<app-menu-bar></app-menu-bar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">New game</div>
+        <div class="panel-body">
+          <form (ngSubmit)="onSubmit()" #gameForm="ngForm">
+            <div class="form-group">
+              <label for="min-players">Minimum Players</label>
+              <input type="number" class="form-control" name="minPlayers" id="min-players" min="1" max="32" required
+                     onchange="document.getElementById('max-players').min = this.value;"
+                     [(ngModel)]="model.minPlayers" #minPlayers="ngModel">
+            </div>
+            <div class="form-group">
+              <label for="max-players">Maximum Players</label>
+              <input type="number" class="form-control" id="max-players" name="maxPlayers" min="2" max="32" required
+                     [(ngModel)]="model.maxPlayers" #maxPlayers="ngModel">
+            </div>
+            <div class="form-group">
+              <label for="template">Template</label>
+              <select class="form-control" id="template" name="template" required
+                      (change)="onChange($event.target.value)" [(ngModel)]="model.gameTemplate.id" #template="ngModel">
+                <option *ngFor="let template of gameTemplates" [value]="template.id">{{template.id}}</option>
+              </select>
+            </div>
+
+            <div *ngIf="tiles">
+              <app-game-board [viewOnly]="true" [tiles]="tiles"></app-game-board>
+              <span>(Dummy tiles are used)</span>
+              <br/><br/>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="!gameForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default" (click)="newGame();">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

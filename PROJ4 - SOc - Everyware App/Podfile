@@ -1,0 +1,19 @@
+platform :ios, '9.0'
+
+target 'Bartimeus' do
+  use_frameworks!
+
+  # Pods for Bartimeus
+  pod 'MovinSDK', '~> 2.6'
+
+  target 'BartimeusTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'BartimeusUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        },
+        "cordova-plugin-fingerprint-aio": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "nl.awesomedudes.diarymanager"
+        }
+    }
+}

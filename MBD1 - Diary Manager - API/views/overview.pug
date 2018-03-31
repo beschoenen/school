@@ -1,0 +1,14 @@
+extends ./layout
+
+block title
+    |Entries
+
+block content
+    each entry in entries
+        div(class="entry-box")
+            br
+            div(class="div-overview-list-item")
+                =entry.title
+                br
+                =entry.formatDate
+                i(class="fa fa-trash-o icon-delete", aria-hidden="false", onclick="deleteEntry('"+entry._id+"', this)")

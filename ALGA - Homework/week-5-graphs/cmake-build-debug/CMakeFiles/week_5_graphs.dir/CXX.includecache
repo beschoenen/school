@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kevin/Development/School/ALGA/week-5-graphs/main.cpp
+iostream
+-
+src/game.h
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/game.h
+src/tools.h
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/tools.h
+
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/game.cpp
+game.h
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/game.h
+tools.h
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/tools.h
+
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/game.h
+iostream
+-
+string
+-
+
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/tools.cpp
+iostream
+-
+tools.h
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/tools.h
+
+/Users/kevin/Development/School/ALGA/week-5-graphs/src/tools.h
+string
+-
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d5ab8e6f-a915-472b-8ee3-cac42f23e428" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TamagotchiService5.xsd" MetadataType="Schema" ID="b682c498-194d-4ff8-bde8-1f75eb63485f" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?xsd=xsd5" />
+    <MetadataFile FileName="TamagotchiService.disco" MetadataType="Disco" ID="c73716e9-6575-4a97-acca-4b0589e0674f" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?disco" />
+    <MetadataFile FileName="TamagotchiService1.xsd" MetadataType="Schema" ID="88cf3043-42f4-428c-9a05-166020892367" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TamagotchiService2.xsd" MetadataType="Schema" ID="54be2949-6f1c-4f7a-9024-6423ab2f483d" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TamagotchiService3.xsd" MetadataType="Schema" ID="b72ebf66-2a1c-446a-8a76-25f7b027d59a" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TamagotchiService.wsdl" MetadataType="Wsdl" ID="b08dbdb2-d8b9-47a3-b275-6a62b23a4e24" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?wsdl" />
+    <MetadataFile FileName="TamagotchiService4.xsd" MetadataType="Schema" ID="04d68f8b-4962-4622-9901-673016bff687" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TamagotchiService.xsd" MetadataType="Schema" ID="d164ac84-6f00-432a-a385-b2c7473b7b2b" SourceId="1" SourceUrl="http://tamagotchi-wcf.azurewebsites.net/Service/TamagotchiService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

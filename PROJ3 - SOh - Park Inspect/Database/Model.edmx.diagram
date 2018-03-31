@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04e8c3b83a384f509f7c2f199626be68" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="ParkInspectModel.Address" Width="1.5" PointX="9.375" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Answer" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.AnswerSetValue" Width="2.125" PointX="1" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Availability" Width="1.5" PointX="0.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Checklist" Width="1.75" PointX="9.625" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.ChecklistQuestion" Width="1.75" PointX="9.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Customer" Width="1.75" PointX="12" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Employee" Width="1.875" PointX="3.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Inspection" Width="1.75" PointX="6.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.InspectionInspector" Width="2.25" PointX="6.125" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.JobTitle" Width="1.5" PointX="6.125" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.ParkingLot" Width="1.75" PointX="9.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Photo" Width="1.5" PointX="3.625" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Question" Width="1.75" PointX="4.375" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.QuestionType" Width="1.5" PointX="7.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.Task" Width="2.125" PointX="12.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ParkInspectModel.WeeklySchedule" Width="1.625" PointX="0.5" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector ManuallyRouted="false" Association="ParkInspectModel.AvailbilityEmployee" />
+        <AssociationConnector Association="ParkInspectModel.ChecklistQuestionsChecklists" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkInspectModel.EmployeeJobTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkInspectModel.InspectionInspectorEmployee" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="ParkInspectModel.WeeklyScheduleEmployee" />
+        <AssociationConnector Association="ParkInspectModel.InspectionInspectorInspection" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkInspectModel.InspectionTask" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkInspectModel.QuestionAnswerSetValue" ManuallyRouted="false" />
+        <AssociationConnector Association="ParkInspectModel.InspectionChecklist" />
+        <AssociationConnector Association="ParkInspectModel.CustomerAddress" />
+        <AssociationConnector Association="ParkInspectModel.CustomerTask" />
+        <AssociationConnector Association="ParkInspectModel.AddressParkingLot" />
+        <AssociationConnector Association="ParkInspectModel.EmployeeAddress" />
+        <AssociationConnector Association="ParkInspectModel.AnswerPhoto" />
+        <AssociationConnector Association="ParkInspectModel.PhotoInspection" />
+        <AssociationConnector Association="ParkInspectModel.AnswerQuestion" />
+        <AssociationConnector Association="ParkInspectModel.InspectionAnswer" />
+        <AssociationConnector Association="ParkInspectModel.AnswerEmployee" />
+        <AssociationConnector Association="ParkInspectModel.TaskParkingLot" />
+        <AssociationConnector Association="ParkInspectModel.TaskChecklist" />
+        <AssociationConnector Association="ParkInspectModel.ChecklistQuestionQuestion" />
+        <AssociationConnector Association="ParkInspectModel.QuestionQuestionType" />
+        <EntityTypeShape EntityType="ParkInspectModel.TaskSchedule" Width="1.875" PointX="12.375" PointY="10.875" />
+        <AssociationConnector Association="ParkInspectModel.TaskScheduleTask" />
+        <EntityTypeShape EntityType="ParkInspectModel.IntervalFrequency" Width="1.625" PointX="12.5" PointY="13.75" />
+        <AssociationConnector Association="ParkInspectModel.TaskScheduleIntervalFrequency" />
+        <AssociationConnector Association="ParkInspectModel.ChecklistChecklist" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

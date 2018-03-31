@@ -1,0 +1,16 @@
+os: osx
+
+osx_image: xcode9
+
+language: cpp
+
+install:
+  - brew upgrade cmake
+  - brew install sdl2
+
+before_script:
+  - mkdir build && cd build
+
+script:
+  - cmake ..
+  - make

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Trees", "3-Trees\3-Trees.csproj", "{BD4A057C-EEFF-4689-BFA7-1491A441572D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Trees-Test", "3-Trees-Test\3-Trees-Test.csproj", "{A09DB32C-65AD-434C-A1D0-5EB6C21B7C18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Trees-Runnable", "3-Trees-Runnable\3-Trees-Runnable.csproj", "{0CD17560-0A7E-487F-A2E8-604C772F19F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD4A057C-EEFF-4689-BFA7-1491A441572D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4A057C-EEFF-4689-BFA7-1491A441572D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4A057C-EEFF-4689-BFA7-1491A441572D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4A057C-EEFF-4689-BFA7-1491A441572D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A09DB32C-65AD-434C-A1D0-5EB6C21B7C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09DB32C-65AD-434C-A1D0-5EB6C21B7C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09DB32C-65AD-434C-A1D0-5EB6C21B7C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09DB32C-65AD-434C-A1D0-5EB6C21B7C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD17560-0A7E-487F-A2E8-604C772F19F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD17560-0A7E-487F-A2E8-604C772F19F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD17560-0A7E-487F-A2E8-604C772F19F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD17560-0A7E-487F-A2E8-604C772F19F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

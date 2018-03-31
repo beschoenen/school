@@ -1,0 +1,5 @@
+<div class="game-board">
+  <div *ngFor="let tile of tiles">
+    <app-tile [tile]="tile" [clickable]="!viewOnly" (clicked)="canSelect($event)"></app-tile>
+  </div>
+</div>

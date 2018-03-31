@@ -1,0 +1,57 @@
+﻿@model TamagotchiService.Tamagotchi
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Tamagotchi</h4>
+        <hr />
+        <div id="name-container">
+            <div class="form-group">
+                <label class="control-label col-md-2" for="name">Name</label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" name="names" type="text">
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+        
+        <br/>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Add Tamagotchi" class="btn btn-default" id="new-name" />
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $("#new-name").click(function() {
+            $("#name-container").append(
+                "<div class=\"form-group\">" +
+                "<label class=\"control-label col-md-2\" for=\"Name\">Name</label>" +
+                "<div class=\"col-md-10\">" +
+                    "<input class=\"form-control text-box single-line\" name=\"names\" type=\"text\">" +
+                    "<span class=\"field-validation-valid text-danger\" data-valmsg-for=\"names\" data-valmsg-replace=\"true\"></span>" +
+                "</div>" +
+            "</div>"
+            );
+        });
+    </script>
+}

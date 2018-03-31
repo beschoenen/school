@@ -1,0 +1,43 @@
+<app-menu-bar></app-menu-bar>
+
+<div class="container" *ngIf="game !== undefined">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>{{ game.gameTemplate.id }} Game Created by {{ game.createdBy.name }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="game-box">
+        <div *ngIf="game.state === 'open'">
+          <p>Waiting for {{ game.createdBy.name }} to start the game...</p>
+        </div>
+        <div *ngIf="game.state === 'finished'" class="dark-background">
+          <p>This game has ended.</p>
+        </div>
+        <div *ngIf="game.state !== 'open'">
+          <app-game-board [viewOnly]="!canPlay" [tiles]="game.tiles"
+                          (tilesMatched)="onMatched($event)"
+                          (error)="showError($event)"></app-game-board>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="canShowHistory">
+    <app-timeline [tiles]="game.tiles"></app-timeline>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 pull-right button-container" *ngIf="game.state === 'open'">
+      <app-game-button [game]="game" (error)="showError($event)"></app-game-button>
+    </div>
+    <div class="col-md-2 pull-right button-container" *ngIf="game.state === 'playing' && inGame()">
+      <button (click)="hint($event)" [disabled]="!hintAvailable" class="pull-right btn btn-primary">Hint</button>
+    </div>
+    <div class="col-md-10">
+      <app-user-list [players]="game.players" [canCheck]="canShowHistory"
+                     (checked)="usersChecked($event)">
+      </app-user-list>
+    </div>
+  </div>
+</div>

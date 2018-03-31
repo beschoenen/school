@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e1abc8d5-550a-4f00-a4f6-00c0ef6c2f05"
+  name="Enums"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8cf5183f-a0e3-4800-bae9-e2de011e654b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSokoban.Enums"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="b8842ce5-295b-401b-b4ab-8f28033333ae"
+        name="FieldType"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0a234bd8-f896-4729-98f6-018a55078a53"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DFieldType"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c6faba93-8dc9-4a07-b9cd-848c9e30fdfd"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="245b036c-990d-4065-ad19-1b5700f0bd37">
+                <propertyInstance
+                  Id="43856c67-df61-43ad-92e6-ed76833ff0b6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3d633076-8c26-48bf-849a-80e423b152d8">
+                <propertyInstance
+                  Id="49476387-2e81-4c7e-b176-9ff110953bf3"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8d1f806a-185d-473a-982c-22fae6733455">
+                <propertyInstance
+                  Id="64e39897-3fc3-44c5-a4bd-a83eb08f9629"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="6e896385-8472-46fd-9069-6a609761d0a1"
+            name="Box">
+            <referencesInternal>
+              <reference
+                Id="a6ad9040-df6d-46f3-9282-96090221f69d"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DFieldType Member%3DBox"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="c66675c6-9083-4606-9a61-d677c3faaff8"
+            name="Floor">
+            <referencesInternal>
+              <reference
+                Id="9d74807c-0f65-44b1-9bd3-7b63ae021eca"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DFieldType Member%3DFloor"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="24c936ac-0d1d-4b01-9366-8b0a7341ef9a"
+            name="Space">
+            <referencesInternal>
+              <reference
+                Id="42ba1470-9ab9-47a2-86ce-6dc37b05c81b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DFieldType Member%3DSpace"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="4fd69c2f-068a-4813-894a-d41d22b3d73c"
+            name="Wall">
+            <referencesInternal>
+              <reference
+                Id="0d182ed7-1863-4a3d-83ae-884c8f482bb4"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DFieldType Member%3DWall"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="52c46477-dac8-4396-a6ca-030514fbac1b"
+        name="DirectionType"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="4add9ed1-264b-4440-9530-cfa9f545db59"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DDirectionType"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="27e2bd14-fc30-446f-a57e-82d4b4da647b"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8819540c-1f6c-49c1-8d1b-780a5e8e7316">
+                <propertyInstance
+                  Id="ab2abdee-7464-40ec-a885-55d7df463988"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a3dc8d6e-e7c5-47a4-b2f6-b365d0203284">
+                <propertyInstance
+                  Id="fb96a481-33fc-4fc8-ac20-65e18c56a984"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8204ec10-2c18-4fa6-8493-8ad1ab67c01b">
+                <propertyInstance
+                  Id="a09ebbd7-262e-475c-8529-75f769be1847"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="45f2222a-ab4e-4bd5-8ae7-84d5affe9296"
+            name="Down">
+            <referencesInternal>
+              <reference
+                Id="5042855f-3979-42da-bc1b-1fc3b84314ad"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DDirectionType Member%3DDown"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="50165354-bf72-428b-9d1e-e95c6573fbf9"
+            name="Left">
+            <referencesInternal>
+              <reference
+                Id="553f7d7c-d7cb-4efe-abc6-d0cab70b516b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DDirectionType Member%3DLeft"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="fcbc37ea-d9ba-4ff3-9fd3-99532d2c5d39"
+            name="Right">
+            <referencesInternal>
+              <reference
+                Id="5b001840-ff8a-4d7c-b69d-e9e47458f467"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DDirectionType Member%3DRight"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="81abaad2-2cfd-4530-b3f4-75fa389826c0"
+            name="Up">
+            <referencesInternal>
+              <reference
+                Id="fc1015e4-5397-4cc7-9b86-055869a946de"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FXBerg%2FDocuments%2FGitHub%2Fmodl3-sokoban%2FSokoban%2Fbin%2FDebug%2FSokoban.exe Namespace%3DSokoban.Enums Type%3DDirectionType Member%3DUp"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

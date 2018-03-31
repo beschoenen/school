@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="SOh_ParkInspect.Control.ManagementReport.InspectorAvailabilityReport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:SOh_ParkInspect.Control.ManagementReport"
+             mc:Ignorable="d"
+             Background="White"
+             d:DesignHeight="430"
+             d:DesignWidth="700"
+             DataContext="{Binding InspectorAvailability, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0"
+              Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Label Content="Selecteer werknemers"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+            <ListView x:Name="EmpList" Grid.Column="0" Grid.Row="1" Grid.RowSpan="4"  ItemsSource="{Binding EmployeeList}"
+                      SelectionChanged="Selector_OnSelectionChanged" SelectionMode="Multiple">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0} {1}">
+                                    <Binding Path="FirstName" />
+                                    <Binding Path="LastName" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <WebBrowser Grid.Column="1"
+                    x:Name="Browser"
+                    local:WebBrowserUtility.BindableSource="{Binding WebBrowserUri, 
+            UpdateSourceTrigger=PropertyChanged}"
+                    Height="Auto"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Width="Auto"
+                    Margin="0,0,0,0.2" />
+        <StackPanel HorizontalAlignment="Left"
+                    Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2">
+            <Button Content="Generate"
+                    Margin="5"
+                    Command="{Binding GenerateCommand}"
+                    CommandParameter="{Binding ElementName=Browser}" />
+            <Button Content="Export"
+                    Margin="5"
+                    Click="exportButton_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

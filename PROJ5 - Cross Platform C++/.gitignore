@@ -1,0 +1,10 @@
+/.idea
+/.vs
+/extern
+/**/*.xcodeproj/**/xcuserdata
+/**/*.xcodeproj/**/xcshareddata
+CMakeLists.txt.user
+*~
+*build*/
+*.pyc
+*.log

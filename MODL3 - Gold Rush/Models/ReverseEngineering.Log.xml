@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-10-26T20:51:06" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '038744b2-4e44-47fe-bb16-f89bf62125b8' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '2da83a88-f797-40af-a6b8-a2b4f41b3a6c' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '8e8e6cdb-6072-4a0b-abb0-2cbe0c7d74ba' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Controller' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Controller::GameController' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Controller::GameController::AskInput' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Controller::GameController::Game' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Controller::GameController::GameController' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Controller::GameController::PlayGame' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum::SwitchState' -  (Enumeration)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum::SwitchState::Bottom' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum::SwitchState::Top' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum::SwitchType' -  (Enumeration)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum::SwitchType::Fork' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Enum::SwitchType::Merge' -  (EnumerationLiteral)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Cart' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Cart::Cart' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Cart::Cart::firstTrack' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Cart::Load' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Cart::Move' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Cart::Track' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Dock' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Dock::Dock' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Dock::Ship' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Dock::TransferLoad' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Dock::TransferLoad::cart' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Field' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Field::Dock' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Field::Field' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Field::FieldId' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Field::Next' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::Game' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::IsPlaying' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::MoveSwitch' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::MoveSwitch::input' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::PlayingGround' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::Score' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::Timer' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::TimerTick' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::TimerTick::eventArgs' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Game::TimerTick::sender' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::Carts' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::Dock' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::MoveSwitch' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::MoveSwitch::id' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::MoveVehicles' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::PlayingGround' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::Ship' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::SpawnNewCarts' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::Switches' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::PlayingGround::Warehouses' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::AtDock' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::Load' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::MaxLoad' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::Move' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::OnWayBack' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::Ship' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::Unload' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Ship::Water' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Bottom' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::CanBeSwitched' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::ChangeState' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Id' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Next' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Switch' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Switch::id' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Switch::type' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::SwitchState' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::SwitchType' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Tail' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Switch::Top' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Track' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Track::Cart' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Track::Next' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Track::Track' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Vehicle' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Vehicle::Load' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Vehicle::Move' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Vehicle::Vehicle' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Warehouse' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Warehouse::FirstTrack' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Warehouse::NewCart' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Warehouse::Warehouse' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Water' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Water::Previous' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Water::Water' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Yard' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Model::Yard::Yard' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Program' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Program::_wantsToPlay' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Program::Main' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Program::Main::args' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Program::Program' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::_dock' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::_switches' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::_warehouses' -  (Property)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::GeneratePlayingGround' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::GenerateRoute' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::GenerateSwitches' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::GenerateWaterRoute' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::GenerateYardLane' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::Reviver::Reviver' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::InputView' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::InputView::InputView' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::InputView::PrintGameInstruction' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::InputView::PrintGameStart' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView' -  (Class)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::GetSwitchIcon' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::GetSwitchIcon::gameSwitch' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::GetTrackIcon' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::GetTrackIcon::defaultChar' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::GetTrackIcon::track' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::OutputView' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintBoat' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintBoat::ship' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintEndGame' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintEndGame::score' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintPlayground' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintPlayground::playingGround' -  (Parameter)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::Gold_Rush::View::OutputView::PrintWelcomeMessage' -  (Operation)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Char' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::Dictionary' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::Dictionary&lt;Char‎, Warehouse‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::Dictionary&lt;Int32‎, Switch‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Collections::Generic::List&lt;Cart‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::ConsoleKey' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Timers' -  (Package)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Timers::ElapsedEventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Models::System::Timers::Timer' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Cart to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Cart to Models::Gold_Rush::Model::Vehicle (Generalization)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Dock to Models::Gold_Rush::Model::Ship (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Field to Models::Gold_Rush::Model::Dock (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Field to Models::Gold_Rush::Model::Field (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::PlayingGround to Models::System::Collections::Generic::List&lt;Cart‎&gt; (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::PlayingGround to Models::Gold_Rush::Model::Dock (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::PlayingGround to Models::Gold_Rush::Model::Ship (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::PlayingGround to Models::System::Collections::Generic::Dictionary&lt;Int32‎, Switch‎&gt; (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::PlayingGround to Models::System::Collections::Generic::Dictionary&lt;Char‎, Warehouse‎&gt; (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Ship to Models::Gold_Rush::Model::Water (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Ship to Models::Gold_Rush::Model::Vehicle (Generalization)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Enum::SwitchState (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Enum::SwitchType (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Switch to Models::Gold_Rush::Model::Track (Generalization)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Track to Models::Gold_Rush::Model::Cart (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Track to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Track to Models::Gold_Rush::Model::Field (Generalization)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Warehouse to Models::Gold_Rush::Model::Track (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Water to Models::Gold_Rush::Model::Field (Association)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Water to Models::Gold_Rush::Model::Field (Generalization)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: Models::Gold_Rush::Model::Yard to Models::Gold_Rush::Model::Track (Generalization)" />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="High" Text="(19) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="High" Text="(10) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-10-26T20:51:15" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

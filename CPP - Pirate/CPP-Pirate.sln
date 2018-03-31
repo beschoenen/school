@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPP-Pirate", "CPP-Pirate\CPP-Pirate.vcxproj", "{69939B8F-D51A-44B3-96C6-9434C8D111F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D6D0B02-B0F6-4E13-92D5-420625896ED1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Debug|x64.ActiveCfg = Debug|x64
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Debug|x64.Build.0 = Debug|x64
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Debug|x86.Build.0 = Debug|Win32
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Release|x64.ActiveCfg = Release|x64
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Release|x64.Build.0 = Release|x64
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Release|x86.ActiveCfg = Release|Win32
+		{69939B8F-D51A-44B3-96C6-9434C8D111F0}.Release|x86.Build.0 = Release|Win32
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Debug|x64.ActiveCfg = Debug|x64
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Debug|x64.Build.0 = Debug|x64
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Debug|x86.ActiveCfg = Debug|Win32
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Debug|x86.Build.0 = Debug|Win32
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Release|x64.ActiveCfg = Release|x64
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Release|x64.Build.0 = Release|x64
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Release|x86.ActiveCfg = Release|Win32
+		{A5BBBBE7-1DDD-4A7E-85AB-91E08B41384B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2082096-4E17-46C7-BF2A-21EBE1E7DF64}
+	EndGlobalSection
+EndGlobal

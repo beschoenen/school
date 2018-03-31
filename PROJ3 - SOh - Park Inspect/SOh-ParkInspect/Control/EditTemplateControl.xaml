@@ -1,0 +1,190 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.EditTemplateControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                           mc:Ignorable="d"
+                           Background="White"
+                           d:DesignHeight="520"
+                           d:DesignWidth="500"
+                           DataContext="{Binding EditTemplate, Source={StaticResource Locator}}">
+
+    <UserControl.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush"
+                    Value="DimGray"/>
+            <Setter Property="BorderThickness"
+                    Value="1"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Grid.Column="0"
+                      Header="Pas vraag aan"
+                      Margin="5">
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="{Binding SelectedTemplateQuestion.Question.QuestionType.Name}"
+                                   HorizontalAlignment="Left"
+                                   Focusable="False"
+                                   Padding="5"
+                                   VerticalAlignment="Top"/>
+                    </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                  Focusable="False"
+                                  HorizontalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding ControlList}"
+                                      Focusable="False"
+                                      Margin="0,23,0,0">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <ContentControl Content="{Binding Control}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </GroupBox>
+
+            <StackPanel Orientation="Vertical"
+                        Grid.Column="1"
+                        Margin="5">
+                <GroupBox Header="Template"
+                          Margin="0,0,0,10">
+                    <StackPanel>
+                        <TextBlock Text="Templatenaam"
+                                   Foreground="DimGray"/>
+                        <TextBox Text="{Binding Checklist.Name}"/>
+                        <TextBlock Text="Opmerkingen"
+                                   Margin="0,5,0,0"
+                                   Foreground="DimGray"/>
+                        <TextBox Text="{Binding Checklist.Remarks}"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Nieuwe vraag toevoegen"
+                          Padding="10">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Bestaande vragen"/>
+                        <DockPanel>
+                            <ComboBox ItemsSource="{Binding ExistingQuestions}"
+                                      SelectedItem="{Binding SelectedExistingQuestion}"
+                                      Width="200"
+                                      Margin="0,5,5,5">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="{}{0}: {1}">
+                                                    <Binding Path="QuestionType.Name"/>
+                                                    <Binding Path="Text"/>
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <Button ToolTip="Voeg bestaande vraag toe"
+                                    Command="{Binding AddExistingQuestionCommand}"
+                                    IsEnabled="{Binding AddExistingQuestionEnabled}">
+                                <iconPacks:PackIconMaterial Kind="Plus"/>
+                            </Button>
+                        </DockPanel>
+                        <TextBlock Text="Nieuwe vraag van type"/>
+                        <DockPanel>
+                            <ComboBox ItemsSource="{Binding QuestionTypes}"
+                                      SelectedItem="{Binding SelectedQuestionType}"
+                                      DisplayMemberPath="Name"
+                                      Width="200"
+                                      Margin="0,5,5,5"/>
+                            <Button DockPanel.Dock="Right"
+                                    ToolTip="Voeg nieuwe vraag toe"
+                                    Command="{Binding AddNewQuestionCommand}">
+                                <iconPacks:PackIconMaterial Kind="Plus"/>
+
+                            </Button>
+                        </DockPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
+
+        <GroupBox Grid.Row="1"
+                  Grid.Column="0"
+                  Margin="5">
+            <GroupBox.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Margin="0"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               Text="Vragen"/>
+                    <Button Grid.Column="1"
+                            Command="{Binding RemoveSelectedQuestionCommand}"
+                            ToolTip="Verwijder"
+                            Padding="5,0"
+                            Height="auto"
+                            Background="{x:Null}"
+                            BorderThickness="0">
+                        <iconPacks:PackIconMaterial Kind="Delete"/>
+                    </Button>
+                </Grid>
+            </GroupBox.Header>
+            <ListView ItemsSource="{Binding TemplateQuestions}"
+                      SelectedItem="{Binding SelectedTemplateQuestion}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Type"
+                                        Width="Auto"
+                                        DisplayMemberBinding="{Binding Question.QuestionType.Name}"/>
+                        <GridViewColumn Header="Vraag"
+                                        Width="100"
+                                        DisplayMemberBinding="{Binding Question.Text}"/>
+                        <GridViewColumn Header="Antwoord prefix"
+                                        Width="100"
+                                        DisplayMemberBinding="{Binding Question.AnswerPrefix}"/>
+                        <GridViewColumn Header="Antwoord suffix"
+                                        Width="100"
+                                        DisplayMemberBinding="{Binding Question.AnswerSuffix}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.Row="2"
+                    Margin="5">
+            <TextBlock Foreground="Red"
+                       Text="{Binding ErrorMessage}"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"/>
+            <Button Command="{Binding CancelCommand}"
+                    Margin="10,0"
+                    Content="Annuleren"/>
+            <Button Command="{Binding SaveTemplateCommand}"
+                    Content="Opslaan"/>
+        </StackPanel>
+    </Grid>
+</helper:ParkInspectControl>

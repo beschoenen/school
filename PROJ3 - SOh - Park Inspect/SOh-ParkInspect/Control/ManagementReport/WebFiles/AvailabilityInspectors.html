@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+<!-- saved from url=(0014)about:internet -->
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+
+<!-- Styles -->
+<style>
+#chartdiv {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+}					
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<!-- Chart code -->
+<script>
+function go(datastring) {
+	var data = JSON.parse(datastring);
+var chart = AmCharts.makeChart("chartdiv", {
+    "theme": "light",
+    "type": "serial",
+    "dataProvider": data.data,
+    "valueAxes": [{
+        "unit": " Uren",
+        "position": "left",
+        "title": "Beschikbaarheid Inspecteurs",
+    }],
+    "startDuration": 1,
+    "graphs": [{
+        "balloonText": "[[category]]: <b>[[value]]</b>",
+        "fillAlphas": 0.9,
+        "lineAlpha": 0.2,
+        "title": "Available",
+        "type": "column",
+        "valueField": "availability"
+    }, {
+        "balloonText": "[[category]]: <b>[[value]]</b>",
+        "fillAlphas": 0.9,
+        "lineAlpha": 0.2,
+        "title": "Unavailable",
+        "type": "column",
+        "clustered":false,
+        "columnWidth":0.5,
+        "valueField": "planned"
+    }],
+    "plotAreaFillAlphas": 0.1,
+    "categoryField": "inspector",
+    "categoryAxis": {
+        "gridPosition": "start"
+    },
+    "export": {
+    	"enabled": true
+     }
+
+});
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>	

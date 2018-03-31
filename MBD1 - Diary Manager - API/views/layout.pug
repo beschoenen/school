@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        link(rel="icon" href="/assets/img/icon.png")
+        link(rel="stylesheet" type="text/css" href="/assets/style/main.css")
+        link(rel="stylesheet" type="text/css" href="/assets/bower/font-awesome/css/font-awesome.min.css")
+        script(src="/assets/bower/jquery/dist/jquery.min.js")
+        script(src="/assets/script/helpers.js")
+        script(src="/assets/script/api.js")
+        title Diary Manager
+    body
+        div(class="div-top")
+            div(class="div-header")
+                img(src="/assets/img/icon.png" width="12%" height="auto")
+            div(class="div-overview")
+                h1 
+                    block title
+                div(class="div-overview-content")
+                    div(class="div-overview-menu")
+                        a(href='overview', class="overview-menu-item") Entries
+                        | 
+                        | |
+                        | 
+                        a(href='devices', class="overview-menu-item") Devices
+                        | 
+                        | |
+                        | 
+                        if isAdmin
+                            a(href='admin', class="overview-menu-item") Admin
+                            | 
+                            | |
+                            | 
+                        a(href='logout', class="overview-menu-item") Log out
+                        hr
+                        |Welcome, 
+                        name= name
+                        br
+                        br
+                        div(class="div-overview-list")
+                            block content

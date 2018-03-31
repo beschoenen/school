@@ -1,0 +1,32 @@
+.game-box {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+  text-align: center;
+  overflow: scroll;
+}
+
+p {
+  margin: 262px auto 0 !important;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.dark-background {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  p {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 118px);
+    padding: 20px 50px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, .1);
+    z-index: 1000;
+  }
+}

@@ -1,0 +1,65 @@
+Manor;3;yellow;
+Manor;3;yellow;
+Manor;3;yellow;
+Manor;3;yellow;
+Manor;3;yellow;
+Castle;4;yellow;
+Castle;4;yellow;
+Castle;4;yellow;
+Castle;4;yellow;
+Palace;5;yellow;
+Palace;5;yellow;
+Palace;5;yellow;
+Tavern;1;green;
+Tavern;1;green;
+Tavern;1;green;
+Tavern;1;green;
+Tavern;1;green;
+Market;2;green;
+Market;2;green;
+Market;2;green;
+Market;2;green;
+Trading Post;2;green;
+Trading Post;2;green;
+Trading Post;2;green;
+Docks;3;green;
+Docks;3;green;
+Docks;3;green;
+Harbor;4;green;
+Harbor;4;green;
+Harbor;4;green;
+Town Hall;5;green;
+Town Hall;5;green;
+Temple;1;blue;
+Temple;1;blue;
+Temple;1;blue;
+Church;2;blue;
+Church;2;blue;
+Church;2;blue;
+Monastery;3;blue;
+Monastery;3;blue;
+Monastery;3;blue;
+Cathedral;5;blue;
+Cathedral;5;blue;
+Watchtower;1;red;
+Watchtower;1;red;
+Watchtower;1;red;
+Prison;2;red;
+Prison;2;red;
+Prison;2;red;
+Battlefield;3;red;
+Battlefield;3;red;
+Battlefield;3;red;
+Fortress;5;red;
+Fortress;5;red;
+Haunted City;2;purple;Color of choince at end of game.
+Keep;3;purple;Cannot be destroyed.
+Keep;3;purple;Cannot be destroyed.
+Graveyard;5;purple;May pay 1 gold to take destroyed districts into hand.
+Laboratory;5;purple;May exchange a card for gold once per turn.
+Smithy;5;purple;May exchange 2 gold for 3 cards once per turn.
+Observatory;5;purple;Keep 1 of 3 cards when drawing for action.
+Library;6;purple;Keep both cards when drawing for action.
+Magic School;6;purple;Color of choice for income.
+Dragon Gate;6;purple;Worth +2 at end of game.
+University;6;purple;Worth +2 at end of game.

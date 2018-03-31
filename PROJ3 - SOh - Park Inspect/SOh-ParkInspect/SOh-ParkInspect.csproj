@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- hoi -->
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74DF4689-F26E-45F2-9E0B-A5D9B4D704D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SOh_ParkInspect</RootNamespace>
+    <AssemblyName>SOh-ParkInspect</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Asset\ParkInspectIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CryptSharp, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CryptSharpOfficial.2.1.0.0\lib\CryptSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dragablz, Version=0.0.3.182, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dragablz.0.0.3.182\lib\net45\Dragablz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Presentation.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Presentation.1.7.5\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GoogleMaps.LocationServices, Version=0.1.5926.26040, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleMaps.LocationServices.0.9.8.6\lib\net40\GoogleMaps.LocationServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.2.1.750, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.2.1.750\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.1.6.0\lib\net46\MahApps.Metro.IconPacks.Material.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MindFusion.Licensing, Version=1.0.0.24360, Culture=neutral, PublicKeyToken=9d02e21d957ddaef, processorArchitecture=MSIL">
+      <HintPath>..\packages\MindFusion.Scheduling.Wpf.3.3.1\lib\net40\MindFusion.Licensing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MindFusion.Scheduling.Wpf, Version=3.3.1.10055, Culture=neutral, PublicKeyToken=d12631580350466b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MindFusion.Scheduling.Wpf.3.3.1\lib\net40\MindFusion.Scheduling.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Control\AccountControl.xaml.cs">
+      <DependentUpon>AccountControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ClientOverviewControl.xaml.cs">
+      <DependentUpon>ClientOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CreateTaskControl.xaml.cs">
+      <DependentUpon>CreateTaskControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LinkInspectorControl.xaml.cs">
+      <DependentUpon>LinkInspectorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\DateQuestionControl.xaml.cs">
+      <DependentUpon>DateQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\DateTimeQuestionControl.xaml.cs">
+      <DependentUpon>DateTimeQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\DecimalQuestionControl.xaml.cs">
+      <DependentUpon>DecimalQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ExecuteInspectionControl.xaml.cs">
+      <DependentUpon>ExecuteInspectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CustomMarker.xaml.cs">
+      <DependentUpon>CustomMarker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\EmployeeAvailabilityControl.xaml.cs">
+      <DependentUpon>EmployeeAvailabilityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\EmployeeInfoControl.xaml.cs">
+      <DependentUpon>EmployeeInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\HeatMapControl.xaml.cs">
+      <DependentUpon>HeatMapControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\InspectionOverviewControl.xaml.cs">
+      <DependentUpon>InspectionOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TaskOverviewControl.xaml.cs">
+      <DependentUpon>TaskOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ManagementControl.xaml.cs">
+      <DependentUpon>ManagementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ManagementReportControl.xaml.cs">
+      <DependentUpon>ManagementReportControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ChangePasswordControl.xaml.cs">
+      <DependentUpon>ChangePasswordControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ManagementReport\InspectionDurationReport.xaml.cs">
+      <DependentUpon>InspectionDurationReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ManagementReport\InspectorAvailabilityReport.xaml.cs">
+      <DependentUpon>InspectorAvailabilityReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ManagementReport\NewInspectionReport.xaml.cs">
+      <DependentUpon>NewInspectionReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ListBoxExt.cs" />
+    <Compile Include="Repository\AddressRepository.cs" />
+    <Compile Include="Repository\AvailabilityRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyAddressRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyAvailabilityRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyScheduleRepository.cs" />
+    <Compile Include="Repository\Interface\IAddressRepository.cs" />
+    <Compile Include="Repository\Interface\IAvailabilityRepository.cs" />
+    <Compile Include="Repository\Interface\IScheduleRepository.cs" />
+    <Compile Include="Repository\ScheduleRepository.cs" />
+    <Compile Include="ViewModel\Control\AccountViewModel.cs" />
+    <Compile Include="ViewModel\ManagementReport\InspectionDurationViewModel.cs" />
+    <Compile Include="Control\ManagementReport\ManagementReportGenerationControl.xaml.cs">
+      <DependentUpon>ManagementReportGenerationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ManagementReport\WebBrowserUtility.cs" />
+    <Compile Include="Control\LocationInfoControl.xaml.cs">
+      <DependentUpon>LocationInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\NumericQuestionControl.xaml.cs">
+      <DependentUpon>NumericQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PerformInspectionControl.xaml.cs">
+      <DependentUpon>PerformInspectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Template\TemplateControl.xaml.cs">
+      <DependentUpon>TemplateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enum\RepositoryType.cs" />
+    <Compile Include="Helper\DbSync.cs" />
+    <Compile Include="Enum\RoleType.cs" />
+    <Compile Include="Helper\Internet.cs" />
+    <Compile Include="Helper\PermissionsMap.cs" />
+    <Compile Include="Helper\RepositoryMap.cs" />
+    <Compile Include="Converter\RoleEnumConverter.cs" />
+    <Compile Include="Model\Settings.cs" />
+    <Compile Include="Repository\AnswerSetValueRepository.cs" />
+    <Compile Include="Repository\ChecklistQuestionRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyChecklistQuestionRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyAnswerSetValueRepository.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Repository\ChecklistRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyChecklistRepository.cs" />
+    <Compile Include="Helper\ITextEvents.cs" />
+    <Compile Include="Helper\PdfConverter.cs" />
+    <Compile Include="Repository\Dummy\DummyQuestionRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyQuestionTypeRepository.cs" />
+    <Compile Include="Repository\Interface\IChecklistQuestionRepository.cs" />
+    <Compile Include="Repository\Interface\IAnswerSetValueRepository.cs" />
+    <Compile Include="Repository\Interface\IChecklistRepository.cs" />
+    <Compile Include="Repository\Interface\IQuestionRepository.cs" />
+    <Compile Include="Repository\Interface\IQuestionTypeRepository.cs" />
+    <Compile Include="ViewModel\ManagementReport\InspectorAvailabilityViewModel.cs" />
+    <Compile Include="ViewModel\ManagementReport\ManagementReportGenerationViewModel.cs" />
+    <Compile Include="ViewModel\ManagementReport\NewInspectionViewModel.cs" />
+    <Compile Include="Repository\JobTitleRepository.cs" />
+    <Compile Include="Repository\ParkingLotRepository.cs" />
+    <Compile Include="Repository\QuestionRepository.cs" />
+    <Compile Include="Repository\QuestionTypeRepository.cs" />
+    <Compile Include="ViewModel\Control\InspectionOverviewViewModel.cs" />
+    <Compile Include="ViewModel\Control\ClientOverviewViewModel.cs" />
+    <Compile Include="ViewModel\Control\LinkInspectorViewModel.cs" />
+    <Compile Include="ViewModel\Control\EmployeeAvailabilityViewModel.cs" />
+    <Compile Include="Control\Template\TemplateChoiceControl.xaml.cs">
+      <DependentUpon>TemplateChoiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\PhotoQuestionControl.xaml.cs">
+      <DependentUpon>PhotoQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\MultipleChoiceQuestionControl.xaml.cs">
+      <DependentUpon>MultipleChoiceQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\TimeQuestionControl.xaml.cs">
+      <DependentUpon>TimeQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UserManagementControl.xaml.cs">
+      <DependentUpon>UserManagementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RegisterInspectorControl.xaml.cs">
+      <DependentUpon>RegisterInspectorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Dummy\DummyJobTitleRepository.cs" />
+    <Compile Include="Converter\ObjectCombiner.cs" />
+    <Compile Include="Enum\ControlType.cs" />
+    <Compile Include="Helper\ParkInspectControl.cs" />
+    <Compile Include="Helper\ParkInspectViewModel.cs" />
+    <Compile Include="Helper\ViewBag.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyCustomerRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyInspectionRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyParkingLotRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyIntervalFrequencyRepository.cs" />
+    <Compile Include="Repository\Dummy\DummyTaskRepository.cs" />
+    <Compile Include="Model\TitledImage.cs" />
+    <Compile Include="ViewModel\Control\ManagentViewModel.cs" />
+    <Compile Include="ViewModel\Template\ITemplateWrapper.cs" />
+    <Compile Include="ViewModel\Question\IQuestionWrapper.cs" />
+    <Compile Include="Model\TemplateModel.cs" />
+    <Compile Include="Repository\Dummy\DummyUserRepository.cs" />
+    <Compile Include="Repository\Interface\IJobTitleRepository.cs" />
+    <Compile Include="Repository\InspectionRepository.cs" />
+    <Compile Include="Repository\Interface\IInspectionRepository.cs" />
+    <Compile Include="Repository\Interface\IParkingLotRepository.cs" />
+    <Compile Include="Repository\TaskRepository.cs" />
+    <Compile Include="Repository\Interface\ICustomerRepository.cs" />
+    <Compile Include="Repository\Interface\ITaskRepository.cs" />
+    <Compile Include="Repository\Interface\IIntervalFrequencyRepository.cs" />
+    <Compile Include="Repository\Interface\IUserRepository.cs" />
+    <Compile Include="Repository\IntervalFrequencyRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Helper\RouterService.cs" />
+    <Compile Include="ViewModel\Control\ChangePasswordViewModel.cs" />
+    <Compile Include="ViewModel\Control\ClientInfoViewModel.cs" />
+    <Compile Include="ViewModel\Control\CreateTaskViewModel.cs" />
+    <Compile Include="ViewModel\Control\EditTemplateViewModel.cs" />
+    <Compile Include="ViewModel\Question\DateQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Question\DecimalQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Control\EmployeeInfoViewModel.cs" />
+    <Compile Include="ViewModel\Control\ExecuteInspectionViewModel.cs" />
+    <Compile Include="ViewModel\Control\HeatMapViewModel.cs" />
+    <Compile Include="ViewModel\Control\TaskOverviewViewModel.cs" />
+    <Compile Include="ViewModel\Template\TemplateViewModel.cs" />
+    <Compile Include="ViewModel\Template\TemplateChoiceViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\Question\NumericQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Question\PhotoQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Question\MultipleChoiceQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Question\TimeQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Question\DateTimeQuestionViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Control\ManagementRapportViewModel.cs" />
+    <Compile Include="ViewModel\Control\UserManagementViewModel.cs" />
+    <Compile Include="ViewModel\Control\TemplateChecklistViewModel.cs" />
+    <Compile Include="ViewModel\Control\LocationInfoViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\Control\RegisterInspectorViewModel.cs" />
+    <Compile Include="ViewModel\Control\TemplateOverviewViewModel.cs" />
+    <Compile Include="Control\TemplateOverviewControl.xaml.cs">
+      <DependentUpon>TemplateOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ClientInfoControl.xaml.cs">
+      <DependentUpon>ClientInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TaskDetailsControl.xaml.cs">
+      <DependentUpon>TaskDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Control\TaskDetailsViewModel.cs" />
+    <Compile Include="Control\Question\SingleChoiceQuestionControl.xaml.cs">
+      <DependentUpon>SingleChoiceQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Question\OpenQuestionControl.xaml.cs">
+      <DependentUpon>OpenQuestionControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Control\AccountControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ClientOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\LinkInspectorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\DateQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\DateTimeQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\DecimalQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="ViewModel\Question\SingleChoiceQuestionViewModel.cs" />
+    <Compile Include="ViewModel\Question\OpenQuestionViewModel.cs" />
+    <Page Include="Control\ExecuteInspectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\CreateTaskControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\CustomMarker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\EmployeeAvailabilityControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\EmployeeInfoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\HeatMapControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\InspectionOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\TaskOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ManagementControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ManagementReportControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ChangePasswordControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\ManagementReport\InspectionDurationReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ManagementReport\InspectorAvailabilityReport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\ManagementReport\ManagementReportGenerationControl.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ManagementReport\NewInspectionReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\LocationInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\NumericQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\PerformInspectionControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\Question\PhotoQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\RegisterInspectorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\TaskDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\EditTemplateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Template\TemplateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Template\TemplateChoiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\MultipleChoiceQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\TimeQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\UserManagementControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Control\EditTemplateControl.xaml.cs">
+      <DependentUpon>EditTemplateControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\TemplateOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ClientInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\SingleChoiceQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Question\OpenQuestionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{5d15c8a7-13fe-4a36-b676-d3aa6e3438d8}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{5d15c8a7-13fe-4a36-b676-d3aa6e3438d8}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\ParkInspectLogoNoBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\ParkInspectIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\GMapsMarkerHigh.png" />
+    <Resource Include="Asset\GMapsMarkerLow.png" />
+    <Resource Include="Asset\GMapsMarkerMedium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\Legenda.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

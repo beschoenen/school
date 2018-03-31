@@ -1,0 +1,13 @@
+@import "~ng2-toastr/bundles/ng2-toastr.min.css";
+
+.horizontally-scrollable {
+  overflow-x: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}

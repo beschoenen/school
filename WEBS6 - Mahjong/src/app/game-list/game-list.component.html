@@ -1,0 +1,40 @@
+<app-menu-bar></app-menu-bar>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-game-filter [games]="games" (filtered)="setFilter($event)"></app-game-filter>
+      <div class="panel panel-default">
+        <div class="panel-heading">Games list</div>
+        <div class="horizontally-scrollable">
+          <table class="table table-hover">
+            <thead>
+              <tr class="info">
+                <th>Game</th>
+                <th>State</th>
+                <th>Players</th>
+                <th>Created By</th>
+                <th>Created On</th>
+                <th>Started On</th>
+                <th>Ended On</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let game of games | gameFilter: filters"
+                  (click)="lobby(game)"
+                  class="clickable">
+                <td>{{game.gameTemplate.id}}</td>
+                <td>{{game.state}}</td>
+                <td>{{game.players.length}} / {{game.maxPlayers}}</td>
+                <td>{{game.createdBy.name}}</td>
+                <td>{{game.createdOn | date: 'd-M-y HH:mm:ss'}}</td>
+                <td>{{game.startedOn | date: 'd-M-y HH:mm:ss'}}</td>
+                <td>{{game.endedOn | date: 'd-M-y HH:mm:ss'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

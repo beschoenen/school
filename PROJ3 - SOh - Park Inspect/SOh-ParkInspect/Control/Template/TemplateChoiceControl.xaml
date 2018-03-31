@@ -1,0 +1,151 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.Template.TemplateChoiceControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:local="clr-namespace:SOh_ParkInspect.Control.Template"
+                           xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                           mc:Ignorable="d"
+                           d:DesignWidth="500"
+                           d:DataContext="{Binding TemplateChoice, Source={StaticResource Locator}}">
+    <Grid Margin="5">
+        <Grid.Resources>
+            <Style TargetType="Border">
+                <Setter Property="Margin"
+                        Value="5,0" />
+                <Setter Property="BorderBrush"
+                        Value="DimGray" />
+                <Setter Property="BorderThickness"
+                        Value="1,0,0,0" />
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground"
+                        Value="DimGray" />
+                <Setter Property="Margin"
+                        Value="5,5,5,0" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin"
+                        Value="5,0" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0">
+            <TextBlock Text="Vraag" />
+            <TextBox Text="{Binding Question.Text}" />
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0">
+            <TextBlock Text="Antwoord prefix" />
+            <TextBox Text="{Binding Question.AnswerPrefix}" />
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0">
+            <TextBlock Text="Antwoord suffix" />
+            <TextBox VerticalAlignment="Top"
+                     Text="{Binding Question.AnswerSuffix}" />
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0">
+            <TextBlock Text="Opmerking" />
+            <TextBox Text="{Binding Question.Remarks}"
+                     MinHeight="60" />
+        </StackPanel>
+        <StackPanel Grid.Row="4"
+                    Grid.Column="0"
+                    Orientation="Vertical">
+            <TextBlock Text="Nieuw antwoord" />
+            <DockPanel>
+                <Button DockPanel.Dock="Right"
+                        Command="{Binding AddNewAnswerCommand}"
+                        Height="22"
+                        Margin="5,0,0,0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                    <iconPacks:PackIconMaterial Kind="Plus"
+                                                Height="Auto" />
+                </Button>
+                <TextBox Height="22"
+                         Text="{Binding NewAnswerText}"
+                         VerticalContentAlignment="Center" />
+            </DockPanel>
+            <TextBlock Text="Bestaand antwoord" />
+            <DockPanel>
+
+                <Button DockPanel.Dock="Right"
+                        Command="{Binding AddExistingAnswerCommand}"
+                        Margin="5,0,0,0"
+                        Height="22"
+                        VerticalAlignment="Center">
+                    <iconPacks:PackIconMaterial Kind="Plus"
+                                                Height="Auto" />
+                </Button>
+                <ComboBox DisplayMemberPath="Value"
+                          Margin="5,0"
+                          ItemsSource="{Binding ExistingAnswers}"
+                          SelectedItem="{Binding SelectedExistingAnswer}"
+                          VerticalContentAlignment="Center" />
+
+            </DockPanel>
+        </StackPanel>
+        <Border Grid.Row="0"
+                Grid.Column="1"
+                Grid.RowSpan="5" />
+        <Grid Grid.Row="0"
+              Grid.Column="2"
+              Grid.RowSpan="5">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0"
+                      Background="{x:Null}"
+                      MinHeight="70"
+                      HorizontalContentAlignment="Stretch"
+                      SelectionMode="Single"
+                      ItemsSource="{Binding AnswerSetValues}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Grid.Column="0"
+                                         Margin="0,0,5,0"
+                                         VerticalAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListViewItem},Path=IsSelected}" />
+                            <TextBox Grid.Column="1"
+                                     Text="{Binding Value}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="1"
+                    Command="{Binding DeleteAnswerCommand}"
+                    Margin="0,5,0,0"
+                    Height="22"
+                    VerticalAlignment="Bottom"
+                    ToolTip="Verwijder geselecteerd antwoord">
+                <iconPacks:PackIconMaterial Kind="Minus"
+                                            Height="Auto" />
+            </Button>
+        </Grid>
+    </Grid>
+</helper:ParkInspectControl>

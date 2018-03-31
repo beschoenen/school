@@ -1,0 +1,15 @@
+language: swift
+
+osx_image: xcode8.3
+
+install:
+  - pod update
+
+before_script:
+  - cp Bartimeus/config.plist.example Bartimeus/config.plist
+
+script:
+  - xcodebuild -scheme Bartimeus -workspace Bartimeus.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3' build
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

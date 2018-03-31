@@ -1,0 +1,105 @@
+﻿@using Wrapper
+@model dynamic
+
+@{
+    var game = ViewBag.Game as Wrapper.Sudoku;
+    var message = ViewBag.Message as string;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku</title>
+    <style>
+        .box {
+            height: 20px;
+            width: 20px;
+            border: 1px solid black;
+            float: left;
+            cursor: pointer;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .row { float: left; }
+
+        .space-h { margin-bottom: 3px; }
+
+        .space-v { margin-right: 3px; }
+
+        #main {
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        #board {
+            padding-top: 10px;
+            width: 206px;
+            margin: 0 auto;
+        }
+
+        .input { width: 40px; }
+
+        #controls { height: 20px; }
+
+        #messages { height: 30px; }
+
+        #messages > div {
+            margin: 0 auto;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="controls">
+        <form action="/Sudoku/NewGame" method="post" style="float: left;">
+            <input type="submit" value="New Game"/>
+        </form>
+
+        <form action="/Sudoku/Set" method="post" style="float: right;">
+            <input type="text" name="x" id="x" placeholder="X" class="input"/>
+            <input type="text" name="y" id="y" placeholder="Y" class="input"/>
+            <input type="text" name="value" id="value" placeholder="Value" class="input"/>
+            <input type="submit" value="Set"/>
+        </form>
+
+        <form action="/Sudoku/Cheat" method="post" style="float: right; margin-right: 5px;">
+            <input type="submit" value="Cheat"/>
+        </form>
+    </div>
+    <div id="messages">
+        <div style="margin: 0 auto;">@(message)</div>
+    </div>
+    <div id="board">
+        @for (var i = 1; i <= 9; i++)
+        {
+            <div class="row @(i % 3 == 0 ? "space-h" : "")">
+
+                @for (var j = 1; j <= 9; j++)
+                {
+                    int? value = game.Get(i, j);
+
+                    if (value == 0)
+                    {
+                        value = null;
+                    }
+
+                    <div data-x="@(i)" data-y="@(j)" onclick="setValues(this)" class="box @(j % 3 == 0 ? "space-v" : "")">@(value)</div>
+                }
+                <br/>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    function setValues(element) {
+        document.getElementById("x").value = element.dataset.x;
+        document.getElementById("y").value = element.dataset.y;
+        document.getElementById("value").focus();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ParkInspectModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ParkInspectModelStoreContainer">
+    <EntitySet Name="Addresses" EntityType="ParkInspectModel.Store.Addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Answers" EntityType="ParkInspectModel.Store.Answers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AnswerSetValues" EntityType="ParkInspectModel.Store.AnswerSetValues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Availabilities" EntityType="ParkInspectModel.Store.Availabilities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Checklists" EntityType="ParkInspectModel.Store.Checklists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChecklistQuestions" EntityType="ParkInspectModel.Store.ChecklistQuestions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="ParkInspectModel.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="ParkInspectModel.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inspections" EntityType="ParkInspectModel.Store.Inspections" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InspectionInspectors" EntityType="ParkInspectModel.Store.InspectionInspectors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobTitles" EntityType="ParkInspectModel.Store.JobTitles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParkingLots" EntityType="ParkInspectModel.Store.ParkingLots" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Photos" EntityType="ParkInspectModel.Store.Photos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Questions" EntityType="ParkInspectModel.Store.Questions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QuestionTypes" EntityType="ParkInspectModel.Store.QuestionTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tasks" EntityType="ParkInspectModel.Store.Tasks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WeeklySchedules" EntityType="ParkInspectModel.Store.WeeklySchedules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaskSchedules" EntityType="ParkInspectModel.Store.TaskSchedules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IntervalFrequencies" EntityType="ParkInspectModel.Store.IntervalFrequencies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QuestionAnswerSetValue" EntityType="ParkInspectModel.Store.QuestionAnswerSetValue" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AvailbilityEmployee" Association="ParkInspectModel.Store.AvailbilityEmployee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Availability" EntitySet="Availabilities" />
+    </AssociationSet>
+    <AssociationSet Name="ChecklistQuestionsChecklists" Association="ParkInspectModel.Store.ChecklistQuestionsChecklists">
+      <End Role="Checklist" EntitySet="Checklists" />
+      <End Role="ChecklistQuestion" EntitySet="ChecklistQuestions" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeJobTitle" Association="ParkInspectModel.Store.EmployeeJobTitle">
+      <End Role="JobTitle" EntitySet="JobTitles" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="InspectionInspectorEmployee" Association="ParkInspectModel.Store.InspectionInspectorEmployee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="InspectionInspector" EntitySet="InspectionInspectors" />
+    </AssociationSet>
+    <AssociationSet Name="WeeklyScheduleEmployee" Association="ParkInspectModel.Store.WeeklyScheduleEmployee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="WeeklySchedule" EntitySet="WeeklySchedules" />
+    </AssociationSet>
+    <AssociationSet Name="InspectionInspectorInspection" Association="ParkInspectModel.Store.InspectionInspectorInspection">
+      <End Role="Inspection" EntitySet="Inspections" />
+      <End Role="InspectionInspector" EntitySet="InspectionInspectors" />
+    </AssociationSet>
+    <AssociationSet Name="InspectionTask" Association="ParkInspectModel.Store.InspectionTask">
+      <End Role="Task" EntitySet="Tasks" />
+      <End Role="Inspection" EntitySet="Inspections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuestionAnswerSetValue_AnswerSetValue" Association="ParkInspectModel.Store.FK_QuestionAnswerSetValue_AnswerSetValue">
+      <End Role="AnswerSetValue" EntitySet="AnswerSetValues" />
+      <End Role="QuestionAnswerSetValue" EntitySet="QuestionAnswerSetValue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuestionAnswerSetValue_Question" Association="ParkInspectModel.Store.FK_QuestionAnswerSetValue_Question">
+      <End Role="Question" EntitySet="Questions" />
+      <End Role="QuestionAnswerSetValue" EntitySet="QuestionAnswerSetValue" />
+    </AssociationSet>
+    <AssociationSet Name="InspectionChecklist" Association="ParkInspectModel.Store.InspectionChecklist">
+      <End Role="Inspection" EntitySet="Inspections" />
+      <End Role="Checklist" EntitySet="Checklists" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerAddress" Association="ParkInspectModel.Store.CustomerAddress">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerTask" Association="ParkInspectModel.Store.CustomerTask">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Task" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="AddressParkingLot" Association="ParkInspectModel.Store.AddressParkingLot">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="ParkingLot" EntitySet="ParkingLots" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeAddress" Association="ParkInspectModel.Store.EmployeeAddress">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="AnswerPhoto" Association="ParkInspectModel.Store.AnswerPhoto">
+      <End Role="Answer" EntitySet="Answers" />
+      <End Role="Photo" EntitySet="Photos" />
+    </AssociationSet>
+    <AssociationSet Name="PhotoInspection" Association="ParkInspectModel.Store.PhotoInspection">
+      <End Role="Photo" EntitySet="Photos" />
+      <End Role="Inspection" EntitySet="Inspections" />
+    </AssociationSet>
+    <AssociationSet Name="AnswerQuestion" Association="ParkInspectModel.Store.AnswerQuestion">
+      <End Role="Answer" EntitySet="Answers" />
+      <End Role="Question" EntitySet="Questions" />
+    </AssociationSet>
+    <AssociationSet Name="InspectionAnswer" Association="ParkInspectModel.Store.InspectionAnswer">
+      <End Role="Inspection" EntitySet="Inspections" />
+      <End Role="Answer" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="AnswerEmployee" Association="ParkInspectModel.Store.AnswerEmployee">
+      <End Role="Answer" EntitySet="Answers" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="TaskParkingLot" Association="ParkInspectModel.Store.TaskParkingLot">
+      <End Role="Task" EntitySet="Tasks" />
+      <End Role="ParkingLot" EntitySet="ParkingLots" />
+    </AssociationSet>
+    <AssociationSet Name="TaskChecklist" Association="ParkInspectModel.Store.TaskChecklist">
+      <End Role="Task" EntitySet="Tasks" />
+      <End Role="Checklist" EntitySet="Checklists" />
+    </AssociationSet>
+    <AssociationSet Name="ChecklistQuestionQuestion" Association="ParkInspectModel.Store.ChecklistQuestionQuestion">
+      <End Role="ChecklistQuestion" EntitySet="ChecklistQuestions" />
+      <End Role="Question" EntitySet="Questions" />
+    </AssociationSet>
+    <AssociationSet Name="QuestionQuestionType" Association="ParkInspectModel.Store.QuestionQuestionType">
+      <End Role="Question" EntitySet="Questions" />
+      <End Role="QuestionType" EntitySet="QuestionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="TaskScheduleTask" Association="ParkInspectModel.Store.TaskScheduleTask">
+      <End Role="TaskSchedule" EntitySet="TaskSchedules" />
+      <End Role="Task" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="TaskScheduleIntervalFrequency" Association="ParkInspectModel.Store.TaskScheduleIntervalFrequency">
+      <End Role="TaskSchedule" EntitySet="TaskSchedules" />
+      <End Role="IntervalFrequency" EntitySet="IntervalFrequencies" />
+    </AssociationSet>
+    <AssociationSet Name="ChecklistChecklist" Association="ParkInspectModel.Store.ChecklistChecklist">
+      <End Role="Checklist" EntitySet="Checklists" />
+      <End Role="Checklist1" EntitySet="Checklists" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Street" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="Number" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ZipCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="City" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="Country" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Province" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="InspectionID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectionID" Type="int" Nullable="false" />
+    <Property Name="Text" Type="varchar(max)" Nullable="false" />
+    <Property Name="Question_ID" Type="int" Nullable="false" />
+    <Property Name="Employee_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AnswerSetValues">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Availabilities">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="StartDateTime" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="StartDateTime" Type="datetime" Nullable="false" />
+    <Property Name="EndDateTime" Type="datetime" Nullable="true" />
+    <Property Name="Available" Type="bit" Nullable="false" />
+    <Property Name="Remark" Type="varchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Checklists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="DateTimeCreated" Type="datetime" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ChecklistID" Type="int" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChecklistQuestions">
+    <Key>
+      <PropertyRef Name="ChecklistID" />
+      <PropertyRef Name="QuestionID" />
+    </Key>
+    <Property Name="ChecklistID" Type="int" Nullable="false" />
+    <Property Name="QuestionID" Type="int" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Contact" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="PhoneNumber" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="Email" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LastNamePrefix" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TelephoneNumber" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="DateOfEmployment" Type="datetime" Nullable="true" />
+    <Property Name="DateOfResignation" Type="datetime" Nullable="true" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JobTitle_Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Address_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inspections">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTimeStarted" Type="datetime" Nullable="true" />
+    <Property Name="DateTimePlanned" Type="datetime" Nullable="false" />
+    <Property Name="DateTimeDone" Type="datetime" Nullable="true" />
+    <Property Name="AverageTravelTime" Type="time" Nullable="false" Precision="0" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Task_ID" Type="int" Nullable="false" />
+    <Property Name="Checklist_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InspectionInspectors">
+    <Key>
+      <PropertyRef Name="InspectorID" />
+      <PropertyRef Name="InspectionID" />
+    </Key>
+    <Property Name="InspectorID" Type="int" Nullable="false" />
+    <Property Name="InspectionID" Type="int" Nullable="false" />
+    <Property Name="NumParkingSpacesOccupied" Type="int" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="Remarks" Type="varchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="JobTitles">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="varchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ParkingLots">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeoLatitude" Type="float" Nullable="true" />
+    <Property Name="GeoLongitude" Type="float" Nullable="true" />
+    <Property Name="NumCameras" Type="int" Nullable="true" />
+    <Property Name="NumParkingSpaces" Type="int" Nullable="true" />
+    <Property Name="DateOpened" Type="datetime" Nullable="true" />
+    <Property Name="DateClosed" Type="datetime" Nullable="true" />
+    <Property Name="HasBarrier" Type="bit" Nullable="true" />
+    <Property Name="HasFence" Type="bit" Nullable="true" />
+    <Property Name="ParkingFeeHourly" Type="int" Nullable="true" />
+    <Property Name="ParkingFeeMax" Type="int" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address_ID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Photos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Filename" Type="varchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Answer_ID" Type="int" Nullable="true" />
+    <Property Name="Answer_InspectionID" Type="int" Nullable="true" />
+    <Property Name="Inspection_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="AnswerPrefix" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="AnswerSuffix" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="Prebuilt" Type="bit" Nullable="false" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="QuestionType_Name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuestionTypes">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="varchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Tasks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTimeStart" Type="datetime" Nullable="false" />
+    <Property Name="DateTimeEnd" Type="datetime" Nullable="true" />
+    <Property Name="Remarks" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DatetimeCreated" Type="datetime" Nullable="false" />
+    <Property Name="Hash" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Customer_ID" Type="int" Nullable="false" />
+    <Property Name="ParkingLot_ID" Type="int" Nullable="false" />
+    <Property Name="Checklist_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeeklySchedules">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="Day" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="StartTime" Type="time" Nullable="false" Precision="0" />
+    <Property Name="EndTime" Type="time" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="TaskSchedules">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectionDateTime" Type="datetime" Nullable="false" />
+    <Property Name="Interval" Type="int" Nullable="false" DefaultValue="1" />
+    <Property Name="Task_ID" Type="int" Nullable="false" />
+    <Property Name="IntervalFrequency_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IntervalFrequencies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuestionAnswerSetValue">
+    <Key>
+      <PropertyRef Name="AnswerSetValues_ID" />
+      <PropertyRef Name="Questions_ID" />
+    </Key>
+    <Property Name="AnswerSetValues_ID" Type="int" Nullable="false" />
+    <Property Name="Questions_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="AvailbilityEmployee">
+    <End Role="Employee" Type="ParkInspectModel.Store.Employees" Multiplicity="1" />
+    <End Role="Availability" Type="ParkInspectModel.Store.Availabilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Availability">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChecklistQuestionsChecklists">
+    <End Role="Checklist" Type="ParkInspectModel.Store.Checklists" Multiplicity="1" />
+    <End Role="ChecklistQuestion" Type="ParkInspectModel.Store.ChecklistQuestions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Checklist">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChecklistQuestion">
+        <PropertyRef Name="ChecklistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeJobTitle">
+    <End Role="JobTitle" Type="ParkInspectModel.Store.JobTitles" Multiplicity="1" />
+    <End Role="Employee" Type="ParkInspectModel.Store.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobTitle">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="JobTitle_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InspectionInspectorEmployee">
+    <End Role="Employee" Type="ParkInspectModel.Store.Employees" Multiplicity="1" />
+    <End Role="InspectionInspector" Type="ParkInspectModel.Store.InspectionInspectors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InspectionInspector">
+        <PropertyRef Name="InspectorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WeeklyScheduleEmployee">
+    <End Role="Employee" Type="ParkInspectModel.Store.Employees" Multiplicity="1" />
+    <End Role="WeeklySchedule" Type="ParkInspectModel.Store.WeeklySchedules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WeeklySchedule">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InspectionInspectorInspection">
+    <End Role="Inspection" Type="ParkInspectModel.Store.Inspections" Multiplicity="1" />
+    <End Role="InspectionInspector" Type="ParkInspectModel.Store.InspectionInspectors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspection">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InspectionInspector">
+        <PropertyRef Name="InspectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InspectionTask">
+    <End Role="Task" Type="ParkInspectModel.Store.Tasks" Multiplicity="1" />
+    <End Role="Inspection" Type="ParkInspectModel.Store.Inspections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Inspection">
+        <PropertyRef Name="Task_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InspectionChecklist">
+    <End Role="Inspection" Type="ParkInspectModel.Store.Inspections" Multiplicity="*" />
+    <End Role="Checklist" Type="ParkInspectModel.Store.Checklists" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Checklist">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Inspection">
+        <PropertyRef Name="Checklist_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CustomerAddress">
+    <End Role="Customer" Type="ParkInspectModel.Store.Customers" Multiplicity="*" />
+    <End Role="Address" Type="ParkInspectModel.Store.Addresses" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Address_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CustomerTask">
+    <End Role="Customer" Type="ParkInspectModel.Store.Customers" Multiplicity="1" />
+    <End Role="Task" Type="ParkInspectModel.Store.Tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AddressParkingLot">
+    <End Role="Address" Type="ParkInspectModel.Store.Addresses" Multiplicity="0..1" />
+    <End Role="ParkingLot" Type="ParkInspectModel.Store.ParkingLots" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ParkingLot">
+        <PropertyRef Name="Address_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeAddress">
+    <End Role="Employee" Type="ParkInspectModel.Store.Employees" Multiplicity="*" />
+    <End Role="Address" Type="ParkInspectModel.Store.Addresses" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Address_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AnswerPhoto">
+    <End Role="Answer" Type="ParkInspectModel.Store.Answers" Multiplicity="0..1" />
+    <End Role="Photo" Type="ParkInspectModel.Store.Photos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answer">
+        <PropertyRef Name="ID" />
+        <PropertyRef Name="InspectionID" />
+      </Principal>
+      <Dependent Role="Photo">
+        <PropertyRef Name="Answer_ID" />
+        <PropertyRef Name="Answer_InspectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PhotoInspection">
+    <End Role="Photo" Type="ParkInspectModel.Store.Photos" Multiplicity="*" />
+    <End Role="Inspection" Type="ParkInspectModel.Store.Inspections" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Inspection">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Photo">
+        <PropertyRef Name="Inspection_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AnswerQuestion">
+    <End Role="Answer" Type="ParkInspectModel.Store.Answers" Multiplicity="*" />
+    <End Role="Question" Type="ParkInspectModel.Store.Questions" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="Question_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InspectionAnswer">
+    <End Role="Inspection" Type="ParkInspectModel.Store.Inspections" Multiplicity="1" />
+    <End Role="Answer" Type="ParkInspectModel.Store.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspection">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="InspectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AnswerEmployee">
+    <End Role="Answer" Type="ParkInspectModel.Store.Answers" Multiplicity="*" />
+    <End Role="Employee" Type="ParkInspectModel.Store.Employees" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="Employee_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaskParkingLot">
+    <End Role="Task" Type="ParkInspectModel.Store.Tasks" Multiplicity="*" />
+    <End Role="ParkingLot" Type="ParkInspectModel.Store.ParkingLots" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ParkingLot">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="ParkingLot_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaskChecklist">
+    <End Role="Task" Type="ParkInspectModel.Store.Tasks" Multiplicity="*" />
+    <End Role="Checklist" Type="ParkInspectModel.Store.Checklists" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Checklist">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="Checklist_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChecklistQuestionQuestion">
+    <End Role="ChecklistQuestion" Type="ParkInspectModel.Store.ChecklistQuestions" Multiplicity="*" />
+    <End Role="Question" Type="ParkInspectModel.Store.Questions" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChecklistQuestion">
+        <PropertyRef Name="QuestionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QuestionQuestionType">
+    <End Role="Question" Type="ParkInspectModel.Store.Questions" Multiplicity="*" />
+    <End Role="QuestionType" Type="ParkInspectModel.Store.QuestionTypes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="QuestionType">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="QuestionType_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaskScheduleTask">
+    <End Role="TaskSchedule" Type="ParkInspectModel.Store.TaskSchedules" Multiplicity="*" />
+    <End Role="Task" Type="ParkInspectModel.Store.Tasks" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskSchedule">
+        <PropertyRef Name="Task_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TaskScheduleIntervalFrequency">
+    <End Role="TaskSchedule" Type="ParkInspectModel.Store.TaskSchedules" Multiplicity="*" />
+    <End Role="IntervalFrequency" Type="ParkInspectModel.Store.IntervalFrequencies" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="IntervalFrequency">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TaskSchedule">
+        <PropertyRef Name="IntervalFrequency_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChecklistChecklist">
+    <End Role="Checklist" Type="ParkInspectModel.Store.Checklists" Multiplicity="0..1" />
+    <End Role="Checklist1" Type="ParkInspectModel.Store.Checklists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Checklist">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Checklist1">
+        <PropertyRef Name="ChecklistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuestionAnswerSetValue_AnswerSetValue">
+    <End Role="AnswerSetValue" Type="ParkInspectModel.Store.AnswerSetValues" Multiplicity="1" />
+    <End Role="QuestionAnswerSetValue" Type="ParkInspectModel.Store.QuestionAnswerSetValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnswerSetValue">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuestionAnswerSetValue">
+        <PropertyRef Name="AnswerSetValues_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuestionAnswerSetValue_Question">
+    <End Role="QuestionAnswerSetValue" Type="ParkInspectModel.Store.QuestionAnswerSetValue" Multiplicity="*" />
+    <End Role="Question" Type="ParkInspectModel.Store.Questions" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QuestionAnswerSetValue">
+        <PropertyRef Name="Questions_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ParkInspectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Customer" Relationship="ParkInspectModel.CustomerAddress" FromRole="Address" ToRole="Customer" />
+          <NavigationProperty Name="ParkingLot" Relationship="ParkInspectModel.AddressParkingLot" FromRole="Address" ToRole="ParkingLot" />
+          <NavigationProperty Name="Employee" Relationship="ParkInspectModel.EmployeeAddress" FromRole="Address" ToRole="Employee" />
+          <Property Name="Province" Type="String" Nullable="true" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="InspectionID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InspectionID" Type="Int32" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <NavigationProperty Name="Photo" Relationship="ParkInspectModel.AnswerPhoto" FromRole="Answer" ToRole="Photo" />
+          <NavigationProperty Name="Question" Relationship="ParkInspectModel.AnswerQuestion" FromRole="Answer" ToRole="Question" />
+          <NavigationProperty Name="Inspection" Relationship="ParkInspectModel.InspectionAnswer" FromRole="Answer" ToRole="Inspection" />
+          <NavigationProperty Name="Employee" Relationship="ParkInspectModel.AnswerEmployee" FromRole="Answer" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="AnswerSetValue">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Questions" Relationship="ParkInspectModel.QuestionAnswerSetValue" FromRole="AnswerSetValue" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Availability">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="StartDateTime" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="StartDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDateTime" Type="DateTime" Precision="0" />
+          <Property Name="Available" Type="Boolean" Nullable="false" />
+          <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="ParkInspectModel.AvailbilityEmployee" FromRole="Availability" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Checklist">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateTimeCreated" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="ChecklistQuestions" Relationship="ParkInspectModel.ChecklistQuestionsChecklists" FromRole="Checklist" ToRole="ChecklistQuestion" />
+          <NavigationProperty Name="Inspections" Relationship="ParkInspectModel.InspectionChecklist" FromRole="Checklist" ToRole="Inspection" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Tasks" Relationship="ParkInspectModel.TaskChecklist" FromRole="Checklist" ToRole="Task" />
+          <NavigationProperty Name="Children" Relationship="ParkInspectModel.ChecklistChecklist" FromRole="Checklist" ToRole="Checklist1" />
+          <NavigationProperty Name="Parent" Relationship="ParkInspectModel.ChecklistChecklist" FromRole="Checklist1" ToRole="Checklist" />
+          <Property Name="ChecklistID" Type="Int32" Nullable="true" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChecklistQuestion">
+          <Key>
+            <PropertyRef Name="ChecklistID" />
+            <PropertyRef Name="QuestionID" />
+          </Key>
+          <Property Name="ChecklistID" Nullable="false" Type="Int32" />
+          <Property Name="QuestionID" Nullable="false" Type="Int32" />
+          <Property Name="Order" Type="Int32" />
+          <NavigationProperty Name="Checklist" Relationship="ParkInspectModel.ChecklistQuestionsChecklists" FromRole="ChecklistQuestion" ToRole="Checklist" />
+          <NavigationProperty Name="Question" Relationship="ParkInspectModel.ChecklistQuestionQuestion" FromRole="ChecklistQuestion" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contact" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Address" Relationship="ParkInspectModel.CustomerAddress" FromRole="Customer" ToRole="Address" />
+          <NavigationProperty Name="Tasks" Relationship="ParkInspectModel.CustomerTask" FromRole="Customer" ToRole="Task" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastNamePrefix" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateOfEmployment" Type="DateTime" Precision="0" />
+          <Property Name="DateOfResignation" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Availabilities" Relationship="ParkInspectModel.AvailbilityEmployee" FromRole="Employee" ToRole="Availability" />
+          <NavigationProperty Name="JobTitle" Relationship="ParkInspectModel.EmployeeJobTitle" FromRole="Employee" ToRole="JobTitle" />
+          <NavigationProperty Name="InspectionInspectors" Relationship="ParkInspectModel.InspectionInspectorEmployee" FromRole="Employee" ToRole="InspectionInspector" />
+          <NavigationProperty Name="WeeklySchedules" Relationship="ParkInspectModel.WeeklyScheduleEmployee" FromRole="Employee" ToRole="WeeklySchedule" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Address" Relationship="ParkInspectModel.EmployeeAddress" FromRole="Employee" ToRole="Address" />
+          <NavigationProperty Name="Answers" Relationship="ParkInspectModel.AnswerEmployee" FromRole="Employee" ToRole="Answer" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Inspection">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTimeStarted" Type="DateTime" Nullable="true" />
+          <Property Name="DateTimePlanned" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateTimeDone" Type="DateTime" Precision="0" />
+          <Property Name="AverageTravelTime" Type="Time" Nullable="false" Precision="0" />
+          <NavigationProperty Name="InspectionInspectors" Relationship="ParkInspectModel.InspectionInspectorInspection" FromRole="Inspection" ToRole="InspectionInspector" />
+          <NavigationProperty Name="Task" Relationship="ParkInspectModel.InspectionTask" FromRole="Inspection" ToRole="Task" />
+          <NavigationProperty Name="Checklist" Relationship="ParkInspectModel.InspectionChecklist" FromRole="Inspection" ToRole="Checklist" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Photos" Relationship="ParkInspectModel.PhotoInspection" FromRole="Inspection" ToRole="Photo" />
+          <NavigationProperty Name="Answers" Relationship="ParkInspectModel.InspectionAnswer" FromRole="Inspection" ToRole="Answer" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InspectionInspector">
+          <Key>
+            <PropertyRef Name="InspectorID" />
+            <PropertyRef Name="InspectionID" />
+          </Key>
+          <Property Name="InspectorID" Type="Int32" Nullable="false" />
+          <Property Name="InspectionID" Type="Int32" Nullable="false" />
+          <Property Name="NumParkingSpacesOccupied" Type="Int32" Nullable="false" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Remarks" Type="String" FixedLength="false" Unicode="false" Nullable="true" />
+          <NavigationProperty Name="Employee" Relationship="ParkInspectModel.InspectionInspectorEmployee" FromRole="InspectionInspector" ToRole="Employee" />
+          <NavigationProperty Name="Inspection" Relationship="ParkInspectModel.InspectionInspectorInspection" FromRole="InspectionInspector" ToRole="Inspection" />
+        </EntityType>
+        <EntityType Name="JobTitle">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="true" />
+          <NavigationProperty Name="Employees" Relationship="ParkInspectModel.EmployeeJobTitle" FromRole="JobTitle" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="ParkingLot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GeoLatitude" Type="Double" Nullable="true" />
+          <Property Name="GeoLongitude" Type="Double" Nullable="true" />
+          <Property Name="NumCameras" Type="Int32" Nullable="true" />
+          <Property Name="NumParkingSpaces" Type="Int32" Nullable="true" />
+          <Property Name="DateOpened" Type="DateTime" Precision="0" />
+          <Property Name="DateClosed" Type="DateTime" Precision="0" Nullable="true" />
+          <Property Name="HasBarrier" Type="Boolean" Nullable="true" />
+          <Property Name="HasFence" Type="Boolean" Nullable="true" />
+          <Property Name="ParkingFeeHourly" Type="Int32" Nullable="true" />
+          <Property Name="ParkingFeeMax" Type="Int32" Nullable="true" />
+          <NavigationProperty Name="Address" Relationship="ParkInspectModel.AddressParkingLot" FromRole="ParkingLot" ToRole="Address" />
+          <NavigationProperty Name="Tasks" Relationship="ParkInspectModel.TaskParkingLot" FromRole="ParkingLot" ToRole="Task" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Photo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Filename" Type="String" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" Nullable="false" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" MaxLength="Max" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Answer" Relationship="ParkInspectModel.AnswerPhoto" FromRole="Photo" ToRole="Answer" />
+          <NavigationProperty Name="Inspection" Relationship="ParkInspectModel.PhotoInspection" FromRole="Photo" ToRole="Inspection" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AnswerPrefix" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Name="AnswerSuffix" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="true" />
+          <NavigationProperty Name="AnswerSetValues" Relationship="ParkInspectModel.QuestionAnswerSetValue" FromRole="Question" ToRole="AnswerSetValue" />
+          <Property Name="Prebuilt" Type="Boolean" Nullable="false" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Answers" Relationship="ParkInspectModel.AnswerQuestion" FromRole="Question" ToRole="Answer" />
+          <NavigationProperty Name="ChecklistQuestions" Relationship="ParkInspectModel.ChecklistQuestionQuestion" FromRole="Question" ToRole="ChecklistQuestion" />
+          <NavigationProperty Name="QuestionType" Relationship="ParkInspectModel.QuestionQuestionType" FromRole="Question" ToRole="QuestionType" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuestionType">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="true" />
+          <NavigationProperty Name="Questions" Relationship="ParkInspectModel.QuestionQuestionType" FromRole="QuestionType" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTimeStart" Type="DateTime" Precision="0" Nullable="false" />
+          <Property Name="DateTimeEnd" Type="DateTime" Precision="0" Nullable="true" />
+          <NavigationProperty Name="Inspections" Relationship="ParkInspectModel.InspectionTask" FromRole="Task" ToRole="Inspection" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <NavigationProperty Name="Customer" Relationship="ParkInspectModel.CustomerTask" FromRole="Task" ToRole="Customer" />
+          <NavigationProperty Name="ParkingLot" Relationship="ParkInspectModel.TaskParkingLot" FromRole="Task" ToRole="ParkingLot" />
+          <NavigationProperty Name="Checklist" Relationship="ParkInspectModel.TaskChecklist" FromRole="Task" ToRole="Checklist" />
+          <NavigationProperty Name="TaskSchedules" Relationship="ParkInspectModel.TaskScheduleTask" FromRole="Task" ToRole="TaskSchedule" />
+          <Property Name="DatetimeCreated" Type="DateTime" Nullable="false" />
+          <Property Name="Hash" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WeeklySchedule">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="Day" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="Day" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="Time" Nullable="false" Precision="0" />
+          <Property Name="EndTime" Type="Time" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Employee" Relationship="ParkInspectModel.WeeklyScheduleEmployee" FromRole="WeeklySchedule" ToRole="Employee" />
+        </EntityType>
+        <Association Name="AvailbilityEmployee">
+          <End Type="Self.Employee" Multiplicity="1" Role="Employee" />
+          <End Type="Self.Availability" Multiplicity="*" Role="Availability" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Availability">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ChecklistQuestionsChecklists">
+          <End Type="Self.Checklist" Multiplicity="1" Role="Checklist" />
+          <End Type="Self.ChecklistQuestion" Multiplicity="*" Role="ChecklistQuestion" />
+          <ReferentialConstraint>
+            <Principal Role="Checklist">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChecklistQuestion">
+              <PropertyRef Name="ChecklistID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EmployeeJobTitle">
+          <End Role="JobTitle" Type="Self.JobTitle" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+        </Association>
+        <Association Name="InspectionInspectorEmployee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="InspectionInspector" Type="Self.InspectionInspector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InspectionInspector">
+              <PropertyRef Name="InspectorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WeeklyScheduleEmployee">
+          <End Type="Self.Employee" Multiplicity="1" Role="Employee" />
+          <End Type="Self.WeeklySchedule" Multiplicity="*" Role="WeeklySchedule" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeeklySchedule">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="InspectionInspectorInspection">
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="1" />
+          <End Role="InspectionInspector" Type="Self.InspectionInspector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inspection">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InspectionInspector">
+              <PropertyRef Name="InspectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="InspectionTask">
+          <End Role="Task" Type="Self.Task" Multiplicity="1" />
+          <End Role="Inspection" Type="Self.Inspection" Multiplicity="*" />
+        </Association>
+        <Association Name="QuestionAnswerSetValue">
+          <End Role="AnswerSetValue" Type="Self.AnswerSetValue" Multiplicity="*" />
+          <End Role="Question" Type="Self.Question" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Database" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="Self.Address" />
+          <EntitySet Name="Answers" EntityType="Self.Answer" />
+          <EntitySet Name="AnswerSetValues" EntityType="Self.AnswerSetValue" />
+          <EntitySet Name="Availabilities" EntityType="Self.Availability" />
+          <EntitySet Name="Checklists" EntityType="Self.Checklist" />
+          <EntitySet Name="ChecklistQuestions" EntityType="Self.ChecklistQuestion" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Inspections" EntityType="Self.Inspection" />
+          <EntitySet Name="InspectionInspectors" EntityType="Self.InspectionInspector" />
+          <EntitySet Name="JobTitles" EntityType="Self.JobTitle" />
+          <EntitySet Name="ParkingLots" EntityType="Self.ParkingLot" />
+          <EntitySet Name="Photos" EntityType="Self.Photo" />
+          <EntitySet Name="Questions" EntityType="Self.Question" />
+          <EntitySet Name="QuestionTypes" EntityType="Self.QuestionType" />
+          <EntitySet Name="Tasks" EntityType="Self.Task" />
+          <EntitySet Name="WeeklySchedules" EntityType="Self.WeeklySchedule" />
+          <AssociationSet Name="AvailbilityEmployee" Association="ParkInspectModel.AvailbilityEmployee">
+            <End EntitySet="Employees" Role="Employee" />
+            <End EntitySet="Availabilities" Role="Availability" />
+          </AssociationSet>
+          <AssociationSet Name="ChecklistQuestionsChecklists" Association="ParkInspectModel.ChecklistQuestionsChecklists">
+            <End EntitySet="Checklists" Role="Checklist" />
+            <End EntitySet="ChecklistQuestions" Role="ChecklistQuestion" />
+          </AssociationSet>
+          <AssociationSet Name="EmployeeJobTitle" Association="ParkInspectModel.EmployeeJobTitle">
+            <End Role="JobTitle" EntitySet="JobTitles" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="InspectionInspectorEmployee" Association="ParkInspectModel.InspectionInspectorEmployee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="InspectionInspector" EntitySet="InspectionInspectors" />
+          </AssociationSet>
+          <AssociationSet Name="WeeklyScheduleEmployee" Association="ParkInspectModel.WeeklyScheduleEmployee">
+            <End EntitySet="Employees" Role="Employee" />
+            <End EntitySet="WeeklySchedules" Role="WeeklySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="InspectionInspectorInspection" Association="ParkInspectModel.InspectionInspectorInspection">
+            <End Role="Inspection" EntitySet="Inspections" />
+            <End Role="InspectionInspector" EntitySet="InspectionInspectors" />
+          </AssociationSet>
+          <AssociationSet Name="InspectionTask" Association="ParkInspectModel.InspectionTask">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Inspection" EntitySet="Inspections" />
+          </AssociationSet>
+          <AssociationSet Name="QuestionAnswerSetValue" Association="ParkInspectModel.QuestionAnswerSetValue">
+            <End Role="AnswerSetValue" EntitySet="AnswerSetValues" />
+            <End Role="Question" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="InspectionChecklist" Association="ParkInspectModel.InspectionChecklist">
+            <End Role="Inspection" EntitySet="Inspections" />
+            <End Role="Checklist" EntitySet="Checklists" />
+          </AssociationSet>
+          <AssociationSet Name="CustomerAddress" Association="ParkInspectModel.CustomerAddress">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="CustomerTask" Association="ParkInspectModel.CustomerTask">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="AddressParkingLot" Association="ParkInspectModel.AddressParkingLot">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="ParkingLot" EntitySet="ParkingLots" />
+          </AssociationSet>
+          <AssociationSet Name="EmployeeAddress" Association="ParkInspectModel.EmployeeAddress">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="AnswerPhoto" Association="ParkInspectModel.AnswerPhoto">
+            <End Role="Answer" EntitySet="Answers" />
+            <End Role="Photo" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="PhotoInspection" Association="ParkInspectModel.PhotoInspection">
+            <End Role="Photo" EntitySet="Photos" />
+            <End Role="Inspection" EntitySet="Inspections" />
+          </AssociationSet>
+          <AssociationSet Name="AnswerQuestion" Association="ParkInspectModel.AnswerQuestion">
+            <End Role="Answer" EntitySet="Answers" />
+            <End Role="Question" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="InspectionAnswer" Association="ParkInspectModel.InspectionAnswer">
+            <End Role="Inspection" EntitySet="Inspections" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="AnswerEmployee" Association="ParkInspectModel.AnswerEmployee">
+            <End Role="Answer" EntitySet="Answers" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="TaskParkingLot" Association="ParkInspectModel.TaskParkingLot">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="ParkingLot" EntitySet="ParkingLots" />
+          </AssociationSet>
+          <AssociationSet Name="TaskChecklist" Association="ParkInspectModel.TaskChecklist">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Checklist" EntitySet="Checklists" />
+          </AssociationSet>
+          <AssociationSet Name="ChecklistQuestionQuestion" Association="ParkInspectModel.ChecklistQuestionQuestion">
+            <End EntitySet="ChecklistQuestions" Role="ChecklistQuestion" />
+            <End EntitySet="Questions" Role="Question" />
+          </AssociationSet>
+          <AssociationSet Name="QuestionQuestionType" Association="ParkInspectModel.QuestionQuestionType">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="QuestionType" EntitySet="QuestionTypes" />
+          </AssociationSet>
+          <EntitySet Name="TaskSchedules" EntityType="ParkInspectModel.TaskSchedule" />
+          <AssociationSet Name="TaskScheduleTask" Association="ParkInspectModel.TaskScheduleTask">
+            <End Role="TaskSchedule" EntitySet="TaskSchedules" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <EntitySet Name="IntervalFrequencies" EntityType="ParkInspectModel.IntervalFrequency" />
+          <AssociationSet Name="TaskScheduleIntervalFrequency" Association="ParkInspectModel.TaskScheduleIntervalFrequency">
+            <End Role="TaskSchedule" EntitySet="TaskSchedules" />
+            <End Role="IntervalFrequency" EntitySet="IntervalFrequencies" />
+          </AssociationSet>
+          <AssociationSet Name="ChecklistChecklist" Association="ParkInspectModel.ChecklistChecklist">
+            <End Role="Checklist" EntitySet="Checklists" />
+            <End Role="Checklist1" EntitySet="Checklists" />
+          </AssociationSet>
+          </EntityContainer>
+        <Association Name="InspectionChecklist">
+          <End Type="ParkInspectModel.Inspection" Role="Inspection" Multiplicity="*" />
+          <End Type="ParkInspectModel.Checklist" Role="Checklist" Multiplicity="1" />
+        </Association>
+        <Association Name="CustomerAddress">
+          <End Type="ParkInspectModel.Customer" Role="Customer" Multiplicity="0..1" />
+          <End Type="ParkInspectModel.Address" Role="Address" Multiplicity="1" />
+        </Association>
+        <Association Name="CustomerTask">
+          <End Type="ParkInspectModel.Customer" Role="Customer" Multiplicity="1" />
+          <End Type="ParkInspectModel.Task" Role="Task" Multiplicity="*" />
+        </Association>
+        <Association Name="AddressParkingLot">
+          <End Type="ParkInspectModel.Address" Role="Address" Multiplicity="0..1" />
+          <End Type="ParkInspectModel.ParkingLot" Role="ParkingLot" Multiplicity="0..1" />
+        </Association>
+        <Association Name="EmployeeAddress">
+          <End Type="ParkInspectModel.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="ParkInspectModel.Address" Role="Address" Multiplicity="1" />
+        </Association>
+        <Association Name="AnswerPhoto">
+          <End Type="ParkInspectModel.Answer" Role="Answer" Multiplicity="0..1" />
+          <End Type="ParkInspectModel.Photo" Role="Photo" Multiplicity="0..1" />
+        </Association>
+        <Association Name="PhotoInspection">
+          <End Type="ParkInspectModel.Photo" Role="Photo" Multiplicity="*" />
+          <End Type="ParkInspectModel.Inspection" Role="Inspection" Multiplicity="1" />
+        </Association>
+        <Association Name="AnswerQuestion">
+          <End Type="ParkInspectModel.Answer" Role="Answer" Multiplicity="*" />
+          <End Type="ParkInspectModel.Question" Role="Question" Multiplicity="1" />
+        </Association>
+        <Association Name="InspectionAnswer">
+          <End Type="ParkInspectModel.Inspection" Role="Inspection" Multiplicity="1" />
+          <End Type="ParkInspectModel.Answer" Role="Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Inspection">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="InspectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AnswerEmployee">
+          <End Type="ParkInspectModel.Answer" Role="Answer" Multiplicity="*" />
+          <End Type="ParkInspectModel.Employee" Role="Employee" Multiplicity="1" />
+        </Association>
+        <Association Name="TaskParkingLot">
+          <End Type="ParkInspectModel.Task" Role="Task" Multiplicity="*" />
+          <End Type="ParkInspectModel.ParkingLot" Role="ParkingLot" Multiplicity="1" />
+        </Association>
+        <Association Name="TaskChecklist">
+          <End Type="ParkInspectModel.Task" Role="Task" Multiplicity="*" />
+          <End Type="ParkInspectModel.Checklist" Role="Checklist" Multiplicity="1" />
+        </Association>
+        <Association Name="ChecklistQuestionQuestion">
+          <End Type="ParkInspectModel.ChecklistQuestion" Multiplicity="*" Role="ChecklistQuestion" />
+          <End Type="ParkInspectModel.Question" Multiplicity="1" Role="Question" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ChecklistQuestion">
+              <PropertyRef Name="QuestionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="QuestionQuestionType">
+          <End Type="ParkInspectModel.Question" Role="Question" Multiplicity="*" />
+          <End Type="ParkInspectModel.QuestionType" Role="QuestionType" Multiplicity="1" />
+        </Association>
+        <EntityType Name="TaskSchedule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InspectionDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="Interval" Type="Int32" Nullable="false" DefaultValue="1" />
+          <NavigationProperty Name="Task" Relationship="ParkInspectModel.TaskScheduleTask" FromRole="TaskSchedule" ToRole="Task" />
+          <NavigationProperty Name="IntervalFrequency" Relationship="ParkInspectModel.TaskScheduleIntervalFrequency" FromRole="TaskSchedule" ToRole="IntervalFrequency" />
+        </EntityType>
+        <Association Name="TaskScheduleTask">
+          <End Type="ParkInspectModel.TaskSchedule" Role="TaskSchedule" Multiplicity="*" />
+          <End Type="ParkInspectModel.Task" Role="Task" Multiplicity="1" />
+        </Association>
+        <EntityType Name="IntervalFrequency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="TaskSchedules" Relationship="ParkInspectModel.TaskScheduleIntervalFrequency" FromRole="IntervalFrequency" ToRole="TaskSchedule" />
+        </EntityType>
+        <Association Name="TaskScheduleIntervalFrequency">
+          <End Type="ParkInspectModel.TaskSchedule" Role="TaskSchedule" Multiplicity="*" />
+          <End Type="ParkInspectModel.IntervalFrequency" Role="IntervalFrequency" Multiplicity="1" />
+        </Association>
+        <Association Name="ChecklistChecklist">
+          <End Type="ParkInspectModel.Checklist" Role="Checklist" Multiplicity="0..1" />
+          <End Type="ParkInspectModel.Checklist" Role="Checklist1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklist">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Checklist1">
+              <PropertyRef Name="ChecklistID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ParkInspectModelStoreContainer" CdmEntityContainer="Database">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Address)">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Answer)">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InspectionID" ColumnName="InspectionID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnswerSetValues">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.AnswerSetValue)">
+        <MappingFragment StoreEntitySet="AnswerSetValues">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Availabilities">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Availability)">
+        <MappingFragment StoreEntitySet="Availabilities">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Checklists">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Checklist)">
+        <MappingFragment StoreEntitySet="Checklists">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ChecklistID" ColumnName="ChecklistID" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChecklistQuestions">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.ChecklistQuestion)">
+        <MappingFragment StoreEntitySet="ChecklistQuestions">
+          <ScalarProperty Name="ChecklistID" ColumnName="ChecklistID" />
+          <ScalarProperty Name="QuestionID" ColumnName="QuestionID" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Customer)">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Employee)">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastNamePrefix" ColumnName="LastNamePrefix" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DateOfEmployment" ColumnName="DateOfEmployment" />
+          <ScalarProperty Name="DateOfResignation" ColumnName="DateOfResignation" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inspections">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Inspection)">
+        <MappingFragment StoreEntitySet="Inspections">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTimeStarted" ColumnName="DateTimeStarted" />
+          <ScalarProperty Name="DateTimePlanned" ColumnName="DateTimePlanned" />
+          <ScalarProperty Name="DateTimeDone" ColumnName="DateTimeDone" />
+          <ScalarProperty Name="AverageTravelTime" ColumnName="AverageTravelTime" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InspectionInspectors">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.InspectionInspector)">
+        <MappingFragment StoreEntitySet="InspectionInspectors">
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="InspectionID" ColumnName="InspectionID" />
+          <ScalarProperty Name="NumParkingSpacesOccupied" ColumnName="NumParkingSpacesOccupied" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTitles">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.JobTitle)">
+        <MappingFragment StoreEntitySet="JobTitles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParkingLots">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.ParkingLot)">
+        <MappingFragment StoreEntitySet="ParkingLots">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GeoLatitude" ColumnName="GeoLatitude" />
+          <ScalarProperty Name="GeoLongitude" ColumnName="GeoLongitude" />
+          <ScalarProperty Name="NumCameras" ColumnName="NumCameras" />
+          <ScalarProperty Name="NumParkingSpaces" ColumnName="NumParkingSpaces" />
+          <ScalarProperty Name="DateOpened" ColumnName="DateOpened" />
+          <ScalarProperty Name="DateClosed" ColumnName="DateClosed" />
+          <ScalarProperty Name="HasBarrier" ColumnName="HasBarrier" />
+          <ScalarProperty Name="HasFence" ColumnName="HasFence" />
+          <ScalarProperty Name="ParkingFeeHourly" ColumnName="ParkingFeeHourly" />
+          <ScalarProperty Name="ParkingFeeMax" ColumnName="ParkingFeeMax" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Photo)">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Question)">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="AnswerPrefix" ColumnName="AnswerPrefix" />
+          <ScalarProperty Name="AnswerSuffix" ColumnName="AnswerSuffix" />
+          <ScalarProperty Name="Prebuilt" ColumnName="Prebuilt" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.QuestionType)">
+        <MappingFragment StoreEntitySet="QuestionTypes">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.Task)">
+        <MappingFragment StoreEntitySet="Tasks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DateTimeStart" ColumnName="DateTimeStart" />
+          <ScalarProperty Name="DateTimeEnd" ColumnName="DateTimeEnd" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DatetimeCreated" ColumnName="DatetimeCreated" />
+          <ScalarProperty Name="Hash" ColumnName="Hash" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeeklySchedules">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.WeeklySchedule)">
+        <MappingFragment StoreEntitySet="WeeklySchedules">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskSchedules">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.TaskSchedule)">
+        <MappingFragment StoreEntitySet="TaskSchedules">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InspectionDateTime" ColumnName="InspectionDateTime" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IntervalFrequencies">
+      <EntityTypeMapping TypeName="IsTypeOf(ParkInspectModel.IntervalFrequency)">
+        <MappingFragment StoreEntitySet="IntervalFrequencies">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EmployeeJobTitle" TypeName="ParkInspectModel.EmployeeJobTitle" StoreEntitySet="Employees">
+      <EndProperty Name="JobTitle">
+        <ScalarProperty Name="Name" ColumnName="JobTitle_Name" />
+      </EndProperty>
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InspectionTask" TypeName="ParkInspectModel.InspectionTask" StoreEntitySet="Inspections">
+      <EndProperty Name="Task">
+        <ScalarProperty Name="ID" ColumnName="Task_ID" />
+      </EndProperty>
+      <EndProperty Name="Inspection">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="QuestionAnswerSetValue" TypeName="ParkInspectModel.QuestionAnswerSetValue" StoreEntitySet="QuestionAnswerSetValue">
+      <EndProperty Name="AnswerSetValue">
+        <ScalarProperty Name="ID" ColumnName="AnswerSetValues_ID" />
+      </EndProperty>
+      <EndProperty Name="Question">
+        <ScalarProperty Name="ID" ColumnName="Questions_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InspectionChecklist" TypeName="ParkInspectModel.InspectionChecklist" StoreEntitySet="Inspections">
+      <EndProperty Name="Checklist">
+        <ScalarProperty Name="ID" ColumnName="Checklist_ID" />
+      </EndProperty>
+      <EndProperty Name="Inspection">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomerAddress" TypeName="ParkInspectModel.CustomerAddress" StoreEntitySet="Customers">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="ID" ColumnName="Address_ID" />
+      </EndProperty>
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CustomerTask" TypeName="ParkInspectModel.CustomerTask" StoreEntitySet="Tasks">
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="ID" ColumnName="Customer_ID" />
+      </EndProperty>
+      <EndProperty Name="Task">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AddressParkingLot" TypeName="ParkInspectModel.AddressParkingLot" StoreEntitySet="ParkingLots">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="ID" ColumnName="Address_ID" />
+      </EndProperty>
+      <EndProperty Name="ParkingLot">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="Address_ID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmployeeAddress" TypeName="ParkInspectModel.EmployeeAddress" StoreEntitySet="Employees">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="ID" ColumnName="Address_ID" />
+      </EndProperty>
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AnswerPhoto" TypeName="ParkInspectModel.AnswerPhoto" StoreEntitySet="Photos">
+      <EndProperty Name="Answer">
+        <ScalarProperty Name="ID" ColumnName="Answer_ID" />
+        <ScalarProperty Name="InspectionID" ColumnName="Answer_InspectionID" />
+      </EndProperty>
+      <EndProperty Name="Photo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+      <Condition ColumnName="Answer_ID" IsNull="false" />
+      <Condition ColumnName="Answer_InspectionID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PhotoInspection" TypeName="ParkInspectModel.PhotoInspection" StoreEntitySet="Photos">
+      <EndProperty Name="Inspection">
+        <ScalarProperty Name="ID" ColumnName="Inspection_ID" />
+      </EndProperty>
+      <EndProperty Name="Photo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AnswerQuestion" TypeName="ParkInspectModel.AnswerQuestion" StoreEntitySet="Answers">
+      <EndProperty Name="Question">
+        <ScalarProperty Name="ID" ColumnName="Question_ID" />
+      </EndProperty>
+      <EndProperty Name="Answer">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="InspectionID" ColumnName="InspectionID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AnswerEmployee" TypeName="ParkInspectModel.AnswerEmployee" StoreEntitySet="Answers">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="ID" ColumnName="Employee_ID" />
+      </EndProperty>
+      <EndProperty Name="Answer">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="InspectionID" ColumnName="InspectionID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaskParkingLot" TypeName="ParkInspectModel.TaskParkingLot" StoreEntitySet="Tasks">
+      <EndProperty Name="ParkingLot">
+        <ScalarProperty Name="ID" ColumnName="ParkingLot_ID" />
+      </EndProperty>
+      <EndProperty Name="Task">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaskChecklist" TypeName="ParkInspectModel.TaskChecklist" StoreEntitySet="Tasks">
+      <EndProperty Name="Checklist">
+        <ScalarProperty Name="ID" ColumnName="Checklist_ID" />
+      </EndProperty>
+      <EndProperty Name="Task">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="QuestionQuestionType" TypeName="ParkInspectModel.QuestionQuestionType" StoreEntitySet="Questions">
+      <EndProperty Name="QuestionType">
+        <ScalarProperty Name="Name" ColumnName="QuestionType_Name" />
+      </EndProperty>
+      <EndProperty Name="Question">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaskScheduleTask" TypeName="ParkInspectModel.TaskScheduleTask" StoreEntitySet="TaskSchedules">
+      <EndProperty Name="Task">
+        <ScalarProperty Name="ID" ColumnName="Task_ID" />
+      </EndProperty>
+      <EndProperty Name="TaskSchedule">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaskScheduleIntervalFrequency" TypeName="ParkInspectModel.TaskScheduleIntervalFrequency" StoreEntitySet="TaskSchedules">
+      <EndProperty Name="IntervalFrequency">
+        <ScalarProperty Name="ID" ColumnName="IntervalFrequency_ID" />
+      </EndProperty>
+      <EndProperty Name="TaskSchedule">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

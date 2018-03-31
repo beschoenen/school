@@ -1,0 +1,15 @@
+<ion-view view-title="Add device">
+  <ion-content class="device" scroll="false">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <div class="content has-header">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="code.code" placeholder="Code">
+        </label>
+      </div>
+      <button ng-click="addDevice()" class="button button-block button-positive button-space">Submit</button>
+    </div>
+  </ion-content>
+</ion-view>

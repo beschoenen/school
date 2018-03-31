@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23379bb2-2757-42b5-96a0-4c973ceae36e}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Models</Name>
+    <RootNamespace>Models</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="AKD.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AKD.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AKD.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Cart_Move.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Game_MoveSwitch.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedAKD.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedAKD.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GeneratedAKD.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1425.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1425.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1425.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1425.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package8_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1425.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2051.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2122.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2123.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_2124.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Models.modelproj">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Ship_Move.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Warehouse_NewCart.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="DKD V2.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DKD V2.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DKD V2.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="DKD.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DKD.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DKD.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Models.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

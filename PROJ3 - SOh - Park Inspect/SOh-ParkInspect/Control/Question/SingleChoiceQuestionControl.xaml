@@ -1,0 +1,32 @@
+<UserControl x:Class="SOh_ParkInspect.Control.Question.SingleChoiceQuestionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:SOh_ParkInspect.Control"
+             mc:Ignorable="d"
+             MinWidth="250"
+             Margin="10"
+             d:DesignHeight="215"
+             d:DesignWidth="250"
+             DataContext="{Binding SingleChoiceQuestion, Source={StaticResource Locator}}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               VerticalAlignment="Center"
+               Margin="0,0,0,10"
+               FontSize="20"
+               Content="{Binding Question.Text}" />
+
+        <ComboBox Grid.Row="1"
+                  ItemsSource="{Binding AnswerSet}"
+                  DisplayMemberPath="Value"
+                  DropDownClosed="comboBox_DropDownClosed" />
+
+    </Grid>
+</UserControl>

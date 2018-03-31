@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Domain">
+      <UniqueIdentifier>{095bbadf-9610-44d5-a428-00fe36184367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\Models">
+      <UniqueIdentifier>{3cf5ffc0-133c-4dc8-a8bb-23a224b2584b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\States">
+      <UniqueIdentifier>{160cdec6-04ee-40b0-a2bd-51a98533c151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain">
+      <UniqueIdentifier>{3aea6c39-c98e-4542-8378-0f74d41fe0ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\Models">
+      <UniqueIdentifier>{b553dc7c-e4ad-4972-951e-5bca18e0cf99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\States">
+      <UniqueIdentifier>{74db92c0-ce39-4579-9ab1-a76351bcff35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\Utility">
+      <UniqueIdentifier>{0ae44185-1af3-47f4-b033-37b42c683995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\Utility">
+      <UniqueIdentifier>{45e293f4-2bcd-4c86-b07a-8dd83c23cbdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\Readers">
+      <UniqueIdentifier>{060389e1-d58c-44dd-81fb-1fd8ffa49b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\Readers">
+      <UniqueIdentifier>{99195ac8-8ee6-40a6-929e-80c5e0e8f3e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\States\Shops">
+      <UniqueIdentifier>{01f8ac55-8246-4829-995f-3b4f954bc8e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\States\Shops\Commodity">
+      <UniqueIdentifier>{b9be8b8b-6e15-4327-b631-2ee204417813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\States\Shops">
+      <UniqueIdentifier>{ab2cb3fa-b2a4-4e78-919d-0bfc9d0b8d25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\States\Shops\Commodity">
+      <UniqueIdentifier>{bae27d0c-e58e-4642-b80e-6233ca3052a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\States\Shops\Ship">
+      <UniqueIdentifier>{20ad6042-9523-4c5d-9ac0-ce4704bda0d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\States\Shops\Cannon">
+      <UniqueIdentifier>{36627be8-1079-4064-9960-a5f814a2e79b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\States\Shops\Cannon">
+      <UniqueIdentifier>{1dfc2897-32b8-4b71-bcc5-d3b9d8a5af81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\States\Shops\Ship">
+      <UniqueIdentifier>{debe36d4-102c-4f33-8ee1-856b00d4af67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Domain\Models\Cannon">
+      <UniqueIdentifier>{76100d62-56a0-401e-aecc-1e2c059a9c3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Domain\Models\Cannon">
+      <UniqueIdentifier>{a6bb8bdd-c865-403e-9c9d-bf95317ebcaa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commodity.h">
+      <Filter>Header Files\Domain\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="journey.h">
+      <Filter>Header Files\Domain\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="port.h">
+      <Filter>Header Files\Domain\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="ship.h">
+      <Filter>Header Files\Domain\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="battle_state.h">
+      <Filter>Header Files\Domain\States</Filter>
+    </ClInclude>
+    <ClInclude Include="port_state.h">
+      <Filter>Header Files\Domain\States</Filter>
+    </ClInclude>
+    <ClInclude Include="sailing_state.h">
+      <Filter>Header Files\Domain\States</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>Header Files\Domain\States</Filter>
+    </ClInclude>
+    <ClInclude Include="str.h">
+      <Filter>Header Files\Domain\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Header Files\Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="destination_state.h">
+      <Filter>Header Files\Domain\States</Filter>
+    </ClInclude>
+    <ClInclude Include="csv_reader.h">
+      <Filter>Header Files\Domain\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="journey_reader.h">
+      <Filter>Header Files\Domain\Readers</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Header Files\Domain\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="commodity_amount_reader.h">
+      <Filter>Header Files\Domain\Readers</Filter>
+    </ClInclude>
+    <ClInclude Include="range.h">
+      <Filter>Header Files\Domain\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="commodity_price_reader.h">
+      <Filter>Header Files\Domain\Readers</Filter>
+    </ClInclude>
+    <ClInclude Include="ship_reader.h">
+      <Filter>Header Files\Domain\Readers</Filter>
+    </ClInclude>
+    <ClInclude Include="commodity_shop_buy_state.h">
+      <Filter>Header Files\Domain\States\Shops\Commodity</Filter>
+    </ClInclude>
+    <ClInclude Include="commodity_shop_state.h">
+      <Filter>Header Files\Domain\States\Shops\Commodity</Filter>
+    </ClInclude>
+    <ClInclude Include="ship_shop_state.h">
+      <Filter>Header Files\Domain\States\Shops\Ship</Filter>
+    </ClInclude>
+    <ClInclude Include="shop_state.h">
+      <Filter>Header Files\Domain\States\Shops</Filter>
+    </ClInclude>
+    <ClInclude Include="cannon_shop_state.h">
+      <Filter>Header Files\Domain\States\Shops\Cannon</Filter>
+    </ClInclude>
+    <ClInclude Include="commodity_shop_sell_state.h">
+      <Filter>Header Files\Domain\States\Shops\Commodity</Filter>
+    </ClInclude>
+    <ClInclude Include="cannon_shop_buy_state.h">
+      <Filter>Header Files\Domain\States\Shops\Cannon</Filter>
+    </ClInclude>
+    <ClInclude Include="cannon_shop_sell_state.h">
+      <Filter>Header Files\Domain\States\Shops\Cannon</Filter>
+    </ClInclude>
+    <ClInclude Include="cannon.h">
+      <Filter>Header Files\Domain\Models\Cannon</Filter>
+    </ClInclude>
+    <ClInclude Include="heavy_cannon.h">
+      <Filter>Header Files\Domain\Models\Cannon</Filter>
+    </ClInclude>
+    <ClInclude Include="light_cannon.h">
+      <Filter>Header Files\Domain\Models\Cannon</Filter>
+    </ClInclude>
+    <ClInclude Include="stock.h">
+      <Filter>Header Files\Domain\Models</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPPirate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ship.cpp">
+      <Filter>Source Files\Domain\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Commodity.cpp">
+      <Filter>Source Files\Domain\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Port.cpp">
+      <Filter>Source Files\Domain\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Journey.cpp">
+      <Filter>Source Files\Domain\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="str.cpp">
+      <Filter>Source Files\Domain\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files\Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="battle_state.cpp">
+      <Filter>Source Files\Domain\States</Filter>
+    </ClCompile>
+    <ClCompile Include="port_state.cpp">
+      <Filter>Source Files\Domain\States</Filter>
+    </ClCompile>
+    <ClCompile Include="sailing_state.cpp">
+      <Filter>Source Files\Domain\States</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>Source Files\Domain\States</Filter>
+    </ClCompile>
+    <ClCompile Include="destination_state.cpp">
+      <Filter>Source Files\Domain\States</Filter>
+    </ClCompile>
+    <ClCompile Include="csv_reader.cpp">
+      <Filter>Source Files\Domain\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="journey_reader.cpp">
+      <Filter>Source Files\Domain\Readers</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>Source Files\Domain\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="commodity_amount_reader.cpp">
+      <Filter>Source Files\Domain\Readers</Filter>
+    </ClCompile>
+    <ClCompile Include="range.cpp">
+      <Filter>Source Files\Domain\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="commodity_price_reader.cpp">
+      <Filter>Source Files\Domain\Readers</Filter>
+    </ClCompile>
+    <ClCompile Include="ship_reader.cpp">
+      <Filter>Source Files\Domain\Readers</Filter>
+    </ClCompile>
+    <ClCompile Include="commodity_shop_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Commodity</Filter>
+    </ClCompile>
+    <ClCompile Include="commodity_shop_buy_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Commodity</Filter>
+    </ClCompile>
+    <ClCompile Include="shop_state.cpp">
+      <Filter>Source Files\Domain\States\Shops</Filter>
+    </ClCompile>
+    <ClCompile Include="cannon_shop_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="ship_shop_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Ship</Filter>
+    </ClCompile>
+    <ClCompile Include="commodity_shop_sell_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Commodity</Filter>
+    </ClCompile>
+    <ClCompile Include="cannon_shop_buy_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="cannon_shop_sell_state.cpp">
+      <Filter>Source Files\Domain\States\Shops\Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="cannon.cpp">
+      <Filter>Source Files\Domain\Models\Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="heavy_cannon.cpp">
+      <Filter>Source Files\Domain\Models\Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="light_cannon.cpp">
+      <Filter>Source Files\Domain\Models\Cannon</Filter>
+    </ClCompile>
+    <ClCompile Include="stock.cpp">
+      <Filter>Source Files\Domain\Models</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\assets\afstanden tussen steden.csv">
+      <Filter>Resource Files</Filter>
+    </Content>
+    <Content Include="..\assets\goederen hoeveelheid.csv">
+      <Filter>Resource Files</Filter>
+    </Content>
+    <Content Include="..\assets\goederen prijzen.csv">
+      <Filter>Resource Files</Filter>
+    </Content>
+    <Content Include="..\assets\schepen.csv">
+      <Filter>Resource Files</Filter>
+    </Content>
+  </ItemGroup>
+</Project>

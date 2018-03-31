@@ -1,0 +1,15 @@
+<ion-view view-title="Image">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon ion-android-upload" ng-click="save()" ng-disabled="!canSave"></button>
+      <button class="button button-icon ion-android-delete" ng-click="delete()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="image" scroll="false">
+    <label class="item item-input">
+      <input type="text" ng-model="image.name" placeholder="Title">
+    </label>
+    <img class="image" http-src="{{ getImageURL(image.id) }}"/>
+  </ion-content>
+</ion-view>

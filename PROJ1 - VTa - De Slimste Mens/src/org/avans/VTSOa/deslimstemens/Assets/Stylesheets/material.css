@@ -1,0 +1,37 @@
+@font-face {
+	font-family: "Roboto Regular";
+	src: url("../Fonts/RobotoCondensed-Regular.ttf");
+}
+
+.root {
+	-fx-font-family: "Roboto Regular";
+}
+
+.default-button {
+    -fx-button-type: FLAT;
+    -fx-padding: 0.7em, 0.50em;
+}
+
+.add-black {
+	-fx-graphic: url("../Images/Add/add_black.png");
+}
+
+.edit-black {
+	-fx-graphic: url("../Images/Edit/edit_black.png");
+}
+
+.raised {
+    -fx-button-type: RAISED;
+}
+
+.raised.fab {
+    -fx-min-width: 42px;
+    -fx-min-height: 42px;
+    -fx-background-radius: 42px;
+    -fx-background-color: grey;
+}
+
+.hamburger{
+    -fx-spacing: 5;
+    -fx-cursor: hand;
+}

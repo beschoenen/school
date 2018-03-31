@@ -1,0 +1,40 @@
+﻿<Window x:Class="SOh_ParkInspect.View.OpenQuestionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SOh_ParkInspect.View"
+        mc:Ignorable="d"
+        DataContext="{Binding OpenQuestion, Source={StaticResource Locator}}"
+        Title="Open Vraag" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="148*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Height="276" Margin="0,0,-0.4,-4" VerticalAlignment="Top" Grid.ColumnSpan="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="Question" Content="{Binding QuestionValue}" Margin="10,30,220,0" Grid.RowSpan="2" VerticalAlignment="Top"/>
+            <TextBox x:Name="AnswerBox" Margin="10,9.8,10,9.6" Grid.Row="3" TextWrapping="Wrap" Text="{Binding AnswerValue}"/>
+            <Grid HorizontalAlignment="Center" Height="28" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="290">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="145"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="SaveButton" Content="Opslaan" HorizontalAlignment="Right" Grid.Column="0" VerticalAlignment="Top" Width="75" Margin="0,0,32.8,0"/>
+                <Button x:Name="BackButton" Content="Terug" HorizontalAlignment="Left" Grid.Column="1" VerticalAlignment="Top" Width="75" Margin="37.2,0,0,0"/>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>

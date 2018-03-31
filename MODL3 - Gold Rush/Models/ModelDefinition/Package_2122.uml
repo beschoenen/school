@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2b9363cf-08c0-46df-816e-70a263ad6680"
+  name="Controller" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="080b7c23-56ff-4958-a7e9-e9ee327b326d"
+        name="GameController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a2ca3cd8-8afb-47d5-b01c-7a811e29b39f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Controller Type%3DGameController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e0629505-7de8-4220-8afc-7ec10ea4f047"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f1c8718-c0e8-49ed-8289-126ee638e927">
+                <propertyInstance
+                  Id="7316c27d-3c7c-4b67-8446-f2f0be141886"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f977f8ab-f170-45ec-aa76-5300063404c9">
+                <propertyInstance
+                  Id="07b4dabb-9180-439f-b042-b63ab55ee8c7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e505d938-1299-437d-8714-f3e4677b712b">
+                <propertyInstance
+                  Id="731dd6da-b488-426a-b280-20ef07e53d0b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d8598fd3-280f-4b38-8dbc-45a21dcf11bc">
+                <propertyInstance
+                  Id="816ec3a0-86e2-4f19-aaf5-75efb10139af"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d86270c0-f043-4245-bb7f-8f9d0a6229b2">
+                <propertyInstance
+                  Id="2e6b603f-a0a9-4a8c-ae45-771769fa13d6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="08417065-3dc4-4c23-bd2d-6a10345538ed"
+            isDerived="false"
+            sourceEndRoleName="GameController"
+            targetEndRoleName="Game"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d8efc1e7-1599-4593-a9d1-aa755899d7e6"
+              LastKnownName="Game"
+              LastKnownLocation="Package_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3858680b-98b2-4b5a-9b53-749d5aae9fae"
+                  name="GameController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10809236-e013-4442-a67e-d4b40424529d"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c36d58f1-287c-443a-9f96-f188827e9141"
+            name="Game"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0998dcc7-ccbf-4fc8-923b-6ee906823bca"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Controller Type%3DGameController Member%3DGame"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="709b1158-2f8e-4f59-9623-fde7b94d5110"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55d2c0de-6a6a-4317-9740-32bee6cbdb4c">
+                    <propertyInstance
+                      Id="bf91596f-5c1d-455d-8207-6beb6629bfc7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29139b46-3f8a-4a77-a0a8-882dfb305fc6">
+                    <propertyInstance
+                      Id="837ff543-bb8c-47e1-842d-f34175e8dd2c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0e602cd-593d-4b81-8df2-93e393da48ee">
+                    <propertyInstance
+                      Id="54424ef7-8236-477b-b658-75a4033f2a1f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b90b246-768f-420f-ae7f-285a682326b6">
+                    <propertyInstance
+                      Id="d1a02e78-7781-4a22-8a1a-b40727e3c675"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8d1fbdd-1bb5-4a50-b37b-54ac304a79cc">
+                    <propertyInstance
+                      Id="c0f4e141-8391-413d-a006-e1db5b8d309e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d8efc1e7-1599-4593-a9d1-aa755899d7e6"
+                LastKnownName="Game"
+                LastKnownLocation="Package_2124.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5d86670d-a60e-4c4c-8a62-1f80f1c8257e"
+            name="GameController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="dd7bfaf7-2c8d-45c0-b675-853b118d6427"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Controller Type%3DGameController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="69caac00-a740-472f-a9cf-f4fd8f7bdd43"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28e7a560-bef1-427c-9725-95eee79a6ebe">
+                    <propertyInstance
+                      Id="812f7c26-c48c-495c-a442-6eb811623594"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17f59be1-e999-4d4e-889f-e38b18f99ad2">
+                    <propertyInstance
+                      Id="5ea53a83-b18f-48f4-ae65-65c09631f867"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf2f85d9-62cd-4eca-83a9-69178cc3d84b">
+                    <propertyInstance
+                      Id="bead2087-c399-4054-864b-491fa7e45703"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96424af3-ed3e-43a1-93be-f07dd0772c5a">
+                    <propertyInstance
+                      Id="ba20b875-e0ee-4159-beee-05f23457cfab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74b4b82d-f98d-4daf-9c27-29f1c4e1467c">
+                    <propertyInstance
+                      Id="37ec4083-24b9-4ea8-b9b9-62b9c35dfb7d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af9913a7-f75c-4712-91f2-f2f8c20e19c3">
+                    <propertyInstance
+                      Id="26d910ca-ca0b-4076-8b33-4ea078f2a6d8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4e83716e-3cb3-44ed-a126-17d25b22c0f3"
+            name="AskInput"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="29ed35c8-0111-46cb-bfe4-6edbfc441ad9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Controller Type%3DGameController Member%3DAskInput"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5dfb0807-8baf-4baf-8336-e3b57127f4d1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a533b61-d87f-4a83-9d6f-8f85afc079c3">
+                    <propertyInstance
+                      Id="dba2d1b8-42ae-48fc-adee-0f280035ac39"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c1d4409-f032-42fb-a7e8-acf5adfa1ce2">
+                    <propertyInstance
+                      Id="e237e7a8-5465-4c07-a05e-eaa89333b8bd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eec0bd2f-b447-4f27-b8ca-b8f8aedbf71e">
+                    <propertyInstance
+                      Id="80d4c7dd-f2be-41f4-a88a-6693e977e81b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="730375b7-7619-4748-ab6b-c5d868bc7e18">
+                    <propertyInstance
+                      Id="f9fd5541-313c-4c36-9285-dfdc49754a67"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d361dba0-e5b6-4af5-8e2a-8a7c749f78e4">
+                    <propertyInstance
+                      Id="b2b0a9c8-d7f8-42be-b8ec-dc4236b14ed2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74cf6826-b75f-451d-a60a-3a94fe08fd30">
+                    <propertyInstance
+                      Id="0190e9da-c8d6-4eff-8c57-afd0510f2a87"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="212ed645-8494-4164-92fe-7672b81a02a5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="231aa9ce-c476-4bd2-b70c-7865afa6e031"
+                      LastKnownName="ConsoleKey"
+                      LastKnownLocation="Package2_2051.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bd99e5ab-7116-4eea-b3e8-6c9261406a9b"
+            name="PlayGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7eb2f5ee-cc96-453f-bb8a-97d9925c2531"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Controller Type%3DGameController Member%3DPlayGame"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cc6ce1c8-94bc-4b07-8598-08ede302d66b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4d50641-f25d-4c05-ab2b-ec36740183ea">
+                    <propertyInstance
+                      Id="c9d5237f-2252-4e0f-b679-7e69cbcf9c54"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fb1327d-5e0f-4bc5-addb-a0681b01e037">
+                    <propertyInstance
+                      Id="89e26d84-570c-492c-9995-4b2e7d602ca3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d50d3a2-2439-4899-97d6-848badc5e849">
+                    <propertyInstance
+                      Id="5bbdfdc4-0df1-453e-9182-3c2fc0c01785"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f758bf46-9bf8-42a6-b7d1-8d900f1ab889">
+                    <propertyInstance
+                      Id="6a2209d1-04bb-4ed9-9237-c32ba18d2ca8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6eeb0a3b-e0a0-403d-89d7-5516c1048223">
+                    <propertyInstance
+                      Id="be8dc0be-ece0-442e-8226-0b554d9a12c9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8dce9f0e-3488-431c-9f00-75b8fd6efa98">
+                    <propertyInstance
+                      Id="c9084fa6-b36d-4e05-8f7b-9978c89518ac"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0adbb449-015f-4d20-b2ae-e03c86e99fe4"
+        name="Program"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="195bd8b5-7def-47f8-bef5-9472df52a844"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush Type%3DProgram"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f4517a6d-1d29-4d92-b7f4-aaa157bd964e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb78068b-eb99-49a4-bef6-ee3169f2ca39">
+                <propertyInstance
+                  Id="65519f91-8235-415c-a6fe-9cfe0f114aa3"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="acef76d4-0f13-464a-807a-ed407be0170f">
+                <propertyInstance
+                  Id="b3c1c947-3f76-4e75-b1d0-91ead5aee7a9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45d96c3c-63a5-4192-a820-0ba6a157521c">
+                <propertyInstance
+                  Id="f8c46ff9-20b0-4aeb-a812-1b8074023e1b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92da95c3-c288-4def-863a-2f22f7d4041e">
+                <propertyInstance
+                  Id="294ec036-4e84-4cf0-9d74-91f45442460c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="76294b4d-614d-4a72-985c-11d4414b7f99">
+                <propertyInstance
+                  Id="e63f6d64-b31f-4870-ae12-5bbf720a999b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="70215815-ede3-4e46-81c8-ac9fefabaf3b"
+            isDerived="false"
+            sourceEndRoleName="Program"
+            targetEndRoleName="GameController"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="080b7c23-56ff-4958-a7e9-e9ee327b326d"
+              LastKnownName="GameController"
+              LastKnownLocation="Package_2122.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85570414-accd-4e46-8bd4-e042bb445c14"
+                  name="Program"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf45f253-51cd-40fd-8659-6318fbfb07cd"
+                  name="GameController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="e7f9adf4-210d-47f5-a16f-0336a652f29b"
+            name="_wantsToPlay"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8f98e64a-3771-4774-b65b-a5bc7c6b175c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush Type%3DProgram Member%3D_wantsToPlay"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8fa6abc6-47c9-4c00-a336-85daea79f87b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e53a9784-157b-4f49-9af3-54b8aaa288a4">
+                    <propertyInstance
+                      Id="28507c71-6f8b-46a7-a5e7-ab4f13699993"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77263187-28be-4211-a0cb-67d53dc74dc2">
+                    <propertyInstance
+                      Id="784f9384-133f-48db-9e4e-7509d8e24ecf"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba3cbd32-9f91-41a0-bcd1-d7afed80271f">
+                    <propertyInstance
+                      Id="a20548a1-c1ed-4507-944e-7f06119d815d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e0555eb-446c-4849-8911-ac1e975d3075">
+                    <propertyInstance
+                      Id="8ecdb539-e07e-4995-8ed1-9aa802dc4400"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="571ae153-306e-4890-8912-7b98d834b1dd">
+                    <propertyInstance
+                      Id="46aeb879-771e-4a6a-8a8b-1cf7ce776afb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="Models.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="01514422-8212-4749-b93d-3c59cb820e86"
+            name="Program"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cbd0e020-c842-4f8c-b3b1-4b0487c6bcc1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush Type%3DProgram Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0177493a-7c61-4858-85bc-acaa046333ee"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02bac147-d510-4d0a-8e4e-6f9b45d33244">
+                    <propertyInstance
+                      Id="6f842c11-ebcc-4d70-9aca-04da096931b2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="144fa57d-e9ad-4fc3-ac3a-8a8c94f6584a">
+                    <propertyInstance
+                      Id="0e82703d-9564-422c-bb36-5fa629375309"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7922776a-936d-40fd-9bab-0852501add9b">
+                    <propertyInstance
+                      Id="7e089252-43c3-4c36-a9dd-c40a082a4737"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="993449f8-451b-4fed-b962-f31dee3eb3ab">
+                    <propertyInstance
+                      Id="a4e41620-aeb7-4e43-a5b8-9e3fa264a1c9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2edee0fd-2f7b-404a-a407-10b6b0bc272f">
+                    <propertyInstance
+                      Id="d8bf93ed-82f2-4802-a682-ff314fadf5cf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae798101-b57e-4ebb-81ae-109424f07499">
+                    <propertyInstance
+                      Id="07c682d4-944f-43dc-b4b7-bd695bc9313a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="17df9906-df11-4694-9beb-e77162eb07dd"
+            name="Main"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8071bfa4-6051-411b-9055-b7efb22e2b3e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush Type%3DProgram Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b8c5433a-2499-4ce0-ad34-e26433e9033e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0493ec89-f163-4667-a742-0ff5094477fb">
+                    <propertyInstance
+                      Id="2f7a5135-0ae1-4ce7-85e7-a5a8da89a665"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2f917cb-5a1d-4c87-8963-3d41ea43e3ef">
+                    <propertyInstance
+                      Id="093c78f6-15d3-4b43-8491-067ed9e252aa"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c2a8517-ce08-48c7-ae12-759275a4065d">
+                    <propertyInstance
+                      Id="cbf13ad7-b14d-47b3-a7d9-0585bb1cfc46"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68b95280-9b33-49d8-8817-edb9cf2d5585">
+                    <propertyInstance
+                      Id="55974fef-2db1-4380-8506-9401eb6b3002"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fbf4200-4a93-474c-9986-d8612841aff4">
+                    <propertyInstance
+                      Id="14f92107-60dd-4540-b51e-038bb121c4ed"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1446246b-3b00-4aba-8ba9-328cfe3ae051">
+                    <propertyInstance
+                      Id="ad4ce145-d0c6-4d10-9ac7-4363cdad4f75"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5e55dd9a-1af8-4c3b-bc92-30249c54b6f8"
+                  name="args"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="913088d3-23c0-4ae8-b4b1-bfb8eccadcd4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush Type%3DProgram Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dargs"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c81eb96c-d1fa-4fc9-9e1f-1de63a74da5e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d1c95cfe-cb75-46c3-84fb-9f1451750bc8"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

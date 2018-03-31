@@ -1,0 +1,24 @@
+version: '{build}'
+
+clone_folder: c:\projects\cmake-init
+
+image: Visual Studio 2017
+
+before_build:
+# Download SDL2
+  - ps: Invoke-WebRequest "https://www.libsdl.org/release/SDL2-devel-2.0.5-VC.zip" -OutFile "C:\projects\sdl.zip"
+
+# Extract SDL
+  - mkdir extern && cd extern
+  - 7z x "C:\projects\sdl.zip"
+  - cd ..
+
+# Build project
+  - mkdir build && cd build
+  - cmake --version
+  - cmake ..
+
+build:
+  project: C:\projects\cmake-init\build\CMakeDemo.sln
+  verbosity: minimal
+  parallel: true

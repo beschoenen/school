@@ -1,0 +1,12 @@
+<div class="tile"
+     (click)="canSelect()"
+     [style.z-index]="tile.zPos"
+     [style.display]="tile.display"
+     [style.top.px]="top"
+     [class.selected]="selected"
+     [style.left.px]="left">
+  <div class="{{ background }}"
+       [class.selected]="isSelected"
+       [class.clickable]="clickable">
+  </div>
+</div>

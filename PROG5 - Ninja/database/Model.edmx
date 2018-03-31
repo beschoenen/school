@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelsStoreContainer">
+    <EntitySet Name="categories" EntityType="Models.Store.categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="equipments" EntityType="Models.Store.equipments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ninjas" EntityType="Models.Store.ninjas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ninja_wearing_equipment" EntityType="Models.Store.ninja_wearing_equipment" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ninja_wearing_equipment_equipment" Association="Models.Store.FK_ninja_wearing_equipment_equipment">
+      <End Role="equipment" EntitySet="equipments" />
+      <End Role="ninja_wearing_equipment" EntitySet="ninja_wearing_equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ninja_wearing_equipment_ninja" Association="Models.Store.FK_ninja_wearing_equipment_ninja">
+      <End Role="ninja" EntitySet="ninjas" />
+      <End Role="ninja_wearing_equipment" EntitySet="ninja_wearing_equipment" />
+    </AssociationSet>
+    <AssociationSet Name="categoryequipment" Association="Models.Store.categoryequipment">
+      <End Role="category" EntitySet="categories" />
+      <End Role="equipment" EntitySet="equipments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="equipments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="image" Type="varchar(max)" Nullable="false" />
+    <Property Name="value" Type="int" Nullable="false" />
+    <Property Name="strength" Type="int" Nullable="false" />
+    <Property Name="intelligence" Type="int" Nullable="false" />
+    <Property Name="agility" Type="int" Nullable="false" />
+    <Property Name="category_name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ninjas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ninja_wearing_equipment">
+    <Key>
+      <PropertyRef Name="equipment_id" />
+      <PropertyRef Name="ninjas_id" />
+    </Key>
+    <Property Name="equipment_id" Type="int" Nullable="false" />
+    <Property Name="ninjas_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="categoryequipment">
+    <End Role="category" Type="Models.Store.categories" Multiplicity="1" />
+    <End Role="equipment" Type="Models.Store.equipments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="equipment">
+        <PropertyRef Name="category_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ninja_wearing_equipment_equipment">
+    <End Role="equipment" Type="Models.Store.equipments" Multiplicity="1" />
+    <End Role="ninja_wearing_equipment" Type="Models.Store.ninja_wearing_equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="equipment">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ninja_wearing_equipment">
+        <PropertyRef Name="equipment_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ninja_wearing_equipment_ninja">
+    <End Role="ninja_wearing_equipment" Type="Models.Store.ninja_wearing_equipment" Multiplicity="*" />
+    <End Role="ninja" Type="Models.Store.ninjas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ninja">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ninja_wearing_equipment">
+        <PropertyRef Name="ninjas_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="equipment" Relationship="Models.categoryequipment" FromRole="category" ToRole="equipment" />
+        </EntityType>
+        <EntityType Name="equipment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="value" Type="Int32" Nullable="false" />
+          <Property Name="strength" Type="Int32" Nullable="false" />
+          <Property Name="intelligence" Type="Int32" Nullable="false" />
+          <Property Name="agility" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ninjas" Relationship="Self.ninja_wearing_equipment" FromRole="equipment" ToRole="ninja" />
+          <NavigationProperty Name="category" Relationship="Models.categoryequipment" FromRole="equipment" ToRole="category" />
+        </EntityType>
+        <EntityType Name="ninja">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="equipment" Relationship="Self.ninja_wearing_equipment" FromRole="ninja" ToRole="equipment" />
+        </EntityType>
+        <Association Name="ninja_wearing_equipment">
+          <End Role="equipment" Type="Self.equipment" Multiplicity="*" />
+          <End Role="ninja" Type="Self.ninja" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categories" EntityType="Self.category" />
+          <EntitySet Name="equipments" EntityType="Self.equipment" />
+          <EntitySet Name="ninjas" EntityType="Self.ninja" />
+          <AssociationSet Name="ninja_wearing_equipment" Association="Self.ninja_wearing_equipment">
+            <End Role="equipment" EntitySet="equipments" />
+            <End Role="ninja" EntitySet="ninjas" />
+          </AssociationSet>
+          <AssociationSet Name="categoryequipment" Association="Models.categoryequipment">
+            <End Role="category" EntitySet="categories" />
+            <End Role="equipment" EntitySet="equipments" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="categoryequipment">
+          <End Type="Models.category" Role="category" Multiplicity="1" />
+          <End Type="Models.equipment" Role="equipment" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="IsTypeOf(Models.category)">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="equipments">
+      <EntityTypeMapping TypeName="IsTypeOf(Models.equipment)">
+        <MappingFragment StoreEntitySet="equipments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="strength" ColumnName="strength" />
+          <ScalarProperty Name="intelligence" ColumnName="intelligence" />
+          <ScalarProperty Name="agility" ColumnName="agility" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ninjas">
+      <EntityTypeMapping TypeName="IsTypeOf(Models.ninja)">
+        <MappingFragment StoreEntitySet="ninjas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ninja_wearing_equipment" TypeName="Models.ninja_wearing_equipment" StoreEntitySet="ninja_wearing_equipment">
+      <EndProperty Name="equipment">
+        <ScalarProperty Name="id" ColumnName="equipment_id" />
+      </EndProperty>
+      <EndProperty Name="ninja">
+        <ScalarProperty Name="id" ColumnName="ninjas_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="categoryequipment" TypeName="Models.categoryequipment" StoreEntitySet="equipments">
+      <EndProperty Name="category">
+        <ScalarProperty Name="name" ColumnName="category_name" />
+      </EndProperty>
+      <EndProperty Name="equipment">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

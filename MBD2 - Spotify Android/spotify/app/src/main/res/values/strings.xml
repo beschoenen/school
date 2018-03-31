@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Spotify favorite app</string>
+    <string name="favorite_toolbar">Favorites</string>
+</resources>

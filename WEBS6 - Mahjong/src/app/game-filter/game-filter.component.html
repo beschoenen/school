@@ -1,0 +1,124 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Filter</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="row">
+          <div class="col-md-12">
+            <strong>Toggle state</strong>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tOpen" style="font-weight: normal;">Open:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tOpen" type="checkbox" (change)="toggleOn('states', 'open')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tPlaying" style="font-weight: normal;">Playing:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tPlaying" type="checkbox" (change)="toggleOn('states', 'playing')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tFinished" style="font-weight: normal;">Finished:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tFinished" type="checkbox" (change)="toggleOn('states', 'finished')">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="row">
+          <div class="col-md-12">
+            <strong>Toggle board</strong>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tShanghai" style="font-weight: normal;">Shanghai:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tShanghai" type="checkbox" (change)="toggleOn('templates', 'Shanghai')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tSnake" style="font-weight: normal;">Snake:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tSnake" type="checkbox" (change)="toggleOn('templates', 'Snake')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tRooster" style="font-weight: normal;">Rooster:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tRooster" type="checkbox" (change)="toggleOn('templates', 'Rooster')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tOx" style="font-weight: normal;">Ox:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tOx" type="checkbox" (change)="toggleOn('templates', 'Ox')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tDragon" style="font-weight: normal;">Dragon:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tDragon" type="checkbox" (change)="toggleOn('templates', 'Dragon')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tRam" style="font-weight: normal;">Ram:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tRam" type="checkbox" (change)="toggleOn('templates', 'Ram')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tMonkey" style="font-weight: normal;">Monkey:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tMonkey" type="checkbox" (change)="toggleOn('templates', 'Monkey')">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="row">
+          <div class="col-md-12">
+            <strong>Toggle me</strong>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tMeBy" style="font-weight: normal;">Created:</label>
+              </div>
+                <div class="col-md-4 col-xs-4">
+                <input id="tMeBy" type="checkbox" (change)="toggleOn('me', 'created')">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-4 col-xs-5">
+                <label for="tJoined" style="font-weight: normal;">Joined:</label>
+              </div>
+              <div class="col-md-4 col-xs-4">
+                <input id="tJoined" type="checkbox" (change)="toggleOn('me', 'joined')">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

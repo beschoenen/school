@@ -1,0 +1,25 @@
+<ion-view view-title="Entry">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button button-icon ion-android-upload" ng-click="save()" ng-disabled="!canSave"></button>
+      <button class="button button-icon ion-android-delete" ng-click="delete()" ng-disabled="!canDelete"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="entry" scroll="false">
+    <label class="item item-input">
+      <input type="text" ng-model="entry.title" placeholder="Title">
+    </label>
+    <div class="image-list">
+      <div class="image new">
+        <button class="button button-icon ion-android-camera" ng-click="takeImage()"></button>
+      </div>
+      <div class="image" ng-repeat="image in entry.images" ng-click="viewImage($index)">
+        <img http-src="{{ getThumbURL(image.id) }}"/>
+      </div>
+    </div>
+    <label class="item item-input">
+      <textarea ng-model="entry.text" class="text-area" placeholder="Text"></textarea>
+    </label>
+  </ion-content>
+</ion-view>

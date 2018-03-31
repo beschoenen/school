@@ -1,0 +1,157 @@
+#board {
+	max-width: 700px;
+	max-height: 500px;
+	margin: 0 auto;
+}
+
+#title {
+	text-align: center;
+}
+
+.start-box {
+	max-width: 300px;
+}
+
+.start-box button {
+	margin-bottom: 10px;
+}
+
+.game-box {
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.game-box > div {
+	padding: 7px;
+}
+
+.game-box * {
+	cursor: pointer;
+}
+
+.game-box div:not(:last-child) {
+	border-bottom: 1px solid black;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.game-box h3 {
+	margin: 0;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.clear-fix {
+	clear: both;
+}
+
+#sea {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	height: 600px;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.field {
+	height: 10%;
+	width: 10%;
+	float:left;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.ship-list button {
+	margin: 20px;
+}
+
+#vertical.active {
+	color: blue;
+}
+
+.ship {
+	float:left;
+	margin: 20px;
+}
+
+.ship-list .field {
+	height: 30px;
+	width: 30px;
+	border-top: 1px solid black;
+}
+
+.ship .field:nth-of-type(1) {
+	border-left: 1px solid black;
+}
+
+.ship .field:hover {
+	cursor: pointer;
+}
+
+.ship.selected .field {
+	background-color: red;
+}
+
+.ship.set .field {
+	background-color: blue;
+}
+
+.ship.set:hover {
+	cursor: auto;
+}
+
+#sea .field.selected {
+	background-color: red;
+}
+
+#sea .field.selected:hover {
+	cursor: pointer;
+}
+
+#sea .field.set {
+	background-color: blue;
+}
+
+#sea .field.set:hover {
+	cursor: pointer;
+}
+
+#enemy {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	height: 500px;
+	width: 500px;
+	margin: 5px;
+}
+
+#enemy .field:hover {
+	cursor: pointer;
+}
+
+.field.hit {
+	background-color: green;
+}
+
+.field.miss {
+	background-color: red;
+}
+
+#own {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	height: 300px;
+	width: 300px;
+	margin: 5px;
+}
+
+.is-ship {
+	background-color: blue;
+}

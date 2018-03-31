@@ -1,0 +1,36 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.ManagementReport.ManagementReportGenerationControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:local="clr-namespace:SOh_ParkInspect.Control.ManagementReport"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           mc:Ignorable="d"
+                           Background="White"
+                           d:DesignHeight="430"
+                           d:DesignWidth="700"
+                           DataContext="{Binding ManagementReportGeneration, Mode=OneWay, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <WebBrowser x:Name="Browser"
+                    local:WebBrowserUtility.BindableSource="{Binding WebBrowserUri, UpdateSourceTrigger=PropertyChanged}"
+                    Height="Auto"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Width="Auto"
+                    Margin="160,0,0,0" />
+        <StackPanel HorizontalAlignment="Left"
+                    Orientation="Horizontal"
+                    Grid.Row="1">
+            <Button Content="Genereer"
+                    Margin="5"
+                    Click="generateButton_Click" />
+            <Button Content="Exporteer"
+                    Margin="5"
+                    Click="exportButton_Click" />
+        </StackPanel>
+    </Grid>
+</helper:ParkInspectControl>

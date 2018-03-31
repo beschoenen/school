@@ -1,0 +1,169 @@
+﻿@using TamagotchiService
+
+@model Tamagotchi
+
+@{
+    ViewBag.Title = "Play";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Tamagotchi currentTamagotchi = ViewBag.Tamagotchi;
+    List<GameRule> rules = ViewBag.Rules;
+}
+
+<h2>Play</h2>
+
+<div>
+    <h4>Tamagotchi</h4>
+</div>
+<br/>
+<div>
+    <div id="deceased">
+        @if (currentTamagotchi.Deceased)
+        {
+            <div class="alert alert-danger">
+                @currentTamagotchi.Name has died! ☹️
+            </div>
+        }
+    </div>
+    <div id="currently-playing"></div>
+
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>@currentTamagotchi.Name</dd>
+
+        <dt>Health</dt>
+        <dd><span id="health">@currentTamagotchi.Health</span>%</dd>
+
+        <dt>Age</dt>
+        <dd><span id="age">@currentTamagotchi.Age</span> Seconds</dd>
+
+        <dt>Hunger</dt>
+        <dd><span id="hunger">@currentTamagotchi.Hunger</span>%</dd>
+
+        <dt>Sleep</dt>
+        <dd><span id="sleep">@currentTamagotchi.Sleep</span>%</dd>
+
+        <dt>Boredom</dt>
+        <dd><span id="boredom">@currentTamagotchi.Boredom</span>%</dd>
+
+        <dt>Statuses</dt>
+        <div id="statuses">
+            @foreach (var status in currentTamagotchi.Statuses)
+            {
+                <dd>@status</dd>
+            }
+        </div>
+    </dl>
+</div>
+<br/>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Game rules</th>
+        <th>Conditions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><label><input @(rules.Contains(GameRule.Age) ? "checked" : "") type="checkbox" class="game-rule-box" value="age">&nbsp;Can age</label></td>
+        <td><label><input @(rules.Contains(GameRule.SleepDeprevation) ? "checked" : "") type="checkbox" class="game-rule-box" value="sleep-deprevation">&nbsp;Can become sleep deprevated</label></td>
+    </tr>
+    <tr>
+        <td><label><input @(rules.Contains(GameRule.Boredom) ? "checked" : "") type="checkbox" class="game-rule-box" value="boredom">&nbsp;Can become bored</label></td>
+        <td><label><input @(rules.Contains(GameRule.Starvation) ? "checked" : "") type="checkbox" class="game-rule-box" value="starvation">&nbsp;Can become starved</label></td>
+    </tr>
+    <tr>
+        <td><label><input @(rules.Contains(GameRule.Hunger) ? "checked" : "") type="checkbox" class="game-rule-box" value="hunger">&nbsp;Can become hungry</label></td>
+        <td><label><input @(rules.Contains(GameRule.Munchies) ? "checked" : "") type="checkbox" class="game-rule-box" value="munchies">&nbsp;Can have the munchies</label></td>
+    </tr>
+    <tr>
+        <td><label><input @(rules.Contains(GameRule.Sleep) ? "checked" : "") type="checkbox" class="game-rule-box" value="sleep">&nbsp;Can become sleepy</label></td>
+        <td><label><input @(rules.Contains(GameRule.Crazy) ? "checked" : "") type="checkbox" class="game-rule-box" value="crazy">&nbsp;Can become crazy</label></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<div>
+    <div style="float: left; margin-right: 5px;">
+        <button value="play" class="action-button btn btn-default" @(currentTamagotchi.Deceased ? "disabled" : "")>Play</button>
+        <button value="hug" class="action-button btn btn-default" @(currentTamagotchi.Deceased ? "disabled" : "")>Hug</button>
+        <button value="feed" class="action-button btn btn-default" @(currentTamagotchi.Deceased ? "disabled" : "")>Feed</button>
+        <button value="sleep" class="action-button btn btn-default" @(currentTamagotchi.Deceased ? "disabled" : "")>Sleep</button>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<br/>
+<p>
+    @Html.ActionLink($"Dismiss {currentTamagotchi?.Name}", "Dismiss")
+</p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+                $.get("//" + window.location.host + '/api/TamagotchiApi/CurrentTamagotchi', updateTamagotchi);
+            }, 2000);
+        });
+
+        function updateTamagotchi(data) {
+            var tamagotchi = JSON.parse(data);
+
+            $("#health").text(tamagotchi.Health);
+            $("#age").text(tamagotchi.Age);
+            $("#hunger").text(tamagotchi.Hunger);
+            $("#sleep").text(tamagotchi.Sleep);
+            $("#boredom").text(tamagotchi.Boredom);
+
+            $("#statuses").empty();
+            $.each(tamagotchi.Statuses,
+                function(index, item) {
+                    $("#statuses").append("<dd>" + item + "</dd>");
+                });
+
+            if (tamagotchi.Deceased) {
+                $("#deceased").html(
+                    "<div class=\"alert alert-danger\">" +
+                    tamagotchi.Name +
+                    " has died! ☹️" +
+                    "</div>"
+                );
+
+                $(".action-button").each(function() {
+                    $(this).attr('disabled', true);
+                });
+            }
+        }
+
+        $(".game-rule-box").click(function() {
+            $.get('//' + window.location.host + "/api/TamagotchiApi/ToggleGameRule?rule=" + this.value, handleRule);
+        });
+
+        function handleRule() {
+            
+        }
+
+        $(".action-button").click(function () {
+            $.get('//' + window.location.host + "/api/TamagotchiApi/DoAction?action=" + this.value, handleAction);
+        });
+
+        function handleAction(data) {
+            $("#currently-playing").html(function() {
+                if (data === "False") {
+                    return "<div class=\"alert alert-warning\">Something went wrong!</div>";
+                } else if (data !== "True") {
+                    return "<div class=\"alert alert-info\">" + data + "</div>";
+                }
+
+                return "";
+            }());
+            
+            setTimeout(function() {
+                $("#currently-playing").find("div").fadeOut(700, function () {
+                    this.remove();
+                });
+            }, 5000);
+            
+        }
+    </script>
+}

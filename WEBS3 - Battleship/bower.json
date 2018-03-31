@@ -1,0 +1,23 @@
+{
+  "name": "battleship",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Kevin Richter"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/beschoenen/battleship",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "handlebars": "^4.0.5",
+    "jquery": "^2.2.3"
+  }
+}

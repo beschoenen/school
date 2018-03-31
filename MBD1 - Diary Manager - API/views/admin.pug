@@ -1,0 +1,25 @@
+extends ./layout
+
+block title
+    |Admin
+
+block content
+    |Total users: 
+    =Object.keys(users).length
+    each user in users
+        div(class="user-box")
+            br
+            #user
+                if user.fullName == name
+                    div(class="div-overview-list-item loggedinuser")
+                        =user.fullName
+                        br
+                        |Total entries: 
+                        =user.entries.length
+                        br
+                        |Total devices: 
+                        =user.devices.length
+                else
+                    div(class="div-overview-list-item")
+                        =user.fullName
+                        i(class="fa fa-trash-o icon-delete", aria-hidden="false", onclick="deleteUser('"+user._id+"', this)")

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Recursion-Test", "1-Recursion-Test\1-Recursion-Test.csproj", "{32783F76-FF89-4451-9AFD-2AAA940D6EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Recursion", "1-Recursion\1-Recursion.csproj", "{B38EF3AB-2FBE-4636-A1A5-FA45B5220FEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Recursion-Sierpinski", "1-Recursion-Sierpinski\1-Recursion-Sierpinski.csproj", "{1BCFCEE8-FCD8-46B3-B438-D83C5CFBE2D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32783F76-FF89-4451-9AFD-2AAA940D6EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32783F76-FF89-4451-9AFD-2AAA940D6EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32783F76-FF89-4451-9AFD-2AAA940D6EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32783F76-FF89-4451-9AFD-2AAA940D6EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38EF3AB-2FBE-4636-A1A5-FA45B5220FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38EF3AB-2FBE-4636-A1A5-FA45B5220FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38EF3AB-2FBE-4636-A1A5-FA45B5220FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38EF3AB-2FBE-4636-A1A5-FA45B5220FEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCFCEE8-FCD8-46B3-B438-D83C5CFBE2D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCFCEE8-FCD8-46B3-B438-D83C5CFBE2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCFCEE8-FCD8-46B3-B438-D83C5CFBE2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCFCEE8-FCD8-46B3-B438-D83C5CFBE2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

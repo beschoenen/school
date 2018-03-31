@@ -1,0 +1,22 @@
+﻿<Window x:Class="prog5_ninja.View.NinjaModificationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d" ShowInTaskbar="False"
+        Title="Edit Ninja" Height="135" Width="239"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        DataContext="{Binding NinjaModificationViewModel, Source={StaticResource Locator}}">
+
+    <Grid>
+        <TextBlock Text="Give your ninja a name" Margin="10,15,10,0" VerticalAlignment="Top" Height="20"/>
+
+        <TextBox Height="23" Margin="10,40,10,0" TextWrapping="Wrap" Text="{Binding Ninja.Name, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <Button Content="Save" Margin="0,0,10,10" HorizontalAlignment="Right" Width="75" 
+            Command="{Binding SaveButtonClickedCommand}" 
+            CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" 
+            Height="22" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="49042b91-b0ef-43c7-bff7-a5903facc824"
+  name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="079adb60-c857-411d-91da-8dc01633d2e6"
+        name="InputView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="65c47bb4-6d19-4412-bf49-4670ef51f5c1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DInputView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="82eab03d-4fb0-4a2b-8ea6-3eec86ed6940"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="228b4d25-68be-4398-8b51-a18ef62b5d4c">
+                <propertyInstance
+                  Id="418b3d46-9d0a-43ab-9c2e-bfa803773d40"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="88a7dea4-53e6-4dac-9495-f804272bab2e">
+                <propertyInstance
+                  Id="be7e4944-3d02-4bab-8278-23713159a574"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e3704780-fb8c-4d8b-a4fd-3a8506e7f55c">
+                <propertyInstance
+                  Id="2f0a98e1-2dc4-4af0-a336-799dd82c06c1"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d329dce-fed2-4b95-9a58-cc80e846d74d">
+                <propertyInstance
+                  Id="bd3c68bc-170c-4d7c-b0a4-60e4554d4bc2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8192e61b-7b92-4a1b-a839-660fc783b54b">
+                <propertyInstance
+                  Id="d790bd62-7c29-4750-93a9-6c182a1f1bb4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="60210e33-35c0-4d50-b033-142da3c93b27"
+            isDerived="false"
+            sourceEndRoleName="InputView"
+            targetEndRoleName="GameController"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="080b7c23-56ff-4958-a7e9-e9ee327b326d"
+              LastKnownName="GameController"
+              LastKnownLocation="Package_2122.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="baafbeaa-eef4-4662-9335-1bf532d7b6e1"
+                  name="InputView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c6ec283-8609-4186-90d2-697d2345d58e"
+                  name="GameController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="d0afd2ae-ddad-42c3-9581-c13670ae797b"
+            name="InputView"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5b8c0809-c6e2-43d0-8213-3d66767282f1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DInputView Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="419909ff-5676-4bfb-b100-4c12cc584812"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f833064d-007a-4036-bebf-ffdb21306efb">
+                    <propertyInstance
+                      Id="8baba313-9099-4032-9d6a-a68a87e2c5f5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d05e01a1-79d5-4ef3-9d6c-0abbabfb3f2b">
+                    <propertyInstance
+                      Id="b10e3add-a925-4148-8635-acacdc5cfd46"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a83661cb-792a-46fc-bad2-b348b44107d7">
+                    <propertyInstance
+                      Id="aafcf1b3-701b-4551-81e3-562d1409560f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef335025-2b30-41ea-ad93-af50e03e2372">
+                    <propertyInstance
+                      Id="79e67c29-ee27-4a00-9eed-a795d7e58dee"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16024a2e-d3a9-4c86-ba0c-7abd3a8678a7">
+                    <propertyInstance
+                      Id="0d58580a-54fe-41a9-b302-17e6a30eb2b2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d9539bb-6759-42aa-b65f-d8ecbc13b87c">
+                    <propertyInstance
+                      Id="14700ec3-2f2b-4168-b411-40d5ba48e263"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="7c77088d-8443-4fcd-bdbf-940e077ed564"
+            name="PrintGameInstruction"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b513e851-004a-4502-bb6c-cd4654ebcfb1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DInputView Member%3DPrintGameInstruction"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e57b952f-c5af-43d0-9184-fa6e49f4c4c7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="674dd163-45bb-487b-b17d-868c345d425f">
+                    <propertyInstance
+                      Id="75306c80-83cc-476b-be0b-824cf46580a7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef424140-2b22-4ae9-8fec-f5d6db485790">
+                    <propertyInstance
+                      Id="20307b2f-9921-466a-ab3b-fab6bbd72e38"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08acc099-7f77-47d9-acf9-ff8013604cfe">
+                    <propertyInstance
+                      Id="2759e63a-7c99-4cc6-a519-bfbc04e5f1f2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af27c14b-e77a-4ff9-8e7c-4cde1be3a3bd">
+                    <propertyInstance
+                      Id="f780c412-e16f-4981-a180-dba8a02e9f5e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a61bb02f-b7af-4094-95ff-3acd45f2a49c">
+                    <propertyInstance
+                      Id="a054e3d9-8826-4d19-84e6-90d4a38e5df2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="130bee93-cea2-4418-94d2-29d643d27406">
+                    <propertyInstance
+                      Id="bb41768f-5639-471c-a92f-317764ba202c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="155be8f8-82eb-4703-b7cb-b86d7a052448"
+            name="PrintGameStart"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d14edeb5-32f4-4ab0-8057-9d5ff8274dd7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DInputView Member%3DPrintGameStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2aac953-b226-4733-9f5e-6782daac3571"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46495c04-5fa1-4a89-a3e5-90ca177dd7a1">
+                    <propertyInstance
+                      Id="8eda681f-a9a5-42de-b74a-cd3fbeade7e2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de129834-ceba-4cec-ad96-2e0753325e9e">
+                    <propertyInstance
+                      Id="9f0465ff-d5bb-47b8-b93f-b27f6a0c3668"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="592a5a73-2216-478c-ba50-98e3a0b1e6c5">
+                    <propertyInstance
+                      Id="459e7b01-d637-4b13-85ea-f1d3a17cd311"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d019d87-649d-4874-b98f-12fd3aac1d87">
+                    <propertyInstance
+                      Id="c91a83b2-1a35-47d5-88b7-b36437f21ab1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d4da380-80dc-4b1b-8708-ddcf3258ee95">
+                    <propertyInstance
+                      Id="6b8656ef-6e09-4b2b-acb1-b6ac476219b2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b92d0e1d-619e-4e8b-a378-953c16a96094">
+                    <propertyInstance
+                      Id="10ea2327-d1fc-4100-b88f-9c29a23f25e5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f43b80d3-d729-45a1-8cf5-b775ee9b23e9"
+        name="OutputView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7c192063-baa3-4d27-9059-a85ea041313c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6bb96e4e-7d87-44b8-92c2-f3d32c8c25bb"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="36429f02-fef7-436c-bd17-429014e27239">
+                <propertyInstance
+                  Id="2cf92893-d690-422d-8ec8-82e40337d2e8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d9271ef-a03f-4d02-bb0d-d56ea4643064">
+                <propertyInstance
+                  Id="568b202b-cf31-444d-bed5-ead9b000184f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="251007ae-5205-40dc-bf24-c925728c44ce">
+                <propertyInstance
+                  Id="4a9e8c4e-1da5-4128-b28f-c3dd654e4541"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4925d6bc-0075-4879-9df4-f01aaa4a9c81">
+                <propertyInstance
+                  Id="2e7e7ecd-a8d8-4e0c-8981-f92b3bfd2479"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="49f2f0a7-4e1f-44d9-bb96-7a25dc298d15">
+                <propertyInstance
+                  Id="09205d21-cc0e-45be-bebf-73214ebba1a7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="685a8eaa-228f-45f9-b6e9-7d84c7188103"
+            isDerived="false"
+            sourceEndRoleName="OutputView"
+            targetEndRoleName="GameController"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="080b7c23-56ff-4958-a7e9-e9ee327b326d"
+              LastKnownName="GameController"
+              LastKnownLocation="Package_2122.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="861c1f08-aa9b-4436-9c62-4ff0adc39a68"
+                  name="OutputView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e156a2a-afea-4246-a6f6-a1e8c0554a42"
+                  name="GameController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="7e898831-fcee-4e41-985e-187c3c908ef4"
+            name="OutputView"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bdca2341-4bed-428b-9df2-c8d90e5941b0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0c92626b-6e1d-43e0-9aca-1096b2e84c10"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0146f88f-ea26-4038-926b-5a05d3570160">
+                    <propertyInstance
+                      Id="e10e730e-1858-45ce-9356-4136fe0cc2e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="012abab8-c112-42fc-aedd-e1b237c964e2">
+                    <propertyInstance
+                      Id="e90e0061-c5c8-462a-9454-e88ee5e64de0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92b2e2db-a6bb-495e-9255-30a476c29c91">
+                    <propertyInstance
+                      Id="1c148ee1-6e97-4584-8e1e-ac1ed8080f8f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14708387-422f-42cf-b28b-729f6107bdce">
+                    <propertyInstance
+                      Id="b84917a4-a15c-40f3-95ee-f9f8d146c35e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06edbd47-c7f3-410c-9197-81b3f2fa0402">
+                    <propertyInstance
+                      Id="1c5b9038-6ff0-4f2f-817d-e86953a574b2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59d5b5bf-fd23-4005-a54a-2fa5506cfbf3">
+                    <propertyInstance
+                      Id="1e860fe3-6466-4f8e-a317-d33b4442dcb0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="77af6f83-c376-444e-b123-e1cd3ed01643"
+            name="GetSwitchIcon"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="216fcbf7-7e27-410f-8ff8-8bbfcba76a49"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DGetSwitchIcon OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DSwitch)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c34f57db-7a22-4e59-b146-2210a342b6ff"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adca4ba8-ba9d-4fb6-b91e-b522cb48f665">
+                    <propertyInstance
+                      Id="9ac84d99-b490-4775-9ca2-0479f2bf0b71"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15f43914-2c90-46a8-a9fb-1d0e57a7b2fc">
+                    <propertyInstance
+                      Id="e2b10daf-ac5a-442e-8235-26de37491bcc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7aaf625-ef4e-40a4-a120-34df62bcad2f">
+                    <propertyInstance
+                      Id="534ea494-5ed0-404f-9895-9a51d8a513ab"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f40e7df1-60c7-42ae-a1b1-10141fdf0dcc">
+                    <propertyInstance
+                      Id="ebc6a8e8-0642-48f2-b9c5-472710cb990d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4560a458-5aad-4cdc-a716-8f8b5462fc03">
+                    <propertyInstance
+                      Id="5c4c2d47-d903-4a1c-8fc6-f70f45ab80ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e50187e-db05-4fd7-98e9-6a7769060942">
+                    <propertyInstance
+                      Id="d3aa2ab3-f46b-45c2-b398-b76d5ec39f66"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c62e2d2-02b0-4fda-a827-d645fc03072f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="817ce680-5111-4fcf-933c-5119b9991d58"
+                      LastKnownName="Char"
+                      LastKnownLocation="Package2_2051.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d7934675-72aa-43c6-883d-2b70b6a322c8"
+                  name="gameSwitch"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a85eb267-2349-4860-b948-fb510a6e164a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DGetSwitchIcon OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DSwitch)]) ParameterIdentifier%3DgameSwitch"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc3f4b8c-447a-4812-8b0b-7a2f897d3d63"
+                      LastKnownName="Switch"
+                      LastKnownLocation="Package_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="46f07df6-fd6a-4a0d-87bd-814b5b4c3c66"
+            name="GetTrackIcon"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="10ddd692-8310-497e-a220-e74e324295f6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DGetTrackIcon OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DTrack)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fbeb7b08-90d6-40db-8001-a8c44f4b211a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b5d5eca-f11d-4b9a-b08e-bf67725930f1">
+                    <propertyInstance
+                      Id="c0df0434-8690-4ca1-8253-72c0b5ef136b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c214bd9-ea13-4d6b-9f60-79d35866c06b">
+                    <propertyInstance
+                      Id="0f8f2915-0ddc-41f3-a87a-286b5f774a29"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44a8badd-3876-4f62-b6b3-01f38f9d5f92">
+                    <propertyInstance
+                      Id="cab35be9-b887-45eb-8688-984fad2dca55"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="306a69e9-9eba-4a24-9292-c9935cfd751b">
+                    <propertyInstance
+                      Id="db1ab95d-3368-4197-8c57-02cbee5c5bdf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a313ba51-8a6e-4313-b49f-eb7eef92eb94">
+                    <propertyInstance
+                      Id="d88cb35d-dd4d-4213-a374-747b8cd2ce37"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16595009-441b-4ec9-9532-edda75fcbaf4">
+                    <propertyInstance
+                      Id="18110142-047a-4512-bd44-dd18dddc27f2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11f568d7-dae7-4210-a3f4-0329494bdc82"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="817ce680-5111-4fcf-933c-5119b9991d58"
+                      LastKnownName="Char"
+                      LastKnownLocation="Package2_2051.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d1ff635-bdb4-4351-a528-c207e98a0d33"
+                  name="track"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8c0bf523-ebb4-4f35-aeed-8817ee0412c1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DGetTrackIcon OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DTrack)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)]) ParameterIdentifier%3Dtrack"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="898857bb-261a-4d5f-8550-3834c4f3ea46"
+                      LastKnownName="Track"
+                      LastKnownLocation="Package_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="335b2c5f-9e14-4359-aefa-1ba5a9dcb7e2"
+                  name="defaultChar"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ad012d08-3166-4b78-b102-43f2bdb87ae4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DGetTrackIcon OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DTrack)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DChar)]) ParameterIdentifier%3DdefaultChar"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="817ce680-5111-4fcf-933c-5119b9991d58"
+                      LastKnownName="Char"
+                      LastKnownLocation="Package2_2051.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c0245559-f72e-4b5e-85d0-18e58cb94d32"
+            name="PrintBoat"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e3a334e3-2586-408c-8641-7a6367088935"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DPrintBoat OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DShip)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="baa08052-8984-4a15-9099-6d744b683ed0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5eaa646c-31a3-4950-9b7f-ab75cc0b046b">
+                    <propertyInstance
+                      Id="8fc923ba-4ccd-4b56-9d00-c7872fa75bb0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="687be9a4-b02f-4dfc-aab7-80aaaa4b0615">
+                    <propertyInstance
+                      Id="6e1f0009-027d-4e20-abca-e4eeca6d1071"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ec44f49-1551-416f-8fe0-30678b7c9705">
+                    <propertyInstance
+                      Id="47233aea-0776-40c0-bee8-802e47bfcbaa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a985104-24a7-4c59-b530-3c847302a13b">
+                    <propertyInstance
+                      Id="6bac48ea-4c92-402f-920a-6ea7e3efb796"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca957032-da82-4fed-b87d-a804cec7d3a9">
+                    <propertyInstance
+                      Id="c990a9de-cfc0-4454-a8eb-461cbd0a1a39"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c6e9801-dc14-4195-a340-6066fdf82d1b">
+                    <propertyInstance
+                      Id="57ce2974-2303-41ce-945d-e3292b8f04c1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="663b6736-ae77-4b93-a7a9-02b2d4e1fee2"
+                  name="ship"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="35054e68-ed42-49bb-8239-73e364b25f24"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DPrintBoat OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DShip)]) ParameterIdentifier%3Dship"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3bc46cf3-95d9-4974-9d60-c7166d76cf47"
+                      LastKnownName="Ship"
+                      LastKnownLocation="Package_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eb902c9a-e4a6-429c-b10b-80c7256fd5ac"
+            name="PrintEndGame"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="51cd712d-2087-4c05-9b15-b6914d2f5536"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DPrintEndGame OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="38ba5286-ffd1-4992-a5ec-449f4fe5b04d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb361a8a-f61d-433a-8243-ca6d753adb1c">
+                    <propertyInstance
+                      Id="5199cdd0-2f32-4249-854e-78c7861ad266"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc4cac50-ee47-4976-aafc-1906fd4cbb48">
+                    <propertyInstance
+                      Id="a58e5bb9-1e93-4619-bc02-0a77d9efac67"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5fc4927-6517-404f-a1da-bc6e735c7eab">
+                    <propertyInstance
+                      Id="6fc64f44-a178-4016-a2d3-5b0e691444d4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74f32c6f-3d00-422d-9fb5-426a27fe4313">
+                    <propertyInstance
+                      Id="30e0b4e0-4e11-4792-8ff1-c3b28bebb44f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df099370-c880-4c10-b897-82f72daf254c">
+                    <propertyInstance
+                      Id="35b446ea-e302-4914-8d9c-25252bbd83ad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="754c46c1-909e-41b7-af57-c3043a6e5cc0">
+                    <propertyInstance
+                      Id="ea409379-58d6-433b-8b4b-fc0a1d925425"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20d4871c-032d-4264-a192-69f6b34d8636"
+                  name="score"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d4611bd0-def8-4eed-ab0f-3a3f3af6484c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DPrintEndGame OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dscore"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Models.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6d69eb32-b7b2-4946-b616-d912d8c4b402"
+            name="PrintPlayground"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ed99d6d3-5abb-4895-b824-adaad361f510"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DPrintPlayground OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DPlayingGround)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="91d98b87-ff7b-48fe-95bf-a0efea5eec46"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8122a647-9c6e-41e8-bd19-06da69fcbc68">
+                    <propertyInstance
+                      Id="4b198fce-f343-45a5-9ec0-3c4f53e72e3b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d66e11a6-8f38-4f9e-b0f1-0fd1618a5810">
+                    <propertyInstance
+                      Id="daa655e2-2d93-415e-9f18-9e95a5bea2fb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0843869f-88d3-4178-842c-5515d9e5a1da">
+                    <propertyInstance
+                      Id="8ab6f5fd-35bc-4a5d-8850-34a59a09a9bc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48f0bba2-4b90-4b66-9627-7da568f70c82">
+                    <propertyInstance
+                      Id="e974c2ce-1fb1-4478-90c3-ee8042244d9c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5ea5984-cfa4-44d1-8f5d-f2dc7c966682">
+                    <propertyInstance
+                      Id="91324241-00d3-4113-82fc-2a7c03277453"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1580fd3d-4672-4576-b760-3e79ac59c0a1">
+                    <propertyInstance
+                      Id="f9ba5a97-f10f-418d-8c5b-584a4009dd2d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3a80a73f-0b8f-4eb9-924d-ad7583544854"
+                  name="playingGround"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fcf17360-71f2-4b27-824b-3ac392f9f965"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3D(Name%3DPrintPlayground OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.Model Type%3DPlayingGround)]) ParameterIdentifier%3DplayingGround"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="48692feb-e642-4976-98d4-12bee11bff42"
+                      LastKnownName="PlayingGround"
+                      LastKnownLocation="Package_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="295fcbe3-69d9-4dcd-9e4d-0967d12498e1"
+            name="PrintWelcomeMessage"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9f3ea50f-35e7-49f1-bf6c-b7a3c8b6929b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FGebruiker%2FDocuments%2FGitHub%2Fmodl3-gold-rush%2FGold Rush%2Fbin%2FDebug%2FGold Rush.exe&quot; Namespace%3DGold_Rush.View Type%3DOutputView Member%3DPrintWelcomeMessage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7ff85449-fb34-4e2a-b2e1-7a160ad2a6c7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2e93410-3a04-4602-b938-72d887f9aba0">
+                    <propertyInstance
+                      Id="bda5c6a6-609d-40cd-8b6f-fd015a700479"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12c6f455-05c7-4010-b52c-29359b7b6206">
+                    <propertyInstance
+                      Id="81c9b82a-f415-4c76-a299-4513ee20d665"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="022da729-8f05-4a84-a66b-9b77cb8c99a0">
+                    <propertyInstance
+                      Id="ff904c0b-95ae-420d-b63b-f3d2496d6ddf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dba7fa54-2c53-4a0b-aa21-7a74544c759d">
+                    <propertyInstance
+                      Id="d01244d5-5976-437e-a43a-b73db8c7a546"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30785dc1-8ba9-4a10-b792-48e83816a22e">
+                    <propertyInstance
+                      Id="269b39b2-49dc-46df-9074-c9433357b7c9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="226dec43-fa1c-4b71-a7ab-b7b5b17bf20a">
+                    <propertyInstance
+                      Id="d3982a58-7aa5-4498-82a0-e52ed97abe18"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

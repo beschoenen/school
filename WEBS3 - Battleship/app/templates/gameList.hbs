@@ -1,0 +1,20 @@
+<div class="start-box center">
+	<button class="pull-left" id="new-game">New game</button>
+	<button class="pull-left" id="new-ai-game">New AI game</button>
+	<button class="pull-right" id="delete-games">Delete games</button>
+	<div class="clear-fix"></div>
+	<div class="game-box center">
+		{{#each games}}
+			<div class="game" data-game-id="{{_id}}">
+				<h3>Game&nbsp;{{_id}}</h3>
+				<label>Against:&nbsp;{{enemyName}}{{^enemyName}}Nobody yet{{/enemyName}}</label>
+				<br>
+				<label>Status:&nbsp;<span class="status">{{status}}</span></label>
+			</div>
+		{{else}}
+			<div class="game">
+				<h3>No games</h3>
+			</div>
+		{{/each}}
+	</div>
+</div>

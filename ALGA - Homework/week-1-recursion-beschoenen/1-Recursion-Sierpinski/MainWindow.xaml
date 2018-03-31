@@ -1,0 +1,13 @@
+﻿<Window x:Class="ALGA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ALGA"
+        mc:Ignorable="d"
+        Title="Sierpinski" Height="685" Width="670" Background="#FFFFCECE">
+    <DockPanel>
+        <Slider Value="1" DockPanel.Dock="Bottom" x:Name="slider" HorizontalAlignment="Stretch" Margin="10,10,0,0" VerticalAlignment="Top" ValueChanged="slider_ValueChanged" SmallChange="1" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" IsSnapToTickEnabled="True" />
+        <Canvas x:Name="canvas" Margin="10,10,10,10" Background="AliceBlue" SizeChanged="canvas_SizeChanged" />
+    </DockPanel>
+</Window>

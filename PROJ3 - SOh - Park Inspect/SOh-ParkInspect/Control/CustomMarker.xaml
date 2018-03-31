@@ -1,0 +1,10 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="SOh_ParkInspect.Control.CustomMarker"
+             Height="40"
+             Width="25"
+             Opacity="10">
+    <Image Name="Icon"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center" />
+</UserControl>

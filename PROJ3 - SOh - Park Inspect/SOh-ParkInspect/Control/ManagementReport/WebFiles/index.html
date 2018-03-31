@@ -1,0 +1,75 @@
+﻿<!doctype html>
+
+<html lang="en">
+<!-- saved from url=(0014)about:internet -->
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+
+<body>
+    <div style="position:absolute; top:60px; left:10px; width:500px; height:500px;">
+        <canvas id="lineChart" width="400" height="200"></canvas>
+    </div>
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+	<link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <div id="chartdiv"></div>
+
+</body>
+
+</html>
+<script>
+        let jsonObject = JSON.parse(var1);
+        var chart = AmCharts.makeChart("chartdiv", {
+            "type": "pie",
+            "theme": "light",
+            "titles": [{
+                "text": "Visitors countries",
+                "size": 16
+            }],
+            "dataProvider": [{
+                "country": "United States",
+                "visits": 7252
+            }, {
+                "country": "China",
+                "visits": 3882
+            }, {
+                "country": "Japan",
+                "visits": 1809
+            }, {
+                "country": "Germany",
+                "visits": 1322
+            }, {
+                "country": "United Kingdom",
+                "visits": 1122
+            }, {
+                "country": "France",
+                "visits": 414
+            }, {
+                "country": "India",
+                "visits": 384
+            }, {
+                "country": "Spain",
+                "visits": 211
+            }],
+            "valueField": "visits",
+            "titleField": "country",
+            "startEffect": "elastic",
+            "startDuration": 2,
+            "labelRadius": 15,
+            "innerRadius": "50%",
+            "depth3D": 10,
+            "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+            "angle": 15,
+            "export": {
+                "enabled": false
+            }
+        });
+</script>

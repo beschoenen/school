@@ -1,0 +1,66 @@
+﻿<helper:ParkInspectControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:planner="http://mindfusion.eu/scheduling/wpf"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           x:Class="SOh_ParkInspect.Control.EmployeeAvailabilityControl"
+                           mc:Ignorable="d"
+                           d:DesignHeight="600"
+                           d:DesignWidth="800"
+                           Background="White"
+                           DataContext="{Binding EmployeeAvailability, Source={StaticResource Locator}}">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               FontSize="20"
+               Content="Beschikbaarheid invullen" />
+
+        <planner:Calendar x:Name="Schedule"
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          CurrentView="Timetable"
+                          Theme="Standard"
+                          >
+            <planner:Calendar.TimetableSettings>
+                <planner:TimetableSettings TwelveHourFormat="False" />
+            </planner:Calendar.TimetableSettings>
+        </planner:Calendar>
+
+        <planner:Calendar Grid.Row="1"
+                          Grid.Column="0"
+                          x:Name="Calendar"
+                          CurrentView="MonthRange"
+                          Theme="Standard">
+            <planner:Calendar.MonthRangeSettings>
+                <planner:MonthRangeSettings NumberOfMonths="4"
+                                            VisibleRows="2"
+                                            MonthsPerRow="2" />
+            </planner:Calendar.MonthRangeSettings>
+            <planner:Calendar.Selection>
+                <planner:Selection AllowMultiple="False"
+                                   Changed="Selection_OnChanged" />
+            </planner:Calendar.Selection>
+        </planner:Calendar>
+
+        <Button Grid.Row="2"
+                Grid.Column="1"
+                Width="Auto"
+                HorizontalAlignment="Right"
+                Content="Opslaan"
+                VerticalAlignment="Bottom"
+                Click="SaveButton_OnClick"
+                Margin="5" />
+    </Grid>
+</helper:ParkInspectControl>

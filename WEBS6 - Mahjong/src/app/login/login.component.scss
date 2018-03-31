@@ -1,0 +1,10 @@
+.login {
+  width: 100%;
+  height: 100%;
+
+  > .btn {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: calc(50% - 32px);
+  }
+}

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cb532325-d4e3-4e9e-9d7f-5103f09a8d67"
+  name="Gold_Rush"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="f3e8c7c8-2461-4871-ba19-218c8b695e25"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGold_Rush"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fe57be96-6108-4436-8c6d-6d131781de96"
+        LastKnownName="Model"
+        LastKnownLocation="Package1_2051.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="513c88ec-985a-4c07-a03e-28766a7c8564"
+        LastKnownName="Controller"
+        LastKnownLocation="Package4_2051.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9e376f7d-b1ac-4ff4-a693-bb6ff42c3ff9"
+        LastKnownName="View"
+        LastKnownLocation="Package5_2051.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c07994a0-c0fb-475f-be1a-a87e0d754636"
+        LastKnownName="Enum"
+        LastKnownLocation="Package8_2051.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

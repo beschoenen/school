@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Models", "Models\Models.modelproj", "{23379BB2-2757-42B5-96A0-4C973CEAE36E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelsLib", "ModelsLib\ModelsLib.csproj", "{1390F273-AA59-458F-B466-C7986801BBA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold Rush", "Gold Rush\Gold Rush.csproj", "{6374BC4F-3C90-4456-B5A3-DFCC7CA4B17A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23379BB2-2757-42B5-96A0-4C973CEAE36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23379BB2-2757-42B5-96A0-4C973CEAE36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23379BB2-2757-42B5-96A0-4C973CEAE36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23379BB2-2757-42B5-96A0-4C973CEAE36E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1390F273-AA59-458F-B466-C7986801BBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1390F273-AA59-458F-B466-C7986801BBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1390F273-AA59-458F-B466-C7986801BBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1390F273-AA59-458F-B466-C7986801BBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6374BC4F-3C90-4456-B5A3-DFCC7CA4B17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6374BC4F-3C90-4456-B5A3-DFCC7CA4B17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6374BC4F-3C90-4456-B5A3-DFCC7CA4B17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6374BC4F-3C90-4456-B5A3-DFCC7CA4B17A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,123 @@
+@font-face {
+  font-family: RobotoDraft;
+  src: url(../lib/robotodraft/fonts/Regular/RobotoDraft-Regular.ttf);
+}
+
+body {
+  font-family: RobotoDraft, serif;
+}
+
+.button-space {
+  margin-left: 3% !important;
+  width: 94% !important;
+}
+
+ion-popover-view.fit {
+  height: auto;
+}
+
+ion-popover-view.fit ion-content {
+  position: relative;
+}
+
+.platform-android ion-popover-view.fit {
+  margin-top: 10px;
+}
+
+.platform-ios ion-popover-view.fit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*********************************
+
+  Login
+
+**********************************/
+
+.login {
+  text-align: center;
+  background: url('../img/login-background.jpg') no-repeat fixed 25% 50%;
+  background-size: cover;
+}
+
+#login-button {
+  margin-bottom: 200px !important;
+}
+
+.login > div.login-buttons {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+
+.login .icon {
+  margin-top: 60px;
+  max-height: 150px;
+}
+
+/*********************************
+
+  Entries
+
+**********************************/
+
+.entries span.date {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+/*********************************
+
+  Entry
+
+**********************************/
+
+.entry .text-area {
+  border: none;
+  resize: none;
+  height: 100vh
+}
+
+.entry .image-list {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  height: 84px;
+}
+
+.entry .image-list .image {
+  border-radius: 2px;
+  height: 64px;
+  max-height: 64px;
+  width: auto;
+  display: inline-block;
+  float: none;
+  margin: 10px 5px;
+}
+
+.entry .image-list .image.new {
+  background-color: black;
+  width: 80px;
+  float: left;
+}
+
+.entry .image-list .image.new button {
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-size: 40px;
+}
+
+/*********************************
+
+  Image
+
+**********************************/
+
+.image img.image {
+  object-fit: cover;
+  max-width: 100vw;
+  padding: 5px;
+}

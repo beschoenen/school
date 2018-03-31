@@ -1,0 +1,22 @@
+{
+  "name": "diary-manager-api",
+  "description": "Diary manager api",
+  "main": "index.js",
+  "authors": [
+    "Rogier Bazelmans <rogier.bazelmans@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/beschoenen/diary-manager-api",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "jquery": "^3.2.1"
+  }
+}

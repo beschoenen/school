@@ -1,0 +1,177 @@
+﻿<helper:ParkInspectControl x:Class="SOh_ParkInspect.Control.EmployeeInfoControl"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:helper="clr-namespace:SOh_ParkInspect.Helper"
+                           mc:Ignorable="d"
+                           d:DesignHeight="600"
+                           d:DesignWidth="700"
+                           Background="White"
+                           MinHeight="460"
+                           MinWidth="300"
+                           DataContext="{Binding EmployeeInfo, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="materialDesign:Card">
+                <Setter Property="Margin"
+                        Value="5" />
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground"
+                        Value="DimGray" />
+                <Setter Property="FontSize"
+                        Value="10" />
+            </Style>
+            <Style TargetType="GroupBox"
+                   BasedOn="{StaticResource {x:Type GroupBox}}">
+                <Setter Property="Padding"
+                        Value="10" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Personeelsgegevens"
+               FontSize="20"
+               Margin="10,0"
+               Grid.Row="0" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:Card Grid.Column="0"
+                                 Grid.Row="0">
+                <GroupBox Header="Naam">
+                    <StackPanel>
+                        <Label Content="Voornaam" />
+                        <TextBox Text="{Binding SelectedEmployee.FirstName}" />
+
+                        <Label Content="Tussenvoegsel" />
+                        <TextBox Text="{Binding SelectedEmployee.LastNamePrefix}" />
+
+                        <Label Content="Achternaam" />
+                        <TextBox Text="{Binding SelectedEmployee.LastName}" />
+                    </StackPanel>
+                </GroupBox>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="0"
+                                 Grid.Column="1">
+                <GroupBox Header="Adres">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Label Content="Straatnaam" />
+                            <TextBox Grid.Row="1"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Column="0"
+                                 Margin="5,0"
+                                 Text="{Binding SelectedEmployee.Address.Street, Mode=TwoWay}" />
+
+                            <Label Content="Huisnummer"
+                               Grid.Row="0"
+                               Grid.Column="2" />
+                            <TextBox Grid.Column="2"
+                                 Grid.Row="1"
+                                 Text="{Binding SelectedEmployee.Address.Number}"
+                                Margin="5,0" />
+
+                            <Label Content="Postcode"
+                               Grid.Row="2" />
+                            <TextBox Text="{Binding SelectedEmployee.Address.ZipCode}"
+                                 Margin="5,0"
+                                 Grid.Row="3" />
+
+                            <Label Content="Plaats"
+                               Grid.Row="2"
+                               Grid.Column="1" />
+                            <TextBox Text="{Binding SelectedEmployee.Address.City}"
+                                 Grid.Row="3"
+                                 Grid.Column="1"
+                                 Grid.ColumnSpan="2"
+                                 Margin="5,0" />
+
+                        </Grid>
+                        <Label Content="Provincie" />
+                        <TextBox Text="{Binding SelectedEmployee.Address.Province}"
+                             Margin="5,0"/>
+
+                        <Label Content="Land" />
+                        <TextBox Text="{Binding SelectedEmployee.Address.Country}"
+                             Margin="5,0"/>
+
+                    </StackPanel>
+                </GroupBox>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="1"
+                                 Grid.Column="0">
+                <GroupBox Header="Contactinformatie">
+                    <StackPanel>
+                        <Label Content="Telefoonnummer" />
+                        <TextBox Text="{Binding SelectedEmployee.TelephoneNumber}" />
+
+                        <Label Content="E-mailadres" />
+                        <TextBox Text="{Binding SelectedEmployee.Email}" />
+                    </StackPanel>
+                </GroupBox>
+            </materialDesign:Card>
+
+            <materialDesign:Card Grid.Row="1"
+                                 Grid.Column="1">
+                <GroupBox Header="Werk">
+                    <StackPanel>
+                        <Label Content="Datum indiensttreding" />
+                        <DatePicker SelectedDate="{Binding SelectedEmployee.DateOfEmployment}" />
+
+                        <Label Content="Functie" />
+                        <ComboBox ItemsSource="{Binding JobTitles}"
+                                  DisplayMemberPath="Name"
+                                  SelectedItem="{Binding SelectedJobTitle}" />
+                    </StackPanel>
+                </GroupBox>
+            </materialDesign:Card>
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+                    Margin="5"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+
+            <Button Content="Annuleer"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,10,0"
+                    Command="{Binding CancelCommand}" />
+
+            <Button Content="Opslaan"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Command="{Binding SaveCommand}" />
+
+        </StackPanel>
+    </Grid>
+</helper:ParkInspectControl>
